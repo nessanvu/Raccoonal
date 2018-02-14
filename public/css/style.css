@@ -174,7 +174,8 @@ body {
   left: 25%;
   top: 25%;
   display: none;
-  border: solid;
+  border: solid 5px #525863;
+  border-radius: 20px;
   background: white;
   flex-direction: column;
   justify-content: center;
@@ -214,7 +215,8 @@ body {
     border: solid;
     text-align: center;
     width: 98%;
-    padding: 5%; }
+    padding: 5%;
+    background-color: rgba(255, 187, 114, 0.9); }
     .calendar .calendarBox .monthBar {
       display: flex;
       border: solid;
@@ -224,6 +226,7 @@ body {
       .calendar .calendarBox .monthBar h2 {
         font-size: 60px; }
     .calendar .calendarBox .dateBox {
+      background-color: white;
       border: solid;
       height: inherit; }
       .calendar .calendarBox .dateBox ul, .calendar .calendarBox .dateBox li {
@@ -234,6 +237,13 @@ body {
         text-align: center;
         margin-top: 10px;
         flex: auto; }
+      .calendar .calendarBox .dateBox .record {
+        border: 3px #76849A solid;
+        background-color: wheat;
+        padding: 5px;
+        border-radius: 12px; }
+      .calendar .calendarBox .dateBox #closeDiaryButton {
+        margin-top: 200px; }
       .calendar .calendarBox .dateBox .weekdays {
         text-transform: uppercase;
         display: flex;
