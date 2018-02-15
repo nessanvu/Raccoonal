@@ -9,11 +9,57 @@
 	<!-- JS -->
 	<!--<script src="../js/bootstrap.js"></script>-->
 	<script src="../js/jquery-3.3.1.min.js"></script>
+	<meta name= "viewport" content="width=device-width, initial-scale=1">
+<style> 
+</style>
 </head>
 <body>
-	<div class="content book"> 
-        This is book page.
-    </div>
+<div class="book"> 
+	<h2>Racoon Book</h2>
+	<!-- Photo Grid Layout -->
+	<div class= "row">
+		<div class= "column">
+			<div class= "content" id="01" onclick="viewProfile(this.id)">
+				<!-- Insert Racoon Photo -->
+				<p>Image of Raccoon</p>
+				<!-- style= "width: 100%-->"
+				<h3>Name</h3>
+				<div class= "profile notification" id= "profile" style= "display: flex;"
+					<div class= "profile picture">
+					<h3> Name </h3>
+					<p> Profile Picture of Racoon </p>
+					<p> Description </p>
+				</div>
+				<button type="button" id="closeProfileButton" class="closebtn">Close
+				</button>
+			</div>
+		</div>
+		<div class= "column">
+			<div class= "content">
+				<!-- Insert Mystery Racoon Photo -->
+				<p>???</p>
+				<!-- style= "width: 100%-->"
+				<h3>???</h3>
+			</div>
+		</div>
+		<div class= "column">
+			<div class= "content">
+				<!-- Insert Mystery Racoon Photo -->
+				<p>???</p>
+				<!-- style= "width: 100%-->"
+				<h3>???</h3>
+			</div>
+		</div>
+		<div class= "column">
+			<div class= "content">
+				<!-- Insert Mystery Racoon Photo -->
+				<p>???</p>
+				<!-- style= "width: 100%-->"
+				<h3>???</h3>
+			</div>
+		</div>
+	</div>
+</div>
 
 	<div class="bar">
 		<button type="button" class="menu" id="calendarButton" onclick="window.location='calendar.handlebars'">Calendar</button>
@@ -22,5 +68,19 @@
 		<button type="button" class="menu" id="emptyButton"></button>
 		<button type="button" class="menu" id="settingButton" onclick="window.location='setting.handlebars'">Setting</button>
 	</div>
+
+<!--Popup Profile-->
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script> 
+	var profile;
+	function viewProfile(id) {
+		profile = $('#' + id).find('#profile');
+		profile.show().css('display', 'flex');
+	}
+	$(".closebtn").on("click",function(e){
+		$(this).parent().hide()
+		e.stopPropagation()
+	})
+</script>
 </body>
 </html>
