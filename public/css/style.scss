@@ -251,12 +251,18 @@ body{
             height: 20px;
         }
     }
+    .records {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+    }
 }
 
 .game{
     /* add background-image */
     position: fixed;
-    border: solid salmon 10px;
+    //border: solid salmon 10px;
 }
 
 .calendar {
@@ -298,6 +304,10 @@ body{
                 background-color: wheat;
                 padding: 5px;
                 border-radius: 12px;
+            }
+
+            .recordModal {
+
             }
 
             #closeDiaryButton {

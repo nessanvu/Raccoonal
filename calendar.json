@@ -23,52 +23,66 @@
           },
           {
             "time":"09:20am", 
+<<<<<<< HEAD
             "emoji":"sad.png",
+=======
+            "emoji":"fear.png",
+>>>>>>> a0eb11777898aa26cd380c6d4fd5983c2e1dc572
             "emotion":{
-              "anger":0.0025987260592504756,
-              "contempt":2.6499199881997892,
-              "disgust":5.782396449813048,
-              "fear":90.6639306040826399,
-              "joy":0.024525411460230365,
-              "sadness":63.06452786137103,
-              "surprise":27.812100959014003,
+              "anger":10.0025987260592504756,
+              "contempt":4.6499199881997892,
+              "disgust":30.782396449813048,
+              "fear":40.6639306040826399,
+              "joy":5.024525411460230365,
+              "sadness":30.06452786137103,
+              "surprise":20.812100959014003,
               "count":22}
           },
           {
+<<<<<<< HEAD
             "time":"12:31pm", 
             "emoji":"joy.png",
+=======
+            "time":"1:31pm", 
+            "emoji":"content.png",
+>>>>>>> a0eb11777898aa26cd380c6d4fd5983c2e1dc572
             "emotion":{
               "anger":0.0025987260592504756,
-              "contempt":2.6499199881997892,
-              "disgust":54.782396449813048,
-              "fear":0.6639306040826399,
-              "joy":0.024525411460230365,
-              "sadness":63.06452786137103,
-              "surprise":27.812100959014003,
+              "contempt":40.6499199881997892,
+              "disgust":0.782396449813048,
+              "fear":2.6639306040826399,
+              "joy":30.024525411460230365,
+              "sadness":1.06452786137103,
+              "surprise":15.812100959014003,
               "count":22}
           },
           {
+<<<<<<< HEAD
             "time":"09:21pm", 
             "emoji":"joy.png",
+=======
+            "time":"05:21pm", 
+            "emoji":"content.png",
+>>>>>>> a0eb11777898aa26cd380c6d4fd5983c2e1dc572
             "emotion":{
-              "anger":23.0025987260592504756,
-              "contempt":2.6499199881997892,
-              "disgust":5.782396449813048,
-              "fear":0.6639306040826399,
-              "joy":0.024525411460230365,
-              "sadness":63.06452786137103,
-              "surprise":27.812100959014003,
+              "anger":1.0025987260592504756,
+              "contempt":60.6499199881997892,
+              "disgust":3.782396449813048,
+              "fear":10.6639306040826399,
+              "joy":43.024525411460230365,
+              "sadness":0.06452786137103,
+              "surprise":40.812100959014003,
               "count":22}
           }
         
         ],
-        "memoText": "ajlksd jasidj wdjj oqkw doa sokdoko a sjod oajs d."
+        "memoText": "Took my hardest midterm todat but went to go get ice cream after."
       },
       {
         "id":"012918",        
         "month":"Janauary",        
         "dateNumber":"29",
-        "image":"emo_e.png",
+        "image":"content.png",
         "today":false,
         "thisMonth":false
       },
@@ -76,7 +90,7 @@
         "id":"013018",
         "month":"Janauary",
         "dateNumber":"30",
-        "image":"emo_e.png",
+        "image":"content.png",
         "today":false,
         "thisMonth":false
       },
@@ -84,7 +98,7 @@
         "id":"013118",
         "month":"Janauary",
         "dateNumber":"31",
-        "image":"emo_e.png",
+        "image":"sad.png",
         "today":false,
         "thisMonth":false
       },
@@ -92,7 +106,11 @@
         "id":"020118",
         "month":"February",
         "dateNumber":"1",
+<<<<<<< HEAD
         "image":"sad.png",
+=======
+        "image":"surprise.png",
+>>>>>>> a0eb11777898aa26cd380c6d4fd5983c2e1dc572
         "today":false,
         "thisMonth":true
       },
@@ -100,7 +118,11 @@
         "id":"020218",
         "month":"February",
         "dateNumber":"2",
+<<<<<<< HEAD
         "image":"joy.png",
+=======
+        "image":"content.png",
+>>>>>>> a0eb11777898aa26cd380c6d4fd5983c2e1dc572
         "today":false,
         "thisMonth":true        
       },
@@ -108,7 +130,11 @@
         "id":"020318",
         "month":"February",
         "dateNumber":"3",
+<<<<<<< HEAD
         "image":"sad.png",
+=======
+        "image":"joy.png",
+>>>>>>> a0eb11777898aa26cd380c6d4fd5983c2e1dc572
         "today":false,
         "thisMonth":true
       },
@@ -116,7 +142,11 @@
         "id":"020418",
         "month":"February",
         "dateNumber":"4",
+<<<<<<< HEAD
         "image":"sad.png",
+=======
+        "image":"joy.png",
+>>>>>>> a0eb11777898aa26cd380c6d4fd5983c2e1dc572
         "today":false,
         "thisMonth":true
       },
@@ -124,7 +154,11 @@
         "id":"020518",
         "month":"February",
         "dateNumber":"5",
+<<<<<<< HEAD
         "image":"sad.png",
+=======
+        "image":"angry.png",
+>>>>>>> a0eb11777898aa26cd380c6d4fd5983c2e1dc572
         "today":false,
         "thisMonth":true
       },
@@ -132,7 +166,11 @@
         "id":"020618",
         "month":"February",
         "dateNumber":"6",
+<<<<<<< HEAD
         "image":"joy.png",
+=======
+        "image":"angry.png",
+>>>>>>> a0eb11777898aa26cd380c6d4fd5983c2e1dc572
         "today":false,
         "thisMonth":true
       },
@@ -140,7 +178,11 @@
         "id":"020718",
         "month":"February",
         "dateNumber":"7",
+<<<<<<< HEAD
         "image":"joy.png",
+=======
+        "image":"sad.png",
+>>>>>>> a0eb11777898aa26cd380c6d4fd5983c2e1dc572
         "today":false,
         "thisMonth":true
       },
@@ -148,7 +190,11 @@
         "id":"020818",
         "month":"February",
         "dateNumber":"8",
+<<<<<<< HEAD
         "image":"joy.png",
+=======
+        "image":"disgust.png",
+>>>>>>> a0eb11777898aa26cd380c6d4fd5983c2e1dc572
         "today":false,
         "thisMonth":true
       },
@@ -156,7 +202,11 @@
         "id":"020918",
         "month":"February",
         "dateNumber":"9",
+<<<<<<< HEAD
         "image":"joy.png",
+=======
+        "image":"sad.png",
+>>>>>>> a0eb11777898aa26cd380c6d4fd5983c2e1dc572
         "today":false,
         "thisMonth":true
       },
@@ -164,7 +214,11 @@
         "id":"021018",
         "month":"February",
         "dateNumber":"10",
+<<<<<<< HEAD
         "image":"joy.png",
+=======
+        "image":"content.png",
+>>>>>>> a0eb11777898aa26cd380c6d4fd5983c2e1dc572
         "today":false,
         "thisMonth":true
       },
@@ -172,7 +226,11 @@
         "id":"021118",
         "month":"February",
         "dateNumber":"11",
+<<<<<<< HEAD
         "image":"joy.png",
+=======
+        "image":"content.png",
+>>>>>>> a0eb11777898aa26cd380c6d4fd5983c2e1dc572
         "today":false,
         "thisMonth":true
       },
@@ -188,7 +246,11 @@
         "id":"021318",
         "dateNumber":"13",
         "month":"February",
+<<<<<<< HEAD
         "image":"joy.png",
+=======
+        "image":"content.png",
+>>>>>>> a0eb11777898aa26cd380c6d4fd5983c2e1dc572
         "today":false,
         "thisMonth":true
       },
@@ -196,7 +258,7 @@
         "id":"021418",
         "dateNumber":"14",
         "month":"February",
-        "image":"emo_e.png",
+        "image":"disgust.png",
         "today":true,
         "thisMonth":true
       },
@@ -204,7 +266,7 @@
         "id":"021518",
         "dateNumber":"15",
         "month":"February",
-        "image":"emo_e.png",
+        "image":"surprise.png",
         "today":false,
         "thisMonth":true
       },
@@ -212,7 +274,7 @@
         "id":"021618",
         "dateNumber":"16",
         "month":"February",
-        "image":"emo_e.png",
+        "image":"fear.png",
         "today":false,
         "thisMonth":true
       },
@@ -220,7 +282,7 @@
         "id":"021718",
         "dateNumber":"17",
         "month":"February",
-        "image":"emo_e.png",
+        "image":"content.png",
         "today":false,
         "thisMonth":true
       },
@@ -228,7 +290,7 @@
         "id":"021818",
         "month":"February",
         "dateNumber":"18",
-        "image":"emo_e.png",
+        "image":"content.png",
         "today":false,
         "thisMonth":true
       },
@@ -236,7 +298,7 @@
         "id":"021918",
         "month":"February",
         "dateNumber":"19",
-        "image":"emo_e.png",
+        "image":"content.png",
         "today":false,
         "thisMonth":true
       },
@@ -244,7 +306,7 @@
         "id":"022018",
         "month":"February",
         "dateNumber":"20",
-        "image":"emo_e.png",
+        "image":"content.png",
         "today":false,
         "thisMonth":true
       },
@@ -252,7 +314,7 @@
         "id":"022118",
         "month":"February",
         "dateNumber":"21",
-        "image":"emo_e.png",
+        "image":"sad.png",
         "today":false,
         "thisMonth":true
       },
@@ -260,7 +322,7 @@
         "id":"022218",
         "month":"February",
         "dateNumber":"22",
-        "image":"emo_e.png",
+        "image":"content.png",
         "today":false,
         "thisMonth":true
       },
@@ -268,7 +330,7 @@
         "id":"022318",
         "month":"February",
         "dateNumber":"23",
-        "image":"emo_e.png",
+        "image":"joy.png",
         "today":false,
         "thisMonth":true
       },
@@ -276,7 +338,7 @@
         "id":"022418",
         "month":"February",
         "dateNumber":"24",
-        "image":"emo_e.png",
+        "image":"joy.png",
         "today":false,
         "thisMonth":true
       },
@@ -284,7 +346,7 @@
         "id":"022518",
         "month":"February",
         "dateNumber":"25",
-        "image":"emo_e.png",
+        "image":"fear.png",
         "today":false,
         "thisMonth":true
       },
@@ -292,7 +354,7 @@
         "id":"022618",
         "month":"February",
         "dateNumber":"26",
-        "image":"emo_e.png",
+        "image":"angry.png",
         "today":false,
         "thisMonth":true
       },
@@ -300,7 +362,7 @@
         "id":"022718",
         "month":"February",
         "dateNumber":"27",
-        "image":"emo_e.png",
+        "image":"content.png",
         "today":false,
         "thisMonth":true
       },
@@ -308,7 +370,7 @@
         "id":"022818",
         "month":"February",
         "dateNumber":"28",
-        "image":"emo_e.png",
+        "image":"content.png",
         "today":false,
         "thisMonth":true
       },
@@ -316,7 +378,7 @@
         "id":"030118",
         "month":"March",
         "dateNumber":"1",
-        "image":"emo_e.png",
+        "image":"sad.png",
         "today":false,
         "thisMonth":false
       },
@@ -324,7 +386,7 @@
         "id":"030218",
         "month":"March",
         "dateNumber":"2",
-        "image":"emo_e.png",
+        "image":"content.png",
         "today":false,
         "thisMonth":false
       },
@@ -332,9 +394,8 @@
         "id":"030318",
         "dateNumber":"3",
         "month":"March",
-        "image":"emo_e.png",
+        "image":"joy.png",
         "today":false,
         "thisMonth":false
       }
     ]
-  }

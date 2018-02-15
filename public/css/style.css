@@ -201,11 +201,15 @@ body {
     align-items: center; }
   .calendarModal .entrys button {
     height: 20px; }
+  .calendarModal .records {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
 
 .game {
   /* add background-image */
-  position: fixed;
-  border: solid salmon 10px; }
+  position: fixed; }
 
 .calendar {
   /* add background-image */

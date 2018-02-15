@@ -40,11 +40,14 @@
 								<h5>{{month}}/{{dateNumber}}/2018</h5>
 								<img id="emoji" src="../images/Emotions/{{image}}">
 							</div>
-							<ol>
+							<ol class="records">
 								{{#records}}
-								<li class="record" onclick="openRecord({{time}})">
+								<li class="record">
 									<span class="timeStamp">{{time}}:</span>
 									<img id="emoji" src="../images/Emotions/{{emoji}}">
+									<div class="recordModal">
+
+									</div>
 								</li>
 								{{/records}}
 							</ol>
