@@ -238,6 +238,7 @@ body {
         padding: 0px;
         list-style: none; }
       .calendar .calendarBox .dateBox li {
+        font-size: 50px;
         text-align: center;
         margin-top: 10px;
         flex: auto; }
@@ -267,8 +268,9 @@ body {
           padding: 0;
           border: solid; }
           .calendar .calendarBox .dateBox .alldays .date img {
-            width: 40px;
-            height: 40px; }
+            margin-top: 30px;
+            width: 50px;
+            height: 50px; }
         .calendar .calendarBox .dateBox .alldays .notThisMonth {
           background-color: grey; }
         .calendar .calendarBox .dateBox .alldays .today {

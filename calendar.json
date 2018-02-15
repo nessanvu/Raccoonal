@@ -4,14 +4,14 @@
         "id":"012818",
         "month":"January",
         "dateNumber":"28",
-        "image":"emo_e.png",
+        "image":"joy.png",
         "today":false,
         "thisMonth":false,
         "records": [
           {
 
             "time":"08:00am", 
-            "emoji":"emo_h.png",            
+            "emoji":"joy.png",            
             "emotion":{
               "anger":0.0025987260592504756,
               "contempt":2.6499199881997892,
@@ -69,14 +69,14 @@
         "id":"012918",        
         "month":"January",        
         "dateNumber":"29",
-        "image":"emo_s.png",
+        "image":"sad.png",
         "today":false,
         "thisMonth":false,
          "records": [
           {
 
             "time":"06:00am", 
-            "emoji":"emo_n.png",            
+            "emoji":"joy.png",            
             "emotion":{
               "anger":0.0025987260592504756,
               "contempt":2.6499199881997892,
@@ -89,7 +89,7 @@
           },
           {
             "time":"09:31pm", 
-            "emoji":"emo_h.png",
+            "emoji":"joy.png",
             "emotion":{
               "anger":1.0025987260592504756,
               "contempt":60.6499199881997892,
@@ -140,7 +140,7 @@
           },
           {
             "time":"08:32am", 
-            "emoji":"emo_n.png",
+            "emoji":"joy.png",
             "emotion":{
               "anger":1.0025987260592504756,
               "contempt":60.6499199881997892,
@@ -153,7 +153,7 @@
           },
           {
             "time":"07:34pm", 
-            "emoji":"emo_n.png",
+            "emoji":"joy.png",
             "emotion":{
               "anger":1.0025987260592504756,
               "contempt":60.6499199881997892,
@@ -179,7 +179,7 @@
         "id":"020118",
         "month":"February",
         "dateNumber":"1",
-        "image":"surprise.png",
+        "image":"sad.png",
         "today":false,
         "thisMonth":true,
          "records": [
@@ -199,7 +199,7 @@
           },
           {
             "time":"03:00pm", 
-            "emoji":"emo_h.png",
+            "emoji":"joy.png",
             "emotion":{
               "anger":1.0025987260592504756,
               "contempt":60.6499199881997892,
@@ -224,7 +224,7 @@
          "records": [
           {
             "time":"08:40pm", 
-            "emoji":"emo_h.png",
+            "emoji":"joy.png",
             "emotion":{
               "anger":1.0025987260592504756,
               "contempt":60.6499199881997892,
@@ -248,7 +248,7 @@
          "records": [
           {
             "time":"02:49pm", 
-            "emoji":"emo_h.png",
+            "emoji":"joy.png",
             "emotion":{
               "anger":1.0025987260592504756,
               "contempt":60.6499199881997892,
@@ -372,7 +372,7 @@
          "records": [
           {
             "time":"01:21pm", 
-            "emoji":"emo_h.png",
+            "emoji":"joy.png",
             "emotion":{
               "anger":1.0025987260592504756,
               "contempt":60.6499199881997892,
@@ -385,7 +385,7 @@
           },
           {
             "time":"03:47pm", 
-            "emoji":"surprise.png",
+            "emoji":"sad.png",
             "emotion":{
               "anger":1.0025987260592504756,
               "contempt":60.6499199881997892,
@@ -409,7 +409,7 @@
          "records": [
           {
             "time":"06:00pm", 
-            "emoji":"emo_h.png",
+            "emoji":"joy.png",
             "emotion":{
               "anger":1.0025987260592504756,
               "contempt":60.6499199881997892,
@@ -459,7 +459,7 @@
          "records": [
           {
             "time":"01:21pm", 
-            "emoji":"emo_h.png",
+            "emoji":"joy.png",
             "emotion":{
               "anger":1.0025987260592504756,
               "contempt":60.6499199881997892,
@@ -472,7 +472,7 @@
           },
           {
             "time":"06:17pm", 
-            "emoji":"emo_n.png",
+            "emoji":"joy.png",
             "emotion":{
               "anger":1.0025987260592504756,
               "contempt":60.6499199881997892,
@@ -520,7 +520,7 @@
          "records": [
           {
             "time":"02:30pm", 
-            "emoji":"emo_h.png",
+            "emoji":"joy.png",
             "emotion":{
               "anger":1.0025987260592504756,
               "contempt":60.6499199881997892,
@@ -533,7 +533,7 @@
           },
           {
             "time":"06:00pm", 
-            "emoji":"emo_n.png",
+            "emoji":"joy.png",
             "emotion":{
               "anger":1.0025987260592504756,
               "contempt":60.6499199881997892,
@@ -581,7 +581,7 @@
          "records": [
           {
             "time":"08:15pm", 
-            "emoji":"emo_n.png",
+            "emoji":"joy.png",
             "emotion":{
               "anger":1.0025987260592504756,
               "contempt":60.6499199881997892,
@@ -594,7 +594,7 @@
           },
           {
             "time":"11:28am", 
-            "emoji":"emo_h.png",
+            "emoji":"joy.png",
             "emotion":{
               "anger":1.0025987260592504756,
               "contempt":60.6499199881997892,
@@ -607,7 +607,7 @@
           },
           {
             "time":"02:17pm", 
-            "emoji":"emo_n.png",
+            "emoji":"joy.png",
             "emotion":{
               "anger":1.0025987260592504756,
               "contempt":60.6499199881997892,
@@ -662,13 +662,13 @@
         "id":"021418",
         "dateNumber":"14",
         "month":"February",
-        "image":"emo_n.png",
+        "image":"joy.png",
         "today":true,
         "thisMonth":true,
          "records": [
           {
             "time":"09:55pm", 
-            "emoji":"emo_h.png",
+            "emoji":"joy.png",
             "emotion":{
               "anger":1.0025987260592504756,
               "contempt":60.6499199881997892,
