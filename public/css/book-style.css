@@ -1,0 +1,47 @@
+/* Style for Racoon Book */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* update paw image and color background later */
+  background-color: #f1f1f1;
+  padding: 20px;
+  /* update font */
+  font-family: Arial; 
+}
+
+h2 {
+  font-size: 50px;
+  word-break: break-all;
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+p{
+  text-align: center;
+}
+.row {
+  margin: 8px-16px;
+}
+.row,
+.row > .column {
+  padding: 8px;
+}
+.column {
+  float: left;
+  width: 25%;
+}
+.row: after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.content {
+  background-color: white;
+  padding: 10px;
+} 
