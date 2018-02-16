@@ -15,6 +15,7 @@
     "express": "3.x",
     "express3-handlebars": "*",
     "gulp-sass": "^3.1.0",
+    "inherits": "^2.0.3",
     "mongodb": "*",
     "mongoose": "*"
   },
