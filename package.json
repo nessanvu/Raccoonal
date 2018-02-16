@@ -12,6 +12,7 @@
     "start": "node app.js"
   },
   "dependencies": {
+    "core-util-is": "^1.0.2",
     "express": "3.x",
     "express3-handlebars": "*",
     "gulp-sass": "^3.1.0",
