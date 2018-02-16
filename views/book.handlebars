@@ -10,13 +10,14 @@
 	<!-- JS -->
 	<!--<script src="../js/bootstrap.js"></script>-->
 	<script src="../js/jquery-3.3.1.min.js"></script>
+
+	<!--
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<style>
-	</style>
+	-->
 </head>
 
 <body>
-<!--	<div class="content">
+	<!--	<div class="content">
 		<h2>Racoon Book</h2>
 		Photo Grid Layout
 		<div class="row">
@@ -61,8 +62,50 @@
 			</div>
 		</div>
 	</div>
-	
 	-->
+	<div class="content">
+		<div class="raccoonbookBox">
+			<h1> Raccoon Book </h1>
+			<div class="raccoons">
+				<div class="raccoon">
+					<img src="../images/Racoons/racoon_default.png">
+					<p>Default</p>
+				</div>
+				<div class="raccoon">
+					<img src="../images/Racoons/racoon_revelle.png">
+					<p>Revelle</p>					
+				</div>
+				<div class="raccoon">
+					<img src="../images/Racoons/racoon_marshall.png">
+					<p>Marshall</p>
+				</div>
+				<div class="raccoon">
+					<img src="../images/Racoons/racoon_muir.png">
+					<p>Muir</p>
+				</div>
+				<div class="raccoon">
+					<img src="../images/Racoons/racoon_sixth.png">
+					<p>Sixth</p>
+				</div>
+				<div class="raccoon">
+					<img src="../images/Racoons/racoon_warren.png">
+					<p>Warren</p>
+				</div>
+				<div class="raccoon">
+					<img src="../images/Racoons/racoon_erc.png">
+					<p>ERC</p>
+				</div>
+			</div>
+			<div class="raccoonDiscription">
+				<h2 id="name"></h2>
+				<img id="profilePic" src="">
+				<p id="discrption">
+					Morbi scelerisque quam risus. Ut consequat consectetur lectus id maximus. Maecenas diam quam, tristique lacinia facilisis sed, cursus in felis. Maecenas sit amet ultrices orci, quis vehicula ligula. Sed bibendum at turpis ac vulputate. Mauris eget odio sodales, bibendum eros eu, tempor erat.
+				</p>
+				<button type="button" id="closeDpt">back</button>				
+			</div>
+		</div>
+	</div>
 
 
 	<div class="bar">
@@ -82,10 +125,21 @@
 		function viewProfile(id) {
 			profile = $('#' + id).find('#profile');
 			profile.show().css('display', 'flex');
-		}
+		};
+
 		$(".closebtn").on("click", function (e) {
 			$(this).parent().hide()
 			e.stopPropagation()
+		});
+
+		$(".raccoon").on("click", function(e) {
+			$(".raccoonDiscription").fadeIn(200).css("display", "flex");			
+			$("#name").text($(e.target).closest("div").find("p").text());
+			$("#profilePic").attr("src", $(e.target).closest("div").find("img")[0].src);
+		})
+
+		$("#closeDpt").on("click", function() {
+			$(".raccoonDiscription").fadeOut(200);
 		})
 	</script>
 </body>
