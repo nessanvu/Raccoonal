@@ -25,22 +25,6 @@
 	</canvas>
 
 	<div class="content">
-		<div class="login">
-			<h1>Raccoonal Journal</h1>
-			<h2>Login</h2>
-			<div class="userInput">
-				<div class="userName">
-					<h3>User name:</h3>
-					<input type="input" id="userNameBox">
-				</div>
-				<div class="password">
-					<h3>Password:</h3>
-					<input type="password" id="passwordBox">
-				</div>
-			</div>
-			<button type="button" id="loginButton">Submit!</button>
-		</div>
-
 		<button type="button" id="startScanButton">Scan</button>
 		<div class="modal" id="startScanDiv">
 			<div class="modalMessage">
@@ -289,16 +273,6 @@
 			$("#scanningDiv").fadeOut(100);
 			$("#scanStopButton").css("display", "initial");
 			$("#resultMemo").val("");
-		});
-
-		$("#loginButton").on("click", function (e) {
-			if ($("#userNameBox").val() == "") {
-				alert("User name can't be empty!");
-			} else if ($("#passwordBox").val() == "") {
-				alert("Password can't be empty!");
-			} else {
-				$(".login").fadeOut(200);
-			}
 		});
 
 	</script>

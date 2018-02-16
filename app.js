@@ -12,6 +12,7 @@ var home = require('./routes/home');
 var calendar = require('./routes/calendar');
 var book = require('./routes/book');
 var setting = require('./routes/setting');
+var login = require('./routes/login');
 // Example route
 // var user = require('./routes/user');
 
@@ -37,7 +38,7 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', home.view);
+app.get('/', login.view);
 app.get('/home.handlebars', home.view);
 app.get('/calendar.handlebars', calendar.view);
 app.get('/book.handlebars', book.view);

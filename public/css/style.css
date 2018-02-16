@@ -307,7 +307,7 @@ body {
 }
 */
 .login {
-  display: none;
+  display: flex;
   position: fixed;
   height: 120%;
   width: 100%;
