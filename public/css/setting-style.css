@@ -1,0 +1,69 @@
+/* Style for Setting Page */
+
+.setting {
+  /* add background-image */
+  padding:10%; }
+  .setting {
+    height: 88%;
+  }
+  .setting .titleBox{
+    -webkit-border-radius:30px;
+    border-radius:30px;
+    border: #solid 10px #000;
+    background-color: rgba(105,100,100,0.8);
+    margin-left: auto ;
+    margin-right: auto ; }
+    .setting .titleBox h1{
+      font-size:80px;
+      color: white;}
+  .setting .settingBox {
+    height: 90%;
+    border: solid;
+    text-align: center;
+    width: 98%;
+    padding: 5%;
+    background-color: rgba(255, 187, 114, 0.9); }
+    .setting .settingBox h2 {
+      font-size:30px;
+      font-weight: 600;
+      text-align: left;}
+    .setting .settingBox .slideContainer {
+      width: 100%; } /*Width of the outside container*/ 
+    .setting .settingBox .slider{
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 15px; /*height of slider bar*/
+      border-radius: 15px;
+      background: #d3d3d3;
+      outline: none;
+      opacity: 0.7;
+      -webkit-transition: .2s;
+      transition: opacity.2s; }
+
+      .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 25px; /*width of slider circle*/
+        height: 25px;
+        border-radius: 50%; 
+        background: #4CAF50;
+        cursor: pointer; }
+
+     /* .slider::-moz-range-thumb {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: #4CAF50;
+        cursor: pointer;} 
+        for use with firefox instead of chrome*/
+    .setting .settingBox .tutorialBox {
+      padding: 5%}
+
+      .setting .settingBox .tutorialBox button{
+        -webkit-border-radius:20px;
+        border-radius:20px;
+        font-weight: 600;
+        font-size:30px;
+        width: 150px;
+        line-height: 50px}
