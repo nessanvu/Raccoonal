@@ -1,7 +1,7 @@
 body{
     font-family: 'Sniglet', cursive;
-    max-width: 600px;
 }
+
 
 .content{
     height: 88%;
@@ -16,7 +16,66 @@ body{
         width: 100%;
     }
 
-    
+    .quizModal {
+        position: fixed;
+        top:25%;
+        bottom: 30%;
+        left: 15%;
+        right: 15%;
+        font-size: 45px;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+
+        .raccoon {
+            max-width: 300px;
+            max-height: 300px;
+            transform: translate(0%, -50%);
+        }
+
+        .quizQuestion {
+            height: 60%;
+            width: 70%;            
+            border: solid #525863 5px;
+            border-radius: 80px;
+            background-color: rgba(233, 200, 181, 0.8);
+            margin-bottom: 10%;
+            color: black;
+
+            p {
+                transform: translate(0%, -50%);            
+            }
+        }
+
+        .quizButton{
+            width:100%;
+            height: 15%;
+            //border: solid green;
+            padding-top: 5%;
+            button {
+                font-size: 40px;
+                height: 100%;
+                width: 30%;
+                margin-left: 4%;
+                margin-right: 4%;
+                text-align: center;
+                display: inline-block;
+                border-radius: 50px;
+                border: solid 3px #76849A;
+                color:#000000;
+                transition-duration: 0.2s;   
+            }
+
+            #quizYesButton {
+                background-color: rgba(157, 255, 128, 0.8);                
+            }
+
+            #quizNoButton {
+                background-color: rgba(241, 114, 114, 0.8);                
+            }
+        }
+    }
 
     .modal {
         /*make the whole modal centered in the middle*/
@@ -166,6 +225,8 @@ body{
         }
     }
 
+ 
+
     .scanResultModal {
         width: 60%;
         height: 50%;
@@ -177,24 +238,64 @@ body{
         align-items: center; 
         border-radius: 20px;
         border: solid 3px #76849A;
-        background-color: white;
+        background-color: #E9C8B5;
         input {
             font-size: 25px;
         }
-        #resultChartContainer {
-            height: 50%;
-            width: 80%;
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        li {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center; 
+            margin: 10px;
+            .emoji {
+                margin-right: 20px;
+            }
+            img {
+                width: 60px;
+                height: 60px;
+            }
         }
 
+        #resultMemo {
+            width: 90%;
+            height: 50px;
+            margin: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center; 
+        }
+
+        button {
+            margin: 30px;
+            padding: 10px;
+            font-size: 40px;
+            border: 6px #525863 solid;
+            border-radius: 20px;
+            background-color: rgb(255, 158, 102);   
+        }
     }
 
     #startScanButton {
         font-size: 45px;
         position: fixed;
-        width: 12%;
-        height: 4%;
+        width: 130px;
+        height: 130px;
         top: 1em;
         right: 1em;
+        border: 5px #525863 solid;
+        border-radius: 20px;
+        background-color: #E9C8B5;         
     }
 
     .raccoonbookBox {
@@ -444,15 +545,20 @@ body{
 
 .bar {
     height: 12%;
-    border:solid;
     display: flex;
-
+    background-image: url("../images/pawbg.jpg");
     flex-direction: row;
     justify-content: center;
     align-items: center; 
 
     button {
-        font-size: 30px;        
+        margin: 15px;
+        font-size: 30px;
+        border: solid 10px #525863;
+        width: 160px;
+        height: 160px;
+        border-radius: 20px;
+        background-color: rgb(252, 193, 159);                        
     }
 }
 

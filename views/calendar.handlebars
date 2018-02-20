@@ -31,11 +31,11 @@
 				</ul>
 				<div class="alldays">
 					{{#each dates}}
-					<div {{#if today}}class="date today" {{/if}} class="date" id={{id}} onclick="openDiary(this.id)">
+					<div {{#if today}}class="date today" {{/if}} class="date">
 						<p id="dateNumber">{{dateNumber}}</p>
 						<img id="emoji" src="../images/Emotions/{{image}}">
 
-						<div class='calendarModal' id="diary">
+						<div class='calendarModal'>
 							<div class="top">
 								<h5>{{month}}/{{dateNumber}}/2018</h5>
 								<img id="emoji" src="../images/Emotions/{{image}}">
@@ -70,15 +70,13 @@
 		<button type="button" class="menu" id="settingButton" onclick="window.location='setting.handlebars'">Setting</button>
 	</div>
 
-	
+
 	<script src="../js/jquery-3.3.1.min.js"></script>
 	<script>
 		var diary;
-		function openDiary(id) {
-			diary = $('#' + id).find('#diary');
-			//diary.css('display', 'flex');
-			diary.show().css('display', 'flex');
-		}
+		$(".date").on("click", function () {
+			$(this).find(".calendarModal").show().css('display', 'flex');
+		});
 
 		$(".closebtn").on("click", function (e) {
 			$(this).parent().hide()

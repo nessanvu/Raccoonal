@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Default",
+        "description": "",
+        "width": 300,
+        "height": 200,
+        "src": "racoon_default.png",
+        "question": "Did you sleep well yesterday?"
+    },
+    {
+        "name": "ERC",
+        "description": "",
+        "width": 180,
+        "height": 230,
+        "src": "racoon_erc.png",
+        "question": "Was your last sleep longer than 6hr?"
+    },
+    {
+        "name": "Marshall",
+        "description": "",
+        "width": 300,
+        "height": 200,
+        "src": "racoon_marshall.png",
+        "question": "Did you eat breakfast today?"
+    },
+    {
+        "name": "Muir",
+        "description": "",
+        "width": 250,
+        "height": 240,
+        "src": "racoon_muir.png",
+        "question": "Do you like today's weather?"
+    },
+    {
+        "name": "Revelle",
+        "description": "",
+        "width": 215,
+        "height": 290,
+        "src": "racoon_revelle.png",
+        "question": "Have you met your friend today?"
+    },
+    {
+        "name": "Sixth",
+        "description": "",
+        "width": 250,
+        "height": 280,
+        "src": "racoon_sixth.png",
+        "question": "Do you feel pain anywhere on your body?"
+    },
+    {
+        "name": "Warren",
+        "description": "",
+        "width": 260,
+        "height": 240,
+        "src": "racoon_warren.png",
+        "question": "Do you have difficulties on focusing on your work?"
+    }
+]

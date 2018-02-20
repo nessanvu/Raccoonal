@@ -25,13 +25,11 @@
 	</canvas>
 
 	<div class="content">
-		<button type="button" id="startScanButton">Scan</button>
+		<button type="button" id="startScanButton">Start</button>
 		<div class="modal" id="startScanDiv">
 			<div class="modalMessage">
 				<p>
-					Think about what you did just now
-					<br>
-					<br> Let's scan your face for 10s!
+					Answer the questions from the raccons, and meanwhile we'll start the emotion scanner!
 				</p>
 			</div>
 			<div class="modalButton">
@@ -50,11 +48,48 @@
 			</button>
 		</div>
 
+		<div class="quizModal">
+			<div class="quizQuestion">
+				<img id="questionImg" src="" class="raccoon">
+				<p id="questionP">
+					Question.
+				</p>
+			</div>
+			<div class="quizButton">
+				<button type="button" id="quizYesButton" onclick="nextQuestion()">Yes</button>
+				<button type="button" id="quizNoButton" onclick="nextQuestion()">No</button>
+			</div>
+		</div>
+
 		<div class="scanResultModal" id="scanResultDiv">
-			<p>Done!</p>
-			<div id="resultChartContainer"></div>
+			<p>Done!
+				<br>Your result is:</p>
+			<!--<div id="resultChartContainer"></div>-->
+			<ul id="emotionRateList">
+				<li id="resultJoy">
+					<img src="../images/Emotions/joy.png" class="emoji">
+				</li>
+				<li id="resultSad">
+					<img src="../images/Emotions/sad.png" class="emoji">
+				</li>
+				<li id="resultContempt">
+					<img src="../images/Emotions/content.png" class="emoji">
+				</li>
+				<li id="resultFear">
+					<img src="../images/Emotions/fear.png" class="emoji">
+				</li>
+				<li id="resultAngry">
+					<img src="../images/Emotions/angry.png" class="emoji">
+				</li>
+				<li id="resultDisgust">
+					<img src="../images/Emotions/disgust.png" class="emoji">
+				</li>
+			</ul>
 			<input type="text" placeholder="What are you thinking about..." id="resultMemo">
-			<button type="button" id="resultDoneButton">Done</button>
+			<div class="buttons">
+				<button type="button" id="resultCalendarButton">Calendar</button>
+				<button type="button" id="resultDoneButton">Close</button>
+			</div>
 		</div>
 	</div>
 
@@ -70,8 +105,46 @@
 
 	<!-- work flow-->
 	<script>
+		var resultOriginState = $('#emotionRateList').clone();
 		function log(node_name, msg) {
 			$(node_name).text(msg);
+		}
+
+		var quizRaccoons = [];
+		$.getJSON("../data/raccoons.json", function (raccoons) {
+			for (var i = 0; i <= 6; i++) {
+				quizRaccoons.push(new quizRaccoon(raccoons[i].src, raccoons[i].question));
+			}
+			console.log(quizRaccoons);
+		});
+
+		function quizRaccoon(src, question) {
+			this.src = src;
+			this.question = question;
+			this.getSrc = function () {
+				return this.src;
+			}
+			this.getQuestion = function () {
+				return this.question;
+			}
+		}
+
+		var ind = 0;
+		function startQuiz() {
+			$(".quizModal").fadeIn(200).css("display", "flex");
+			$("#questionImg").attr("src", "../images/Racoons/" + quizRaccoons[ind].getSrc());
+			$("#questionP").text(quizRaccoons[ind].getQuestion());
+		}
+
+		function nextQuestion() {
+			$(".quizModal").hide();
+			ind++;
+			if (ind < 7) {
+				startQuiz();
+			} else {
+				ind = 0;
+				$(".quizModal").hide();
+			}
 		}
 
 		//affectiva init
@@ -86,12 +159,15 @@
 		detector.detectAllEmotions();
 		detector.detectAllEmojis();
 
-		$("#startScanButton").on("click", function () {
+		$("#startScanButton").on("click", clickStart);
+		function clickStart() {
 			$("#startScanDiv").fadeIn(100).css("display", "flex");
-		});
+			$(this).prop("disabled", true);
+		}
 
 		$("#scanLaterButton").on("click", function () {
 			$("#startScanDiv").fadeOut(100);
+			$("#startScanButton").prop("disabled", false);
 		});
 
 		//countdown
@@ -124,6 +200,15 @@
 			resultObj["count"] = 0;
 		}
 
+		function rateResult(score) {
+			if (score >= 0 && score < 1) return 0;
+			if (score >= 1 && score < 20) return 1;
+			if (score >= 20 && score < 40) return 2;
+			if (score >= 40 && score < 60) return 3;
+			if (score >= 60 && score < 80) return 4;
+			if (score >= 80 && score <= 100) return 5;
+		}
+
 		function finalizeResult(resultObj) {
 			if (resultObj["count"] == 0) resultObj["count"] = 1;
 			resultObj["anger"] = (resultObj["anger"] / resultObj["count"]);
@@ -136,14 +221,13 @@
 
 			var overall = resultObj["anger"] + resultObj["contempt"] + resultObj["disgust"] + resultObj["fear"] + resultObj["joy"] + resultObj["sadness"] + resultObj["surprise"];
 			if (overall == 0) overall = 1;
-
-			resultObj["anger"] = (resultObj["anger"] / overall * 100);
-			resultObj["contempt"] = (resultObj["contempt"] / overall * 100);
-			resultObj["disgust"] = (resultObj["disgust"] / overall * 100);
-			resultObj["fear"] = (resultObj["fear"] / overall * 100);
-			resultObj["joy"] = (resultObj["joy"] / overall * 100);
-			resultObj["sadness"] = (resultObj["sadness"] / overall * 100);
-			resultObj["surprise"] = (resultObj["surprise"] / overall * 100);
+			resultObj["anger"] = rateResult(resultObj["anger"] / overall * 100);
+			resultObj["contempt"] = rateResult(resultObj["contempt"] / overall * 100);
+			resultObj["disgust"] = rateResult(resultObj["disgust"] / overall * 100);
+			resultObj["fear"] = rateResult(resultObj["fear"] / overall * 100);
+			resultObj["joy"] = rateResult(resultObj["joy"] / overall * 100);
+			resultObj["sadness"] = rateResult(resultObj["sadness"] / overall * 100);
+			resultObj["surprise"] = rateResult(resultObj["surprise"] / overall * 100);
 		}
 
 		var timer = new Timer();
@@ -165,39 +249,24 @@
 			log('#avgRes', "Emotions in average: " + JSON.stringify(resultObj));
 			$("#scanStopButton").fadeOut(100);
 
-			var chart = new CanvasJS.Chart("resultChartContainer", {
-				theme: "theme2",
-				title: {
-					text: "Your current emotion is"
-				},
-				data: [{
-					type: "pie",
-					startAngle:25,
-					backgroundColor: "rgba(255,187,114,0.9)",
-					radius: 100,
-					indexLableFontSize: 20,					
-					indexLabel: "{emotion} - {y}",
-					yValueFormatString: "###0.0\"%\"",
-					click: explodePie,
-					dataPoints: [
-						{ y: resultObj["anger"], emotion: "Anger" },
-						{ y: resultObj["contempt"], emotion: "Contempt" },
-						{ y: resultObj["disgust"], emotion: "Disgust" },
-						{ y: resultObj["fear"], emotion: "Fear" },
-						{ y: resultObj["joy"], emotion: "Joy" },
-						{ y: resultObj["sadness"], emotion: "Sadness" },
-						{ y: resultObj["surprise"], emotion: "Surprise" }
-					]
-				}]
-			});
-			chart.render();
-
-			function explodePie(e) {
-				for (var i = 0; i < e.dataSeries.dataPoints.length; i++) {
-					if (i !== e.dataPointIndex)
-						e.dataSeries.dataPoints[i].exploded = false;
-				}
-			}
+			for (var i = 0; i < resultObj["joy"]; i++) {
+				$("#resultJoy").append('<img src="../images/rate_star.png">');
+			};
+			for (var i = 0; i < resultObj["sadness"]; i++) {
+				$("#resultSad").append('<img src="../images/rate_star.png">');
+			};
+			for (var i = 0; i < resultObj["contempt"]; i++) {
+				$("#resultContempt").append('<img src="../images/rate_star.png">');
+			};
+			for (var i = 0; i < resultObj["fear"]; i++) {
+				$("#resultFear").append('<img src="../images/rate_star.png">');
+			};
+			for (var i = 0; i < resultObj["anger"]; i++) {
+				$("#resultAngry").append('<img src="../images/rate_star.png">');
+			};
+			for (var i = 0; i < resultObj["disgust"]; i++) {
+				$("#resultDisgust").append('<img src="../images/rate_star.png">');
+			};
 
 			$("#scanResultDiv").fadeIn(100).css("display", "flex");
 		});
@@ -219,14 +288,7 @@
 				$("#notCenteredMessage").fadeOut(100);
 				timer.start();
 
-				/* temp testing
-				log('#timeStamp', "Timestamp: " + timestamp.toFixed(2));
-				log('#numOfFace', "Number of faces found: " + faces.length);
-				log('#emotionsRes', "Emotions: " + JSON.stringify(faces[0].emotions, function (key, val) {
-					return val.toFixed ? Number(val.toFixed(0)) : val;
-				}));*/
 				log('#emojiRes', "Emoji: " + faces[0].emojis.dominantEmoji);
-				// collect data into obj
 				resultObj["anger"] += faces[0].emotions.anger;
 				resultObj["contempt"] += faces[0].emotions.contempt;
 				resultObj["disgust"] += faces[0].emotions.disgust;
@@ -241,15 +303,18 @@
 
 		$("#scanOkButton").on("click", function () {
 			detector.start();
+			startQuiz();
 			$("#startScanDiv").fadeOut(100);
 			$("#scanningDiv").fadeIn(100).css("display", "flex");
 			$("#toggleCamButton").hide();
 			output.text("Initializing emotion Scanner...");
+			//startQuiz();
 		});
 
 		$("#scanStopButton").on("click", function () {
 			detector.stop();
 			timer.stop();
+			$("#startScanButton").prop("disabled", false);
 			$("#toggleCamButton").fadeOut(100);
 			$(".affectivaTest").fadeOut(100);
 			$("#notCenteredMessage").fadeOut(100);
@@ -268,6 +333,8 @@
 		});
 
 		$("#resultDoneButton").on("click", function () {
+			$('#emotionRateList').replaceWith(resultOriginState);
+			$("#startScanButton").prop("disabled", false);
 			$("#notCenteredMessage").fadeOut(100);
 			$(".resultMessages").text("");
 			$("#scanResultDiv").fadeOut(100);
@@ -280,11 +347,6 @@
 
 	<!-- game -->
 	<script>
-
-		function startGame() {
-			myGameArea.start();
-		}
-
 		var myGameArea = {
 			canvas: $("#myGameCanvas")[0],
 			start: function () {
@@ -299,13 +361,59 @@
 			}
 		}
 
+
 		var myGamePiece;
-		function startGame() {
-			myGameArea.start();
-			myGamePiece = new component(300, 200, "../images/Racoons/racoon_default.png", 10, 1000, "image");
+		var myGamePiece2;
+		function getRand(min, max) {
+			return Math.floor(Math.random() * (max - min + 1) + min);
 		}
 
-		function component(width, height, color, x, y, type) {
+		$.getJSON("../data/raccoons.json", function (raccoons) {
+			var a = getRand(0, 6);
+			var b = getRand(0, 6);
+			while (a == b) {
+				b = getRand(0, 6);
+			}
+			var x1 = getRand(0, 650);
+			var y1 = getRand(600, 1250);
+			var x2 = getRand(0, 650);
+			var y2 = getRand(600, 1250);
+			while (Math.abs(x1 - x2) < 200) {
+				x2 = getRand(0, 650);
+			}
+			while (Math.abs(y1 - y2) < 300) {
+				y2 = getRand(600, 1200);
+			}
+
+			var k = 4;
+			var m1 = getRand(-k, k);
+			var m2 = getRand(-k, k);
+			while (m1 == 0) m1 = getRand(-k, k);
+			while (m2 == 0) m2 = getRand(-k, k);
+
+			myGamePiece = new component(raccoons[a].width, raccoons[a].height, "../images/Racoons/" + raccoons[a].src, x1, y1, "image", m1);
+			myGamePiece2 = new component(raccoons[b].width, raccoons[b].height, "../images/Racoons/" + raccoons[b].src, x2, y2, "image", m2);
+		});
+
+		function startGame() {
+			myGameArea.start();
+			var x = readCookie('userName');
+			function readCookie(name) {
+				var nameEQ = name + "=";
+				var ca = document.cookie.split(';');
+				for (var i = 0; i < ca.length; i++) {
+					var c = ca[i];
+					while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+					if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+				}
+				return null;
+			}
+			if (x != null) {
+				clickStart();
+			}
+		}
+
+		function component(width, height, color, x, y, type, m) {
 			this.type = type;
 			if (type == "image") {
 				this.image = new Image();
@@ -315,6 +423,7 @@
 			this.height = height;
 			this.x = x;
 			this.y = y;
+			this.m = m;
 			this.update = function () {
 				ctx = myGameArea.context;
 				if (type == "image") {
@@ -330,11 +439,11 @@
 			this.moveToRight = true;
 			this.move = function () {
 				if (this.moveToRight) {
-					this.x+=2;
+					this.x += this.m;
 				} else {
-					this.x-=2;
+					this.x -= this.m;
 				}
-				if (this.x < 0 | this.x > myGameArea.canvas.width-this.width) {
+				if (this.x < 0 | this.x > myGameArea.canvas.width - this.width) {
 					this.moveToRight = !this.moveToRight;
 				}
 			}
@@ -343,7 +452,9 @@
 		function updateGameArea() {
 			myGameArea.clear();
 			myGamePiece.move();
+			myGamePiece2.move();
 			myGamePiece.update();
+			myGamePiece2.update();
 		}
 
 

@@ -44,7 +44,17 @@
             } else if ($("#passwordBox").val() == "") {
                 alert("Password can't be empty!");
             } else {
-                window.location='home.handlebars';
+                var now = new Date();
+                var time = now.getTime();
+                var expireTime = time+1000*3;
+                now.setTime(expireTime);
+                document.cookie =
+                    'userName=' + $("#userNameBox").val() + '; ' +
+                        'expires=' + now.toGMTString() + '; ' +
+                        'path=/';
+
+                console.log(document.cookie);
+                window.location = 'home.handlebars';
             }
         });
     </script>
