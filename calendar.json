@@ -1,898 +1,884 @@
 {
-    "dates": [
-      {
-        "year":"2018",
-        "month":"1",
-        "dateNumber":"28",
-        "image":"joy.png",
-        //"today":false,
-        //"thisMonth":false,
-        "records": [
-          {
-            "hour": "8",
-            "minute": "15",
-            "emoji":"joy.png",            
-            "emotion":{
-              "anger":0,
-              "content":1,
-              "disgust":2,
-              "fear":0,
-              "joy":5,
-              "sadness":1,
-              "surprise":1},
-            "memoText" : "lorem ipsum"
+  "dates": [
+    {
+      "year": "2018",
+      "month": "0",
+      "dateNumber": "28",
+      "image": "joy.png",
+      "records": [
+        {
+          "hour": "8",
+          "minute": "15",
+          "emoji": "joy.png",
+          "emotion": {
+            "anger": 0,
+            "contempt": 1,
+            "disgust": 2,
+            "fear": 0,
+            "joy": 5,
+            "sadness": 1,
+            "surprise": 1
           },
-          {
-            "hour": "12",
-            "minute": "37",
-            "emoji":"surprise.png",            
-            "emotion":{
-              "anger":0,
-              "content":2,
-              "disgust":1,
-              "fear":3,
-              "joy":1,
-              "sadness":0,
-              "surprise":5},
-            "memoText" : "lorem ipsum"
+          "memoText": "lorem ipsum"
+        },
+        {
+          "hour": "12",
+          "minute": "37",
+          "emoji": "surprise.png",
+          "emotion": {
+            "anger": 0,
+            "contempt": 2,
+            "disgust": 1,
+            "fear": 3,
+            "joy": 1,
+            "sadness": 0,
+            "surprise": 5
           },
-          {
-            "hour": "14",
-            "minute": "14",
-            "emoji":"joy.png",            
-            "emotion":{
-              "anger":0,
-              "content":1,
-              "disgust":2,
-              "fear":0,
-              "joy":5,
-              "sadness":1,
-              "surprise":1},
-            "memoText" : "lorem ipsum"
+          "memoText": "lorem ipsum"
+        },
+        {
+          "hour": "14",
+          "minute": "14",
+          "emoji": "joy.png",
+          "emotion": {
+            "anger": 0,
+            "contempt": 1,
+            "disgust": 2,
+            "fear": 0,
+            "joy": 5,
+            "sadness": 1,
+            "surprise": 1
           },
-          {
-            "hour": "18",
-            "minute": "22",
-            "emoji":"content.png",            
-            "emotion":{
-              "anger":1,
-              "content":5,
-              "disgust":1,
-              "fear":0,
-              "joy":2,
-              "sadness":1,
-              "surprise":1},
-            "memoText" : "lorem ipsum"
-          }
-        
-        ],
-      },
-      {
-        "id":"012918",        
-        "month":"1",        
-        "dateNumber":"29",
-        "image":"sad.png",
-        "today":false,
-        "thisMonth":false,
-         "records": [
-          {
-
-            "hour": "3",
-            "minute": "01",
-            "emoji":"disgust.png",            
-            "emotion":{
-              "anger":2,
-              "content":1,
-              "disgust":5,
-              "fear":1,
-              "joy":0,
-              "sadness":1,
-              "surprise":3},
-            "memoText" : "lorem ipsum"
+          "memoText": "lorem ipsum"
+        },
+        {
+          "hour": "18",
+          "minute": "22",
+          "emoji": "contempt.png",
+          "emotion": {
+            "anger": 1,
+            "contempt": 5,
+            "disgust": 1,
+            "fear": 0,
+            "joy": 2,
+            "sadness": 1,
+            "surprise": 1
           },
-          {
-            "hour": "21",
-            "minute": "13",
-            "emoji":"sad.png",            
-            "emotion":{
-              "anger":2,
-              "content":1,
-              "disgust":2,
-              "fear":0,
-              "joy":0,
-              "sadness":4,
-              "surprise":1},
-            "memoText" : "lorem ipsum"
-          }
-        ],
-      },
-      {
-        "id":"013018",
-        "month":"1",
-        "dateNumber":"30",
-        "image":"fear.png",
-        "today":false,
-        "thisMonth":false,
-         "records": [
-          {
-
-            "hour": "10",
-            "minute": "10",
-            "emoji":"content.png",            
-            "emotion":{
-              "anger":1,
-              "content":5,
-              "disgust":1,
-              "fear":0,
-              "joy":2,
-              "sadness":1,
-              "surprise":1},
-            "memoText" : "lorem ipsum"
+          "memoText": "lorem ipsum"
+        }
+      ]
+    },
+    {
+      "id": "012918",
+      "month": "0",
+      "dateNumber": "29",
+      "image": "sad.png",
+      "thisMonth": false,
+      "records": [
+        {
+          "hour": "3",
+          "minute": "01",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 5,
+            "fear": 1,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
           },
-          {
-            "hour": "11",
-            "minute": "11",
-            "emoji":"angry.png",            
-            "emotion":{
-              "anger":5,
-              "content":0,
-              "disgust":2,
-              "fear":2,
-              "joy":0,
-              "sadness":1,
-              "surprise":3},
-            "memoText" : "lorem ipsum"
+          "memoText": "lorem ipsum"
+        },
+        {
+          "hour": "21",
+          "minute": "13",
+          "emoji": "sad.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 2,
+            "fear": 0,
+            "joy": 0,
+            "sadness": 4,
+            "surprise": 1
           },
-          {
-            "hour": "16",
-            "minute": "59",
-            "emoji":"fear.png",            
-            "emotion":{
-              "anger":2,
-              "content":0,
-              "disgust":2,
-              "fear":4,
-              "joy":0,
-              "sadness":0,
-              "surprise":2},
-            "memoText" : "lorem ipsum"
+          "memoText": "lorem ipsum"
+        }
+      ]
+    },
+    {
+      "id": "013018",
+      "month": "0",
+      "dateNumber": "30",
+      "image": "fear.png",
+      "thisMonth": false,
+      "records": [
+        {
+          "hour": "10",
+          "minute": "10",
+          "emoji": "contempt.png",
+          "emotion": {
+            "anger": 1,
+            "contempt": 5,
+            "disgust": 1,
+            "fear": 0,
+            "joy": 2,
+            "sadness": 1,
+            "surprise": 1
           },
-          {
-            "hour": "20",
-            "minute": "09",
-            "emoji":"fear.png",            
-            "emotion":{
-              "anger":2,
-              "content":0,
-              "disgust":2,
-              "fear":4,
-              "joy":0,
-              "sadness":0,
-              "surprise":2},
-            "memoText" : "lorem ipsum"
-          }
-        ],
-      },
-      {
-        "id":"013118",
-        "month":"1",
-        "dateNumber":"31",
-        "image":"disgust.png",
-        "today":false,
-        "thisMonth":false
-      },
-      {
-        "id":"020118",
-        "month":"2",
-        "dateNumber":"1",
-        "image":"surprise.png",
-        "today":false,
-        "thisMonth":true,
-         "records": [
-          {
-
-            "hour": "8",
-            "minute": "15",
-            "emoji":"joy.png",            
-            "emotion":{
-              "anger":0,
-              "content":3,
-              "disgust":0,
-              "fear":0,
-              "joy":4,
-              "sadness":0,
-              "surprise":1},
-            "memoText" : "lorem ipsum"
+          "memoText": "lorem ipsum"
+        },
+        {
+          "hour": "11",
+          "minute": "11",
+          "emoji": "angry.png",
+          "emotion": {
+            "anger": 5,
+            "contempt": 0,
+            "disgust": 2,
+            "fear": 2,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
           },
-          {
-            "hour": "8",
-            "minute": "39",
-            "emoji":"surprise.png",            
-            "emotion":{
-              "anger":0,
-              "content":2,
-              "disgust":1,
-              "fear":3,
-              "joy":1,
-              "sadness":0,
-              "surprise":5},
-            "memoText" : "lorem ipsum"
-          }
-        ],
-      },
-      {
-        "id":"020218",
-        "month":"2",
-        "dateNumber":"2",
-        "image":"angry.png",
-        "today":false,
-        "thisMonth":true,
-         "records": [
-          {
-            "hour": "23",
-            "minute": "31",
-            "emoji":"joy.png",            
-            "emotion":{
-              "anger":5,
-              "content":0,
-              "disgust":2,
-              "fear":2,
-              "joy":0,
-              "sadness":1,
-              "surprise":3},
-            "memoText" : "lorem ipsum"
-          }
-        ],
-      },
-      {
-        "id":"020318",
-        "month":"2",
-        "dateNumber":"3",
-        "image":"content.png",
-        "today":false,
-        "thisMonth":true,
-         "records": [
-          {
-            "hour": "10",
-            "minute": "26",
-            "emoji":"content.png",            
-            "emotion":{
-              "anger":1,
-              "content":5,
-              "disgust":1,
-              "fear":0,
-              "joy":2,
-              "sadness":1,
-              "surprise":1},
-            "memoText" : "lorem ipsum"
+          "memoText": "lorem ipsum"
+        },
+        {
+          "hour": "16",
+          "minute": "59",
+          "emoji": "fear.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 0,
+            "disgust": 2,
+            "fear": 4,
+            "joy": 0,
+            "sadness": 0,
+            "surprise": 2
           },
-          {
-            "hour": "17",
-            "minute": "19",
-            "emoji":"content.png",            
-            "emotion":{
-              "anger":1,
-              "content":5,
-              "disgust":1,
-              "fear":0,
-              "joy":2,
-              "sadness":1,
-              "surprise":1},
-            "memoText" : "lorem ipsum"
-          }
-        ],
-      },
-      {
-        "id":"020418",
-        "month":"2",
-        "dateNumber":"4",
-        "image":"surprise.png",
-        "today":false,
-        "thisMonth":true,
-         "records": [
-          {
-            "hour": "8",
-            "minute": "15",
-            "emoji":"joy.png",            
-            "emotion":{
-              "anger":0,
-              "content":1,
-              "disgust":2,
-              "fear":0,
-              "joy":5,
-              "sadness":1,
-              "surprise":1},
-            "memoText" : "lorem ipsum"
+          "memoText": "lorem ipsum"
+        },
+        {
+          "hour": "20",
+          "minute": "09",
+          "emoji": "fear.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 0,
+            "disgust": 2,
+            "fear": 4,
+            "joy": 0,
+            "sadness": 0,
+            "surprise": 2
           },
-          {
-            "hour": "15",
-            "minute": "15",
-            "emoji":"surprise.png",            
-            "emotion":{
-              "anger":0,
-              "content":2,
-              "disgust":1,
-              "fear":3,
-              "joy":1,
-              "sadness":0,
-              "surprise":5},
-            "memoText" : "lorem ipsum"
+          "memoText": "lorem ipsum"
+        }
+      ]
+    },
+    {
+      "id": "013118",
+      "month": "0",
+      "dateNumber": "31",
+      "image": "disgust.png",
+      "thisMonth": false
+    },
+    {
+      "id": "020118",
+      "month": "1",
+      "dateNumber": "1",
+      "image": "surprise.png",
+      "records": [
+        {
+          "hour": "8",
+          "minute": "15",
+          "emoji": "joy.png",
+          "emotion": {
+            "anger": 0,
+            "contempt": 3,
+            "disgust": 0,
+            "fear": 0,
+            "joy": 4,
+            "sadness": 0,
+            "surprise": 1
           },
-          {
-            "hour": "19",
-            "minute": "15",
-            "emoji":"surprise.png",            
-            "emotion":{
-              "anger":0,
-              "content":2,
-              "disgust":1,
-              "fear":3,
-              "joy":1,
-              "sadness":0,
-              "surprise":5},
-            "memoText" : "lorem ipsum"
+          "memoText": "lorem ipsum"
+        },
+        {
+          "hour": "8",
+          "minute": "39",
+          "emoji": "surprise.png",
+          "emotion": {
+            "anger": 0,
+            "contempt": 2,
+            "disgust": 1,
+            "fear": 3,
+            "joy": 1,
+            "sadness": 0,
+            "surprise": 5
           },
-          {
-            "hour": "20",
-            "minute": "15",
-            "emoji":"joy.png",            
-            "emotion":{
-              "anger":0,
-              "content":1,
-              "disgust":2,
-              "fear":0,
-              "joy":5,
-              "sadness":1,
-              "surprise":1},
-            "memoText" : "lorem ipsum"
-          }
-        ],
-      },
-      {
-        "id":"020518",
-        "month":"2",
-        "dateNumber":"5",
-        "image":"angry.png",
-        "today":false,
-        "thisMonth":true,
-         "records": [
-          {
-            "hour": "17",
-            "minute": "54",
-            "emoji":"angry.png",            
-            "emotion":{
-              "anger":5,
-              "content":0,
-              "disgust":2,
-              "fear":2,
-              "joy":0,
-              "sadness":1,
-              "surprise":3},
-            "memoText" : "lorem ipsum"
-          }
-        ],
-      },
-      {
-        "id":"020618",
-        "month":"2",
-        "dateNumber":"6",
-        "image":"content.png",
-        "today":false,
-        "thisMonth":true,
-         "records": [
-          {
-            "hour": "19",
-            "minute": "07",
-            "emoji":"content.png",            
-            "emotion":{
-              "anger":1,
-              "content":5,
-              "disgust":1,
-              "fear":0,
-              "joy":2,
-              "sadness":1,
-              "surprise":1},
-            "memoText" : "lorem ipsum"
+          "memoText": "lorem ipsum"
+        }
+      ]
+    },
+    {
+      "id": "020218",
+      "month": "1",
+      "dateNumber": "2",
+      "image": "angry.png",
+      "records": [
+        {
+          "hour": "23",
+          "minute": "31",
+          "emoji": "joy.png",
+          "emotion": {
+            "anger": 5,
+            "contempt": 0,
+            "disgust": 2,
+            "fear": 2,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
           },
-          {
-            "hour": "23",
-            "minute": "19",
-            "emoji":"surprise.png",            
-            "emotion":{
-              "anger":0,
-              "content":2,
-              "disgust":1,
-              "fear":3,
-              "joy":1,
-              "sadness":0,
-              "surprise":5},
-            "memoText" : "lorem ipsum"
-          }
-        ],
-      },
-      {
-        "id":"020718",
-        "month":"2",
-        "dateNumber":"7",
-        "image":"content.png",
-        "today":false,
-        "thisMonth":true,
-         "records": [
-          {
-            "hour": "2",
-            "minute": "2",
-            "emoji":"content.png",            
-            "emotion":{
-              "anger":1,
-              "content":5,
-              "disgust":1,
-              "fear":0,
-              "joy":2,
-              "sadness":1,
-              "surprise":1},
-            "memoText" : "lorem ipsum"
+          "memoText": "lorem ipsum"
+        }
+      ]
+    },
+    {
+      "id": "020318",
+      "month": "1",
+      "dateNumber": "3",
+      "image": "contempt.png",
+      "records": [
+        {
+          "hour": "10",
+          "minute": "26",
+          "emoji": "contempt.png",
+          "emotion": {
+            "anger": 1,
+            "contempt": 5,
+            "disgust": 1,
+            "fear": 0,
+            "joy": 2,
+            "sadness": 1,
+            "surprise": 1
           },
-          {
-            "hour": "5",
-            "minute": "5",
-            "emoji":"content.png",            
-            "emotion":{
-              "anger":1,
-              "content":5,
-              "disgust":1,
-              "fear":0,
-              "joy":2,
-              "sadness":1,
-              "surprise":1},
-            "memoText" : "lorem ipsum"
+          "memoText": "lorem ipsum"
+        },
+        {
+          "hour": "17",
+          "minute": "19",
+          "emoji": "contempt.png",
+          "emotion": {
+            "anger": 1,
+            "contempt": 5,
+            "disgust": 1,
+            "fear": 0,
+            "joy": 2,
+            "sadness": 1,
+            "surprise": 1
           },
-          {
-            "hour": "10",
-            "minute": "10",
-            "emoji":"content.png",            
-            "emotion":{
-              "anger":1,
-              "content":5,
-              "disgust":1,
-              "fear":0,
-              "joy":2,
-              "sadness":1,
-              "surprise":1},
-            "memoText" : "lorem ipsum"
-          }
-        ],
-      },
-      {
-        "id":"020818",
-        "month":"2",
-        "dateNumber":"8",
-        "image":"joy.png",
-        "today":false,
-        "thisMonth":true,
-         "records": [
-          {
-            "hour": "7",
-            "minute": "45",
-            "emoji":"joy.png",            
-            "emotion":{
-              "anger":0,
-              "content":1,
-              "disgust":2,
-              "fear":0,
-              "joy":5,
-              "sadness":1,
-              "surprise":1},
-            "memoText" : "lorem ipsum"
+          "memoText": "lorem ipsum"
+        }
+      ]
+    },
+    {
+      "id": "020418",
+      "month": "1",
+      "dateNumber": "4",
+      "image": "surprise.png",
+      "records": [
+        {
+          "hour": "8",
+          "minute": "15",
+          "emoji": "joy.png",
+          "emotion": {
+            "anger": 0,
+            "contempt": 1,
+            "disgust": 2,
+            "fear": 0,
+            "joy": 5,
+            "sadness": 1,
+            "surprise": 1
           },
-          {
-            "hour": "15",
-            "minute": "09",
-            "emoji":"joy.png",            
-            "emotion":{
-              "anger":0,
-              "content":1,
-              "disgust":2,
-              "fear":0,
-              "joy":5,
-              "sadness":1,
-              "surprise":1},
-            "memoText" : "lorem ipsum"
-          }
-        ],
-      },
-      {
-        "id":"020918",
-        "month":"2",
-        "dateNumber":"9",
-        "image":"sad.png",
-        "today":false,
-        "thisMonth":true,
-         "records": [
-          {
-            "hour": "8",
-            "minute": "15",
-            "emoji":"sad.png",            
-            "emotion":{
-              "anger":2,
-              "content":1,
-              "disgust":2,
-              "fear":0,
-              "joy":0,
-              "sadness":4,
-              "surprise":1},
-            "memoText" : "lorem ipsum"
-          }
-        ],
-      },
-      {
-        "id":"021018",
-        "month":"2",
-        "dateNumber":"10",
-        "image":"content.png",
-        "today":false,
-        "thisMonth":true,
-         "records": [
-          {
-            "hour": "21",
-            "minute": "19",
-            "emoji":"content.png",            
-            "emotion":{
-              "anger":1,
-              "content":5,
-              "disgust":1,
-              "fear":0,
-              "joy":2,
-              "sadness":1,
-              "surprise":1},
-            "memoText" : "lorem ipsum"
+          "memoText": "lorem ipsum"
+        },
+        {
+          "hour": "15",
+          "minute": "15",
+          "emoji": "surprise.png",
+          "emotion": {
+            "anger": 0,
+            "contempt": 2,
+            "disgust": 1,
+            "fear": 3,
+            "joy": 1,
+            "sadness": 0,
+            "surprise": 5
           },
-          {
-            "hour": "22",
-            "minute": "51",
-            "emoji":"joy.png",            
-            "emotion":{
-              "anger":0,
-              "content":1,
-              "disgust":2,
-              "fear":0,
-              "joy":4,
-              "sadness":1,
-              "surprise":1},
-            "memoText" : "lorem ipsum"
-          }
-        ],
-      },
-      {
-        "id":"021118",
-        "month":"2",
-        "dateNumber":"11",
-        "image":"content.png",
-        "today":false,
-        "thisMonth":true,
-         "records": [
-          {
-            "hour": "14",
-            "minute": "11",
-            "emoji":"content.png",            
-            "emotion":{
-              "anger":1,
-              "content":5,
-              "disgust":1,
-              "fear":0,
-              "joy":2,
-              "sadness":1,
-              "surprise":1},
-            "memoText" : "lorem ipsum"
-          }
-        ],
-      },
-      {
-        "id":"021218",
-        "month":"2",
-        "dateNumber":"12",
-        "image":"joy.png",
-        "today":false,
-        "thisMonth":true,
-         "records": [
-          {
-            "hour": "8",
-            "minute": "15",
-            "emoji":"fear.png",            
-            "emotion":{
-              "anger":2,
-              "content":0,
-              "disgust":2,
-              "fear":4,
-              "joy":0,
-              "sadness":0,
-              "surprise":2},
-            "memoText" : "lorem ipsum"
+          "memoText": "lorem ipsum"
+        },
+        {
+          "hour": "19",
+          "minute": "15",
+          "emoji": "surprise.png",
+          "emotion": {
+            "anger": 0,
+            "contempt": 2,
+            "disgust": 1,
+            "fear": 3,
+            "joy": 1,
+            "sadness": 0,
+            "surprise": 5
           },
-          {
-            "hour": "10",
-            "minute": "19",
-            "emoji":"surprise.png",            
-            "emotion":{
-              "anger":0,
-              "content":2,
-              "disgust":1,
-              "fear":3,
-              "joy":1,
-              "sadness":0,
-              "surprise":5},
-            "memoText" : "lorem ipsum"
+          "memoText": "lorem ipsum"
+        },
+        {
+          "hour": "20",
+          "minute": "15",
+          "emoji": "joy.png",
+          "emotion": {
+            "anger": 0,
+            "contempt": 1,
+            "disgust": 2,
+            "fear": 0,
+            "joy": 5,
+            "sadness": 1,
+            "surprise": 1
           },
-          {
-            "hour": "11",
-            "minute": "44",
-            "emoji":"joy.png",            
-            "emotion":{
-              "anger":0,
-              "content":1,
-              "disgust":2,
-              "fear":0,
-              "joy":5,
-              "sadness":1,
-              "surprise":1},
-            "memoText" : "lorem ipsum"
+          "memoText": "lorem ipsum"
+        }
+      ]
+    },
+    {
+      "id": "020518",
+      "month": "1",
+      "dateNumber": "5",
+      "image": "angry.png",
+      "records": [
+        {
+          "hour": "17",
+          "minute": "54",
+          "emoji": "angry.png",
+          "emotion": {
+            "anger": 5,
+            "contempt": 0,
+            "disgust": 2,
+            "fear": 2,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
           },
-          {
-            "hour": "14",
-            "minute": "29",
-            "emoji":"joy.png",            
-            "emotion":{
-              "anger":0,
-              "content":1,
-              "disgust":2,
-              "fear":0,
-              "joy":5,
-              "sadness":1,
-              "surprise":1},
-            "memoText" : "lorem ipsum"
-          }
-        ],
-      },
-      {
-        "id":"021318",
-        "dateNumber":"13",
-        "month":"2",
-        "image":"content.png",
-        "today":false,
-        "thisMonth":true,
-         "records": [
-          {
-            "hour": "18",
-            "minute": "59",
-            "emoji":"content.png",            
-            "emotion":{
-              "anger":1,
-              "content":5,
-              "disgust":1,
-              "fear":0,
-              "joy":2,
-              "sadness":1,
-              "surprise":1},
-            "memoText" : "lorem ipsum"
-          }
-        ],
-      },
-      {
-        "id":"021418",
-        "dateNumber":"14",
-        "month":"2",
-        "image":"joy.png",
-        "today":true,
-        "thisMonth":true,
-         "records": [
-          {
-            "hour": "1",
-            "minute": "22",
-            "emoji":"joy.png",            
-            "emotion":{
-              "anger":0,
-              "content":3,
-              "disgust":0,
-              "fear":0,
-              "joy":5,
-              "sadness":0,
-              "surprise":1},
-            "memoText" : "lorem ipsum"
+          "memoText": "lorem ipsum"
+        }
+      ]
+    },
+    {
+      "id": "020618",
+      "month": "1",
+      "dateNumber": "6",
+      "image": "contempt.png",
+      "records": [
+        {
+          "hour": "19",
+          "minute": "07",
+          "emoji": "contempt.png",
+          "emotion": {
+            "anger": 1,
+            "contempt": 5,
+            "disgust": 1,
+            "fear": 0,
+            "joy": 2,
+            "sadness": 1,
+            "surprise": 1
           },
-          {
-            "hour": "9",
-            "minute": "25",
-            "emoji":"disgust.png",            
-            "emotion":{
-              "anger":2,
-              "content":1,
-              "disgust":5,
-              "fear":1,
-              "joy":0,
-              "sadness":1,
-              "surprise":3},
-            "memoText" : "lorem ipsum"
+          "memoText": "lorem ipsum"
+        },
+        {
+          "hour": "23",
+          "minute": "19",
+          "emoji": "surprise.png",
+          "emotion": {
+            "anger": 0,
+            "contempt": 2,
+            "disgust": 1,
+            "fear": 3,
+            "joy": 1,
+            "sadness": 0,
+            "surprise": 5
           },
-          {
-            "hour": "18",
-            "minute": "34",
-            "emoji":"content.png",            
-            "emotion":{
-              "anger":1,
-              "content":5,
-              "disgust":1,
-              "fear":0,
-              "joy":2,
-              "sadness":1,
-              "surprise":1},
-            "memoText" : "lorem ipsum"
-          }
-        ],
-      },
-      {
-        "id":"021518",
-        "dateNumber":"15",
-        "month":"2",
-        "image":"disgust.png",
-        "today":false,
-        "thisMonth":true,
-         "records": [
-          {
-            "hour": "15",
-            "minute": "19",
-            "emoji":"disgust.png",            
-            "emotion":{
-              "anger":2,
-              "content":1,
-              "disgust":5,
-              "fear":1,
-              "joy":0,
-              "sadness":1,
-              "surprise":3},
-            "memoText" : "lorem ipsum"
+          "memoText": "lorem ipsum"
+        }
+      ]
+    },
+    {
+      "id": "020718",
+      "month": "1",
+      "dateNumber": "7",
+      "image": "contempt.png",
+      "records": [
+        {
+          "hour": "2",
+          "minute": "2",
+          "emoji": "contempt.png",
+          "emotion": {
+            "anger": 1,
+            "contempt": 5,
+            "disgust": 1,
+            "fear": 0,
+            "joy": 2,
+            "sadness": 1,
+            "surprise": 1
           },
-          {
-            "hour": "19",
-            "minute": "56",
-            "emoji":"disgust.png",            
-            "emotion":{
-              "anger":2,
-              "content":1,
-              "disgust":5,
-              "fear":1,
-              "joy":0,
-              "sadness":1,
-              "surprise":3},
-            "memoText" : "lorem ipsum"
-          }
-        ],
-      },
-      {
-        "id":"021618",
-        "dateNumber":"16",
-        "month":"2",
-        "image":"fear.png",
-        "today":false,
-        "thisMonth":true
-      },
-      {
-        "id":"021718",
-        "dateNumber":"17",
-        "month":"2",
-        "image":"content.png",
-        "today":false,
-        "thisMonth":true
-      },
-      {
-        "id":"021818",
-        "month":"2",
-        "dateNumber":"18",
-        "image":"content.png",
-        "today":false,
-        "thisMonth":true
-      },
-      {
-        "id":"021918",
-        "month":"2",
-        "dateNumber":"19",
-        "image":"content.png",
-        "today":false,
-        "thisMonth":true
-      },
-      {
-        "id":"022018",
-        "month":"2",
-        "dateNumber":"20",
-        "image":"content.png",
-        "today":false,
-        "thisMonth":true
-      },
-      {
-        "id":"022118",
-        "month":"2",
-        "dateNumber":"21",
-        "image":"sad.png",
-        "today":false,
-        "thisMonth":true
-      },
-      {
-        "id":"022218",
-        "month":"2",
-        "dateNumber":"22",
-        "image":"content.png",
-        "today":false,
-        "thisMonth":true
-      },
-      {
-        "id":"022318",
-        "month":"2",
-        "dateNumber":"23",
-        "image":"joy.png",
-        "today":false,
-        "thisMonth":true
-      },
-      {
-        "id":"022418",
-        "month":"2",
-        "dateNumber":"24",
-        "image":"joy.png",
-        "today":false,
-        "thisMonth":true
-      },
-      {
-        "id":"022518",
-        "month":"2",
-        "dateNumber":"25",
-        "image":"fear.png",
-        "today":false,
-        "thisMonth":true
-      },
-      {
-        "id":"022618",
-        "month":"2",
-        "dateNumber":"26",
-        "image":"angry.png",
-        "today":false,
-        "thisMonth":true
-      },
-      {
-        "id":"022718",
-        "month":"2",
-        "dateNumber":"27",
-        "image":"content.png",
-        "today":false,
-        "thisMonth":true
-      },
-      {
-        "id":"022818",
-        "month":"2",
-        "dateNumber":"28",
-        "image":"content.png",
-        "today":false,
-        "thisMonth":true
-      },
-      {
-        "id":"030118",
-        "month":"3",
-        "dateNumber":"1",
-        "image":"sad.png",
-        "today":false,
-        "thisMonth":false
-      },
-      {
-        "id":"030218",
-        "month":"3",
-        "dateNumber":"2",
-        "image":"content.png",
-        "today":false,
-        "thisMonth":false
-      },
-      {
-        "id":"030318",
-        "month":"3",
-        "dateNumber":"3",
-        "image":"joy.png",
-        "today":false,
-        "thisMonth":false
-      }
-    ]
+          "memoText": "lorem ipsum"
+        },
+        {
+          "hour": "5",
+          "minute": "5",
+          "emoji": "contempt.png",
+          "emotion": {
+            "anger": 1,
+            "contempt": 5,
+            "disgust": 1,
+            "fear": 0,
+            "joy": 2,
+            "sadness": 1,
+            "surprise": 1
+          },
+          "memoText": "lorem ipsum"
+        },
+        {
+          "hour": "10",
+          "minute": "10",
+          "emoji": "contempt.png",
+          "emotion": {
+            "anger": 1,
+            "contempt": 5,
+            "disgust": 1,
+            "fear": 0,
+            "joy": 2,
+            "sadness": 1,
+            "surprise": 1
+          },
+          "memoText": "lorem ipsum"
+        }
+      ]
+    },
+    {
+      "id": "020818",
+      "month": "1",
+      "dateNumber": "8",
+      "image": "joy.png",
+      "records": [
+        {
+          "hour": "7",
+          "minute": "45",
+          "emoji": "joy.png",
+          "emotion": {
+            "anger": 0,
+            "contempt": 1,
+            "disgust": 2,
+            "fear": 0,
+            "joy": 5,
+            "sadness": 1,
+            "surprise": 1
+          },
+          "memoText": "lorem ipsum"
+        },
+        {
+          "hour": "15",
+          "minute": "09",
+          "emoji": "joy.png",
+          "emotion": {
+            "anger": 0,
+            "contempt": 1,
+            "disgust": 2,
+            "fear": 0,
+            "joy": 5,
+            "sadness": 1,
+            "surprise": 1
+          },
+          "memoText": "lorem ipsum"
+        }
+      ]
+    },
+    {
+      "id": "020918",
+      "month": "1",
+      "dateNumber": "9",
+      "image": "sad.png",
+      "records": [
+        {
+          "hour": "8",
+          "minute": "15",
+          "emoji": "sad.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 2,
+            "fear": 0,
+            "joy": 0,
+            "sadness": 4,
+            "surprise": 1
+          },
+          "memoText": "lorem ipsum"
+        }
+      ]
+    },
+    {
+      "id": "021018",
+      "month": "1",
+      "dateNumber": "10",
+      "image": "contempt.png",
+      "records": [
+        {
+          "hour": "21",
+          "minute": "19",
+          "emoji": "contempt.png",
+          "emotion": {
+            "anger": 1,
+            "contempt": 5,
+            "disgust": 1,
+            "fear": 0,
+            "joy": 2,
+            "sadness": 1,
+            "surprise": 1
+          },
+          "memoText": "lorem ipsum"
+        },
+        {
+          "hour": "22",
+          "minute": "51",
+          "emoji": "joy.png",
+          "emotion": {
+            "anger": 0,
+            "contempt": 1,
+            "disgust": 2,
+            "fear": 0,
+            "joy": 4,
+            "sadness": 1,
+            "surprise": 1
+          },
+          "memoText": "lorem ipsum"
+        }
+      ]
+    },
+    {
+      "id": "021118",
+      "month": "1",
+      "dateNumber": "11",
+      "image": "contempt.png",
+      "records": [
+        {
+          "hour": "14",
+          "minute": "11",
+          "emoji": "contempt.png",
+          "emotion": {
+            "anger": 1,
+            "contempt": 5,
+            "disgust": 1,
+            "fear": 0,
+            "joy": 2,
+            "sadness": 1,
+            "surprise": 1
+          },
+          "memoText": "lorem ipsum"
+        }
+      ]
+    },
+    {
+      "id": "021218",
+      "month": "1",
+      "dateNumber": "12",
+      "image": "joy.png",
+      "records": [
+        {
+          "hour": "8",
+          "minute": "15",
+          "emoji": "fear.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 0,
+            "disgust": 2,
+            "fear": 4,
+            "joy": 0,
+            "sadness": 0,
+            "surprise": 2
+          },
+          "memoText": "lorem ipsum"
+        },
+        {
+          "hour": "10",
+          "minute": "19",
+          "emoji": "surprise.png",
+          "emotion": {
+            "anger": 0,
+            "contempt": 2,
+            "disgust": 1,
+            "fear": 3,
+            "joy": 1,
+            "sadness": 0,
+            "surprise": 5
+          },
+          "memoText": "lorem ipsum"
+        },
+        {
+          "hour": "11",
+          "minute": "44",
+          "emoji": "joy.png",
+          "emotion": {
+            "anger": 0,
+            "contempt": 1,
+            "disgust": 2,
+            "fear": 0,
+            "joy": 5,
+            "sadness": 1,
+            "surprise": 1
+          },
+          "memoText": "lorem ipsum"
+        },
+        {
+          "hour": "14",
+          "minute": "29",
+          "emoji": "joy.png",
+          "emotion": {
+            "anger": 0,
+            "contempt": 1,
+            "disgust": 2,
+            "fear": 0,
+            "joy": 5,
+            "sadness": 1,
+            "surprise": 1
+          },
+          "memoText": "lorem ipsum"
+        }
+      ]
+    },
+    {
+      "id": "021318",
+      "dateNumber": "13",
+      "month": "1",
+      "image": "contempt.png",
+      "records": [
+        {
+          "hour": "18",
+          "minute": "59",
+          "emoji": "contempt.png",
+          "emotion": {
+            "anger": 1,
+            "contempt": 5,
+            "disgust": 1,
+            "fear": 0,
+            "joy": 2,
+            "sadness": 1,
+            "surprise": 1
+          },
+          "memoText": "lorem ipsum"
+        }
+      ]
+    },
+    {
+      "id": "021418",
+      "dateNumber": "14",
+      "month": "1",
+      "image": "joy.png",
+      "records": [
+        {
+          "hour": "1",
+          "minute": "22",
+          "emoji": "joy.png",
+          "emotion": {
+            "anger": 0,
+            "contempt": 3,
+            "disgust": 0,
+            "fear": 0,
+            "joy": 5,
+            "sadness": 0,
+            "surprise": 1
+          },
+          "memoText": "lorem ipsum"
+        },
+        {
+          "hour": "9",
+          "minute": "25",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 5,
+            "fear": 1,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "lorem ipsum"
+        },
+        {
+          "hour": "18",
+          "minute": "34",
+          "emoji": "contempt.png",
+          "emotion": {
+            "anger": 1,
+            "contempt": 5,
+            "disgust": 1,
+            "fear": 0,
+            "joy": 2,
+            "sadness": 1,
+            "surprise": 1
+          },
+          "memoText": "lorem ipsum"
+        }
+      ]
+    },
+    {
+      "id": "021518",
+      "dateNumber": "15",
+      "month": "1",
+      "image": "disgust.png",
+      "records": [
+        {
+          "hour": "15",
+          "minute": "19",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 5,
+            "fear": 1,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "lorem ipsum"
+        },
+        {
+          "hour": "19",
+          "minute": "56",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 5,
+            "fear": 1,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "lorem ipsum"
+        }
+      ]
+    },
+    {
+      "id": "021618",
+      "dateNumber": "16",
+      "month": "1",
+      "image": "fear.png",
+      "records": []
+    },
+    {
+      "id": "021718",
+      "dateNumber": "17",
+      "month": "1",
+      "image": "contempt.png",
+      "records": []
+    },
+    {
+      "id": "021818",
+      "month": "1",
+      "dateNumber": "18",
+      "image": "contempt.png",
+      "records": []
+    },
+    {
+      "id": "021918",
+      "month": "1",
+      "dateNumber": "19",
+      "image": "contempt.png",
+      "records": []
+    },
+    {
+      "id": "022018",
+      "month": "1",
+      "dateNumber": "20",
+      "image": "contempt.png",
+      "records": []
+    },
+    {
+      "id": "022118",
+      "month": "1",
+      "dateNumber": "21",
+      "image": "sad.png",
+      "records": []
+    },
+    {
+      "id": "022218",
+      "month": "1",
+      "dateNumber": "22",
+      "image": "contempt.png",
+      "records": []
+    },
+    {
+      "id": "022318",
+      "month": "1",
+      "dateNumber": "23",
+      "image": "joy.png",
+      "records": []
+    },
+    {
+      "id": "022418",
+      "month": "1",
+      "dateNumber": "24",
+      "image": "joy.png",
+      "records": []
+    },
+    {
+      "id": "022518",
+      "month": "1",
+      "dateNumber": "25",
+      "image": "fear.png",
+      "records": []
+    },
+    {
+      "id": "022618",
+      "month": "1",
+      "dateNumber": "26",
+      "image": "angry.png",
+      "records": []
+    },
+    {
+      "id": "022718",
+      "month": "1",
+      "dateNumber": "27",
+      "image": "contempt.png",
+      "records": []
+    },
+    {
+      "id": "022818",
+      "month": "1",
+      "dateNumber": "28",
+      "image": "contempt.png",
+      "records": []
+    },
+    {
+      "id": "030118",
+      "month": "2",
+      "dateNumber": "1",
+      "image": "sad.png",
+      "records": []
+    },
+    {
+      "id": "030218",
+      "month": "2",
+      "dateNumber": "2",
+      "image": "contempt.png",
+      "records": []
+    },
+    {
+      "id": "030318",
+      "month": "2",
+      "dateNumber": "3",
+      "image": "joy.png",
+      "records": []
+    }
+  ]
 }
