@@ -2,6 +2,13 @@ body{
     font-family: 'Sniglet', cursive;
 }
 
+.homePage {
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat; 
+    background-color: #E9C8B5;
+    width: 100%;
+    height: 100%;   
+}
 
 .content{
     height: 88%;
@@ -10,7 +17,6 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center; 
-    background-image: url("../images/background.png");
     background-size: 100% auto;
     h1 {
         width: 100%;
@@ -450,13 +456,10 @@ body{
 }
 
 .game{
-    /* add background-image */
     position: fixed;
-    //border: solid salmon 10px;
 }
 
 .calendar {
-    /* add background-image */
     padding: 10%;
     .calendarBox {
         height: 90%;
@@ -565,6 +568,7 @@ body{
         display: flex;
         justify-content: center;
         align-items: center;
+        box-shadow: 3px 2px 20px rgb(62, 70, 83);
         img {
             max-width: 100px;
             max-height: 100px;

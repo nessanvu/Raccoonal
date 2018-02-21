@@ -32,6 +32,8 @@ app.use(express.cookieParser('IxD secret key'));
 app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.bodyParser());
+
 
 // development only
 if ('development' == app.get('env')) {
@@ -45,6 +47,9 @@ app.get('/book.handlebars', book.view);
 app.get('/setting.handlebars', setting.view);
 // Example route
 // app.get('/users', user.list);
+
+app.post('/', home.parseJson);
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
