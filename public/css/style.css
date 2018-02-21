@@ -434,6 +434,16 @@ body {
     height: 160px;
     border-radius: 20px;
     background-color: #fcc19f; }
+  .bar #calendarButton, .bar #bookButton, .bar #emptyButton, .bar #settingButton {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .bar #calendarButton img, .bar #bookButton img, .bar #emptyButton img, .bar #settingButton img {
+      max-width: 100px;
+      max-height: 100px; }
+  .bar #homeButton {
+    width: 190px;
+    height: 220px; }
 
 .menu {
   margin: 5px;

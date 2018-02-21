@@ -1,4 +1,5 @@
 <html>
+
 <head>
 	<title>Raccoonal Setting</title>
 
@@ -11,40 +12,44 @@
 	<!--<script src="../js/bootstrap.js"></script>-->
 	<script src="../js/jquery-3.3.1.min.js"></script>
 </head>
+
 <body>
-	<div class="content setting"> 
+	<div class="content setting">
 
-	        <div class="titleBox">
-	        	<h1 id="titleText">Settings</h1>
-	        </div>
+		<div class="titleBox">
+			<h1 id="titleText">Settings</h1>
+		</div>
 
-	        <div class="settingBox">
-	        	<h2 id="soundText">Sound:</h2>
-	        	<div class="slideContainer">
-	        		<input type="range" min="1" max="100" value="50"
-	        		class="slider" id="myRange">
-	        	</div>
-	        	<h2 id="sfxText">SFX:</h2>
-	        	<div class="slideContainer">
-	        		<input type="range" min="1" max="100" value="50"
-	        		class="slider" id="myRange">
-	        	</div>
-	        	<div class="tutorialBox">
-	        		<button type="button" id="tutorial">Tutorial</button>
-	        	</div>
-		    </div>
+		<div class="settingBox">
+			<h2 id="soundText">Sound:</h2>
+			<div class="slideContainer">
+				<input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+			</div>
+			<h2 id="sfxText">SFX:</h2>
+			<div class="slideContainer">
+				<input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+			</div>
+			<div class="tutorialBox">
+				<button type="button" id="tutorial">Tutorial</button>
+			</div>
+		</div>
 	</div>
-
 
 	<div class="bar">
-		<button type="button" class="menu" id="calendarButton" onclick="window.location='calendar.handlebars'">Calendar</button>
-		<button type="button" class="menu" id="bookButton" onclick="window.location='book.handlebars'">Raccoon
-			<br>Book</button>
-		<button type="button" class="menu" id="homeButton" onclick="window.location='home.handlebars'">Yard</button>
+		<button type="button" class="menu" id="calendarButton" onclick="window.location='calendar.handlebars'">
+			<img src="../images/Navigation/calendar.png">
+		</button>
+		<button type="button" class="menu" id="bookButton" onclick="window.location='book.handlebars'">
+			<img src="../images/Navigation/photoalbum.png">
+		</button>
+		<img src="../images/Navigation/home.png" class="menu" id="homeButton" onclick="window.location='home.handlebars'">
 		<button type="button" class="menu" id="emptyButton" disabled>Market
 			<br>Coming Soon!</button>
-		<button type="button" class="menu" id="settingButton" onclick="window.location='setting.handlebars'">Setting</button>
+		<button type="button" class="menu" id="settingButton" onclick="window.location='setting.handlebars'">
+			<img src="../images/Navigation/settings.png">
+		</button>
 	</div>
-	
+
 </body>
+
 </html>
