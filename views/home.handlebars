@@ -105,6 +105,9 @@
 
 	<!-- work flow-->
 	<script>
+		var t = new Date();
+		console.log(t);
+
 		var resultOriginState = $('#emotionRateList').clone();
 		function log(node_name, msg) {
 			$(node_name).text(msg);
@@ -115,7 +118,7 @@
 			for (var i = 0; i <= 6; i++) {
 				quizRaccoons.push(new quizRaccoon(raccoons[i].src, raccoons[i].question));
 			}
-			console.log(quizRaccoons);
+			//console.log(quizRaccoons);
 		});
 
 		function quizRaccoon(src, question) {
@@ -129,6 +132,8 @@
 			}
 		}
 
+		var isQuizFinished = false;
+		var isScanFinished = false;
 		var ind = 0;
 		function startQuiz() {
 			$(".quizModal").fadeIn(200).css("display", "flex");
@@ -144,6 +149,12 @@
 			} else {
 				ind = 0;
 				$(".quizModal").hide();
+				isQuizFinished = true;
+
+				if (isScanFinished) {
+					$("#scanResultDiv").fadeIn(100).css("display", "flex");
+				}
+
 			}
 		}
 
@@ -245,8 +256,8 @@
 			$(".affectivaTest").fadeOut(100);
 			output.text("Scanning done!");
 			finalizeResult(resultObj);
-			console.log(JSON.stringify(resultObj));
-			log('#avgRes', "Emotions in average: " + JSON.stringify(resultObj));
+			//console.log(JSON.stringify(resultObj));
+			//log('#avgRes', "Emotions in average: " + JSON.stringify(resultObj));
 			$("#scanStopButton").fadeOut(100);
 
 			for (var i = 0; i < resultObj["joy"]; i++) {
@@ -268,7 +279,11 @@
 				$("#resultDisgust").append('<img src="../images/rate_star.png">');
 			};
 
-			$("#scanResultDiv").fadeIn(100).css("display", "flex");
+			isScanFinished = true;
+
+			if (isQuizFinished) {
+				$("#scanResultDiv").fadeIn(100).css("display", "flex");
+			}
 		});
 
 		detector.addEventListener("onInitializeSuccess", function () {
@@ -288,7 +303,7 @@
 				$("#notCenteredMessage").fadeOut(100);
 				timer.start();
 
-				log('#emojiRes', "Emoji: " + faces[0].emojis.dominantEmoji);
+				//log('#emojiRes', "Emoji: " + faces[0].emojis.dominantEmoji);
 				resultObj["anger"] += faces[0].emotions.anger;
 				resultObj["contempt"] += faces[0].emotions.contempt;
 				resultObj["disgust"] += faces[0].emotions.disgust;
@@ -303,6 +318,8 @@
 
 		$("#scanOkButton").on("click", function () {
 			detector.start();
+			isQuizFinished = false;
+			isScanFinished = false;
 			startQuiz();
 			$("#startScanDiv").fadeOut(100);
 			$("#scanningDiv").fadeIn(100).css("display", "flex");
