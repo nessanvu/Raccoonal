@@ -6,8 +6,7 @@
 	<!-- CSS -->
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/style.css">
-
-	<!-- JS -->
+	<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
 	<!--<script src="../js/bootstrap.js"></script>-->
 </head>
 
@@ -15,9 +14,13 @@
 	<div class="content calendar">
 		<div class="calendarBox">
 			<div class="monthBar">
-				<button type="button" id="leftButton">&#8592;</button>
-				<h2 id="monthText">February</h2>
-				<button type="button" id="rightButton">&#8594;</button>
+				<button type="button" id="leftButton">
+					<img src="../images/arrow-left.png" alt="left">
+				</button>
+				<p id="monthText">February</p>
+				<button type="button" id="rightButton">
+					<img src="../images/arrow-right.png" alt="right">
+				</button>
 			</div>
 			<div class="dateBox">
 				<ul class="weekdays">
@@ -31,34 +34,78 @@
 				</ul>
 				<div class="alldays">
 					{{#each dates}}
-					<div {{#if today}}class="date today" {{/if}} class="date">
+					<div class="date">
 						<p id="dateNumber">{{dateNumber}}</p>
-						<img id="emoji" src="../images/Emotions/{{image}}">
+						<img id="emojiOfTheDay" src="../images/Emotions/{{image}}">
 
 						<div class='calendarModal'>
 							<div class="top">
-								<h5>{{month}}/{{dateNumber}}/2018</h5>
-								<img id="emoji" src="../images/Emotions/{{image}}">
+								<p class="monthNumber hide">{{month}}</p>
+								<p class="dateNumber hide">{{dateNumber}}</p>
+								<button type="button" id="closeDiaryButton" class="closebtn">Close</button>
+								<div class="fullDate"></div>
 							</div>
 							<ol class="records">
 								{{#records}}
 								<li class="record">
-									<span class="timeStamp">{{time}}:</span>
+									<p class="timeStamp">{{hour}}:{{minute}}</p>
 									<img id="emoji" src="../images/Emotions/{{emoji}}">
-									<div class="recordModal">
+									<p class="memoText hide">{{memoText}}</p>
+									<div class="emotion hide">
+										<p class="angerData">{{emotion.anger}}</p>
+										<p class="contemptData">{{emotion.contempt}}</p>
+										<p class="disgustData">{{emotion.disgust}}</p>
+										<p class="fearData">{{emotion.fear}}</p>
+										<p class="joyData">{{emotion.joy}}</p>
+										<p class="sadnessData">{{emotion.sadness}}</p>
+										<p class="surpriseData">{{emotion.surprise}}</p>
 									</div>
 								</li>
 								{{/records}}
 							</ol>
-							<button type="button" id="closeDiaryButton" class="closebtn">Close</button>
 						</div>
 					</div>
 					{{/each}}
 				</div>
+
+				<div class="memoModal">
+					<p id="memoTitle">Memo</p>
+					<p class="memoText"></p>
+					<ul id="emotionRateList">
+						<li id="resultJoy">
+							<p class="joyRes"></p>
+							<img src="../images/Emotions/joy.png" class="emoji">
+						</li>
+						<li id="resultSad">
+							<p class="sadnessRes"></p>
+							<img src="../images/Emotions/sad.png" class="emoji">
+						</li>
+						<li id="resultContempt">
+							<p class="contemptRes"></p>
+							<img src="../images/Emotions/contempt.png" class="emoji">
+						</li>
+						<li id="resultFear">
+							<p class="fearRes"></p>
+							<img src="../images/Emotions/fear.png" class="emoji">
+						</li>
+						<li id="resultAngry">
+							<p class="angerRes"></p>
+							<img src="../images/Emotions/angry.png" class="emoji">
+						</li>
+						<li id="resultDisgust">
+							<p class="disgustRes"></p>
+							<img src="../images/Emotions/disgust.png" class="emoji">
+						</li>
+						<li id="resultSurprise">
+							<p class="surpriseRes"></p>
+							<img src="../images/Emotions/surprise.png" class="emoji">
+						</li>
+					</ul>
+					<button type="button" id="closeMemoModal">Back</button>
+				</div>
 			</div>
 		</div>
 	</div>
-
 
 	<div class="bar">
 		<button type="button" class="menu" id="calendarButton" onclick="window.location='calendar.handlebars'">
@@ -79,11 +126,55 @@
 	<script>
 		var diary;
 		$(".date").on("click", function () {
-			$(this).find(".calendarModal").show().css('display', 'flex');
+			var t = new Date();
+			var yearNumber = t.getFullYear();
+			var monthNumber = $(this).find('.monthNumber').text();
+			var dateNumber = $(this).find('.dateNumber').text();
+			switch (monthNumber) {
+				case "0":
+					monthNumber = "JANUARY";
+					break;
+				case "1":
+					monthNumber = "FEBRUARY";
+					break;
+				case "2":
+					monthNumber = "MARCH";
+					break;
+				case "3":
+					monthNumber = "APRIL";
+					break;
+				case "4":
+					monthNumber = "MAY";
+					break;
+				case "5":
+					monthNumber = "JUNE";
+					break;
+				case "6":
+					monthNumber = "JULY";
+					break;
+				case "7":
+					monthNumber = "AUGUST";
+					break;
+				case "8":
+					monthNumber = "SEPETEMBER";
+					break;
+				case "9":
+					monthNumber = "OCTOBER";
+					break;
+				case "10":
+					monthNumber = "NOVEMBER";
+					break;
+				case "11":
+					monthNumber = "DECEMBER";
+					break;
+			}
+			$(this).find('.fullDate').html('<p class="monthNum">' + monthNumber + '</p>' + '<p class="dateNum">' + dateNumber + '</p>' + '<p class="yearNum">' + yearNumber + '</p>');
+
+			$(this).find(".calendarModal").fadeIn(100).css('display', 'flex');
 		});
 
 		$(".closebtn").on("click", function (e) {
-			$(this).parent().hide()
+			$(this).parent().parent().fadeOut(100)
 			e.stopPropagation()
 		});
 
@@ -95,6 +186,22 @@
 		$('.closememoBtn').on("click", function (e) {
 			$('#memo').hide();
 			e.stopPropagation();
+		})
+
+		$('.record').on("click", function (e) {
+			$(".memoModal").find(".memoText").text($(this).find(".memoText").text());
+			$(".memoModal").find(".joyRes").text($(this).find(".joyData").text());
+			$(".memoModal").find(".sadnessRes").text($(this).find(".sadnessData").text());
+			$(".memoModal").find(".contemptRes").text($(this).find(".contemptData").text());
+			$(".memoModal").find(".fearRes").text($(this).find(".fearData").text());
+			$(".memoModal").find(".angerRes").text($(this).find(".angerData").text());
+			$(".memoModal").find(".disgustRes").text($(this).find(".disgustData").text());
+			$(".memoModal").find(".surpriseRes").text($(this).find(".surpriseData").text());
+			$(".memoModal").fadeIn(100).css("display", "flex");
+		})
+
+		$('#closeMemoModal').on("click", function (e) {
+			$(".memoModal").fadeOut(100);		
 		})
 
 	</script>

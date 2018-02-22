@@ -412,57 +412,74 @@ body {
 
 .calendarModal {
   position: fixed;
-  width: 50%;
-  height: 50%;
-  left: 25%;
-  top: 25%;
+  left: 20%;
+  top: 20%;
+  right: 20%;
+  bottom: 25%;
+  padding: 20px;
   display: none;
-  border: solid 5px #525863;
   border-radius: 20px;
-  background: white;
+  border: solid 3px #525863;
+  background-color: #ffede3;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  box-shadow: 4px 5px 20px;
+}
+
+.calendarModal .hide {
+  display: none;
 }
 
 .calendarModal .top {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  right: 0px;
+  margin: 20px 50px 30px 20px;
 }
 
-.calendarModal .top h5 {
-  font-size: 50px;
-}
-
-.calendarModal .top img {
-  margin-left: 20px;
-  width: 40px;
-  height: 40px;
-}
-
-.calendarModal .entrys * {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.calendarModal .entrys li {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.calendarModal .entrys button {
-  height: 20px;
-}
-
-.calendarModal .records {
+.calendarModal .top .fullDate {
+  font-family: 'Fredericka the Great', cursive;
+  float: right;
+  padding: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.calendarModal .top .fullDate * {
+  margin: 0;
+  padding: 0;
+}
+
+.calendarModal .top .fullDate .monthNum {
+  font-size: 35px;
+}
+
+.calendarModal .top .fullDate .dateNum {
+  font-size: 80px;
+}
+
+.calendarModal .top .fullDate .yearNum {
+  font-size: 35px;
+}
+
+.calendarModal .top #closeDiaryButton {
+  float: left;
+  border: 5px solid #525863;
+  border-radius: 10px;
+  font-size: 30px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.calendarModal .records {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendarModal .records li {
+  width: 100%;
 }
 
 .game {
@@ -470,12 +487,13 @@ body {
 }
 
 .calendar {
-  padding: 10%;
+  padding: 5%;
 }
 
 .calendar .calendarBox {
-  height: 90%;
-  border: solid;
+  height: 95%;
+  border: solid #525863 10px;
+  border-radius: 20px;
   text-align: center;
   width: 98%;
   padding: 5%;
@@ -483,21 +501,103 @@ body {
 }
 
 .calendar .calendarBox .monthBar {
+  margin-bottom: 20px;
   display: flex;
-  border: solid;
+  border: solid 8px #924010;
+  border-radius: 20px;
+  background-color: #ca8156;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar .calendarBox .monthBar #monthText {
+  font-size: 70px;
+}
+
+.calendar .calendarBox .monthBar button {
+  margin: 10px 20px 10px 20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: solid 5px #924010;
+  background-color: #f5bb99;
+  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-.calendar .calendarBox .monthBar h2 {
-  font-size: 60px;
+.calendar .calendarBox .monthBar button img {
+  max-width: 60px;
 }
 
 .calendar .calendarBox .dateBox {
   background-color: white;
-  border: solid;
-  height: inherit;
+  border: solid 8px #525863;
+  border-radius: 20px;
+  height: 88%;
+}
+
+.calendar .calendarBox .dateBox .memoModal {
+  position: fixed;
+  background-color: rgba(233, 200, 181, 0.87);
+  border: solid 5px #525863;
+  border-radius: 20px;
+  left: 22%;
+  right: 22%;
+  top: 25%;
+  bottom: 30%;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar .calendarBox .dateBox .memoModal #closeMemoModal {
+  border: solid #525863 5px;
+  padding: 5px;
+  margin: 5px 5px 20px 5px;
+  font-size: 35px;
+  border-radius: 20px;
+  width: 160px;
+  height: 80px;
+}
+
+.calendar .calendarBox .dateBox .memoModal #memoTitle {
+  font-size: 60px;
+}
+
+.calendar .calendarBox .dateBox .memoModal .memoText {
+  overflow: scroll;
+  font-size: 40px;
+  width: 85%;
+  height: 55%;
+  margin-bottom: 5%;
+  border: solid #525863 5px;
+  padding: 30px;
+  background-color: #ebdfd9;
+}
+
+.calendar .calendarBox .dateBox .memoModal #emotionRateList {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 25%;
+}
+
+.calendar .calendarBox .dateBox .memoModal #emotionRateList li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 4px 10px 4px;
+}
+
+.calendar .calendarBox .dateBox .memoModal #emotionRateList li img {
+  width: 65px;
+  height: 65px;
 }
 
 .calendar .calendarBox .dateBox ul, .calendar .calendarBox .dateBox li {
@@ -514,14 +614,30 @@ body {
 }
 
 .calendar .calendarBox .dateBox .record {
+  width: 80%;
+  font-size: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   border: 3px #76849A solid;
   background-color: wheat;
   padding: 5px;
   border-radius: 12px;
 }
 
-.calendar .calendarBox .dateBox #closeDiaryButton {
-  margin-top: 200px;
+.calendar .calendarBox .dateBox .record p {
+  margin: 5px;
+  width: 160px;
+  border: solid #525863 5px;
+  border-radius: 20px;
+  background-color: #ccd4e2;
+}
+
+.calendar .calendarBox .dateBox .record img {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
 }
 
 .calendar .calendarBox .dateBox .weekdays {
@@ -529,6 +645,8 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  background-color: #5a2404;
+  color: #E9C8B5;
 }
 
 .calendar .calendarBox .dateBox .alldays {
@@ -538,28 +656,21 @@ body {
 }
 
 .calendar .calendarBox .dateBox .alldays .date {
-  font-size: 40px;
+  background-color: #fae2d4;
+  font-size: 55px;
   padding: 5px;
   flex: auto;
   width: 14%;
-  height: 18%;
+  height: 18.55%;
   margin: 0;
   padding: 0;
-  border: solid;
+  border: solid 2px #525863;
 }
 
-.calendar .calendarBox .dateBox .alldays .date img {
+.calendar .calendarBox .dateBox .alldays .date #emojiOfTheDay {
   margin-top: 30px;
-  width: 50px;
-  height: 50px;
-}
-
-.calendar .calendarBox .dateBox .alldays .notThisMonth {
-  background-color: grey;
-}
-
-.calendar .calendarBox .dateBox .alldays .today {
-  background-color: grey;
+  width: 60px;
+  height: 60px;
 }
 
 .bar {

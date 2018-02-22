@@ -8,7 +8,7 @@ exports.view = function (req, res) {
 };
 
 exports.parseJson = function (req, res) {
-  console.log(req.body);
+  //console.log(req.body);
   res.status(200).end();
   var t = new Date();
   var m = t.getMonth();
@@ -16,7 +16,7 @@ exports.parseJson = function (req, res) {
   for (var i = 0; i < data.dates.length; i++) {
     if (data.dates[i].month == m && data.dates[i].dateNumber == d) {
       data.dates[i].records.push(req.body);
-      console.log(data.dates[i].records);
+      //console.log(data.dates[i].records);
     }
   }
 };
