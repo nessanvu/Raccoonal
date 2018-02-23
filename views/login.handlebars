@@ -15,29 +15,32 @@
     <script src="../js/bootstrap.js"></script>
     <script src="https://download.affectiva.com/js/3.1/affdex.js" type="text/javascript"> </script>
     <script src="../js/easytimer.min.js"></script>
-    <script src="../js/canvasjs.min.js"></script>
 </head>
 
 <body>
-    <div class="content otherPages">
-        <div class="login">
-            <h1>Raccoonal Journal</h1>
-            <h2>Login</h2>
-            <div class="userInput">
-                <div class="userName">
-                    <h3>User name:</h3>
-                    <input type="input" id="userNameBox">
-                </div>
-                <div class="password">
-                    <h3>Password:</h3>
-                    <input type="password" id="passwordBox">
-                </div>
+    <div class="content otherPages login">
+        <h1>Raccoonal Journal</h1>
+        <h2>Login</h2>
+        <div class="userInput">
+            <div class="userName">
+                <h3>User name:</h3>
+                <input type="input" id="userNameBox">
             </div>
-            <fb:login-button id="fbLogin" scope="public_profile,email" onlogin="checkLoginState();">
-            </fb:login-button>
-
-            <button type="button" id="loginButton">Submit!</button>
+            <div class="password">
+                <h3>Password:</h3>
+                <input type="password" id="passwordBox">
+            </div>
         </div>
+        <fb:login-button id="fbLogin" scope="public_profile,email" onlogin="checkLoginState();">
+        </fb:login-button>
+
+        <div id="tutorialDiv">
+            <input id="firstTimeUser" type="checkbox">
+            <label for="firstTimeUser">Read Tutorial?</label>
+        </div>
+
+        <button type="button" id="loginButton">Submit!</button>
+
     </div>
 
     <script>
@@ -47,17 +50,21 @@
             } else if ($("#passwordBox").val() == "") {
                 alert("Password can't be empty!");
             } else {
-                var now = new Date();
-                var time = now.getTime();
-                var expireTime = time + 1000 * 3;
-                now.setTime(expireTime);
-                document.cookie =
-                    'userName=' + $("#userNameBox").val() + '; ' +
-                    'expires=' + now.toGMTString() + '; ' +
-                    'path=/';
+                if ($('#firstTimeUser').is(":checked")) {
+                    window.location = 'tutorial.handlebars';
+                } else {
+                    var now = new Date();
+                    var time = now.getTime();
+                    var expireTime = time + 1000 * 3;
+                    now.setTime(expireTime);
+                    document.cookie =
+                        'userName=' + $("#userNameBox").val() + '; ' +
+                        'expires=' + now.toGMTString() + '; ' +
+                        'path=/';
 
-                console.log(document.cookie);
-                window.location = 'home.handlebars';
+                    console.log(document.cookie);
+                    window.location = 'home.handlebars';
+                }
             }
         });
     </script> {{> facebook}}

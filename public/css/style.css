@@ -518,7 +518,7 @@ body {
 .bar {
   height: 12%;
   display: flex;
-  background-image: url("../images/pawbg.jpg");
+  background-image: url("../images/pawbg.png");
   flex-direction: row;
   justify-content: center;
   align-items: center; }
@@ -530,12 +530,12 @@ body {
     height: 160px;
     border-radius: 20px;
     background-color: #fcc19f; }
-  .bar #calendarButton, .bar #bookButton, .bar #emptyButton, .bar #settingButton {
+  .bar #calendarButton, .bar #bookButton, .bar #marketButton, .bar #settingButton {
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 3px 2px 20px #3e4653; }
-    .bar #calendarButton img, .bar #bookButton img, .bar #emptyButton img, .bar #settingButton img {
+    .bar #calendarButton img, .bar #bookButton img, .bar #marketButton img, .bar #settingButton img {
       max-width: 100px;
       max-height: 100px; }
   .bar #homeButton {
@@ -582,21 +582,35 @@ body {
     font-size: 60px; }
   .login h3 {
     font-size: 50px; }
-  .login .userName {
+  .login .userName, .login .password {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; }
-  .login .password {
+    .login .userName input, .login .password input {
+      margin: 5% 10% 30% 10%;
+      width: 100%;
+      height: 60px;
+      font-size: 40px; }
+  .login #tutorialDiv {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-  .login input {
-    margin: 5% 10% 30% 10%;
-    width: 100%;
-    height: 60px;
-    font-size: 40px; }
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center; }
+    .login #tutorialDiv #firstTimeUser {
+      margin: 0px 20px 0px 0px;
+      margin: 0;
+      width: 50px;
+      height: 50px; }
+    .login #tutorialDiv label {
+      font-size: 40px; }
   .login #loginButton {
-    margin-top: 50px;
+    margin-top: 30px;
     font-size: 40px; }
+
+.welcomePage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center; }

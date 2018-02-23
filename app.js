@@ -13,6 +13,7 @@ var calendar = require('./routes/calendar');
 var book = require('./routes/book');
 var setting = require('./routes/setting');
 var login = require('./routes/login');
+var tutorial = require('./routes/tutorial');
 // Example route
 // var user = require('./routes/user');
 
@@ -45,6 +46,7 @@ app.get('/home.handlebars', home.view);
 app.get('/calendar.handlebars', calendar.view);
 app.get('/book.handlebars', book.view);
 app.get('/setting.handlebars', setting.view);
+app.get('/tutorial.handlebars', tutorial.view);
 // Example route
 // app.get('/users', user.list);
 

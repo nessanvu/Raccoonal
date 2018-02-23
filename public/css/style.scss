@@ -660,7 +660,7 @@ body{
 .bar {
     height: 12%;
     display: flex;
-    background-image: url("../images/pawbg.jpg");
+    background-image: url("../images/pawbg.png");
     flex-direction: row;
     justify-content: center;
     align-items: center; 
@@ -675,7 +675,7 @@ body{
         background-color: rgb(252, 193, 159);               
     }
 
-    #calendarButton, #bookButton, #emptyButton, #settingButton{
+    #calendarButton, #bookButton, #marketButton, #settingButton{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -749,28 +749,47 @@ body{
     h3 {
         font-size: 50px;
     }
-    .userName {
+    .userName, .password {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center; 
+        input {
+            margin: 5% 10% 30% 10%;
+            width: 100%;
+            height: 60px;
+            font-size: 40px;
+        }
     }
-    .password {
+    
+
+    #tutorialDiv {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; 
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;  
+        #firstTimeUser {
+            margin: 0px 20px 0px 0px;
+            margin: 0;
+            width: 50px;
+            height: 50px;
+        }
+        label {
+            font-size: 40px;
+        }
     }
-    input {
-        margin: 5% 10% 30% 10%;
-        width: 100%;
-        height: 60px;
-        font-size: 40px;
-    }
+
+
     #loginButton {
-        margin-top: 50px;
+        margin-top: 30px;
         font-size: 40px;
     }
+}
 
-
+.welcomePage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
