@@ -9,8 +9,47 @@
 
 <body>
     <div class="welcomePage otherPages">
-        <img alt="tutorial" src="">
+        <img id="tutImg" alt="tutorial" src="../images/Tutorial/Tutorial_1.png">
+        <button type="button" id="skipBtn">Skip</button>
+        <button type="button" id="prevBtn">Previous</button>
+        <button type="button" id="nextBtn">Next</button>
     </div>
 </body>
+
+<script>
+    var page = 1;
+    $("#nextBtn").on("click", function () {
+        if (page < 3) {
+            page++;
+            if (page == 2) {
+                $("#prevBtn").fadeIn(300);
+            }
+            $("#tutImg").attr("src", "../images/Tutorial/Tutorial_" + page + ".png");
+            if (page == 3) {
+                $(this).text("Done!");
+                $(this).css("background-color", "rgb(157, 255, 128)");
+            }
+        } else {
+            window.location = "home.handlebars";
+        }
+    })
+
+    $("#prevBtn").on("click", function () {
+        page--;
+        if (page == 1) {
+            $("#prevBtn").fadeOut(300);
+        }
+        if (page == 2) {
+            $("#nextBtn").text("Next");
+            $("#nextBtn").css("background-color", "rgb(252, 193, 159)");
+        }
+        $("#tutImg").attr("src", "../images/Tutorial/Tutorial_" + page + ".png");
+    })
+
+    $("#skipBtn").on("click", function () {
+        window.location = "home.handlebars";
+    })
+
+</script>
 
 </html>

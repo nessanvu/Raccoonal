@@ -614,3 +614,26 @@ body {
   display: flex;
   align-content: center;
   justify-content: center; }
+  .welcomePage img {
+    width: 100%; }
+  .welcomePage button {
+    padding: 20px;
+    position: fixed;
+    font-size: 45px;
+    border: solid 6px #525863;
+    border-radius: 20px;
+    background-color: #fcc19f;
+    font-family: 'Sniglet', cursive; }
+  .welcomePage #skipBtn {
+    background-color: rgba(252, 193, 159, 0.5);
+    top: 1em;
+    right: 1em; }
+  .welcomePage #prevBtn {
+    left: 1em;
+    bottom: 1em;
+    width: 220px;
+    display: none; }
+  .welcomePage #nextBtn {
+    right: 1em;
+    bottom: 1em;
+    width: 220px; }
