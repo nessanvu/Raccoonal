@@ -239,7 +239,7 @@ body {
     border-radius: 20px;
     background-color: #E9C8B5; }
   .content .raccoonbookBox {
-    height: 80%;
+    height: 85%;
     width: 80%;
     border: 10px #525863 solid;
     border-radius: 40px;
@@ -248,12 +248,15 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center; }
+    .content .raccoonbookBox .hide {
+      display: none; }
     .content .raccoonbookBox h1 {
-      font-size: 70px; }
+      font-size: 70px;
+      font-family: 'Sniglet', cursive; }
     .content .raccoonbookBox .raccoons {
       margin: 5%;
       display: grid;
-      grid-template-columns: auto auto auto;
+      grid-template-columns: 33.33% auto 33.33%;
       width: 85%;
       height: 85%; }
       .content .raccoonbookBox .raccoons .raccoon {
@@ -278,32 +281,38 @@ body {
           border-radius: 20px;
           width: 90%;
           margin-top: 20%; }
-    .content .raccoonbookBox .raccoonDiscription {
-      position: absolute;
+    .content .raccoonbookBox .raccoondescription {
+      position: fixed;
       display: none;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       width: 50%;
-      height: 40%;
+      height: 50%;
       background-color: blanchedalmond;
       border-radius: 20px;
       border: solid #76849A 10px;
       padding: 20px; }
-      .content .raccoonbookBox .raccoonDiscription #name {
+      .content .raccoonbookBox .raccoondescription #name {
         font-size: 45px; }
-      .content .raccoonbookBox .raccoonDiscription img {
+      .content .raccoonbookBox .raccoondescription img {
         max-width: 80%;
         max-height: 40%;
         border: solid 4px #525863;
         overflow: hidden;
         background-color: white; }
-      .content .raccoonbookBox .raccoonDiscription p {
+      .content .raccoonbookBox .raccoondescription #college {
+        margin: 5px;
+        font-size: 40px;
+        border: solid #76849A 5px;
+        border-radius: 20px;
+        background-color: #eee6e1; }
+      .content .raccoonbookBox .raccoondescription #description {
         height: 40%;
         word-wrap: break-word;
         font-size: 30px;
         overflow: scroll; }
-      .content .raccoonbookBox .raccoonDiscription button {
+      .content .raccoonbookBox .raccoondescription button {
         font-size: 40px;
         width: 30%;
         border: solid #525863 5px;
@@ -516,6 +525,7 @@ body {
             height: 60px; }
 
 .bar {
+  z-index: 1;
   height: 12%;
   display: flex;
   background-image: url("../images/pawbg.png");

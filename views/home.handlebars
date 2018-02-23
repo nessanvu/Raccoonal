@@ -121,7 +121,7 @@
 		var quizRaccoons = [];
 		$.getJSON("../data/raccoons.json", function (raccoons) {
 			for (var i = 0; i <= 6; i++) {
-				quizRaccoons.push(new quizRaccoon(raccoons[i].src, raccoons[i].question));
+				quizRaccoons.push(new quizRaccoon(raccoons.raccoons[i].src, raccoons.raccoons[i].question));
 			}
 			//console.log(quizRaccoons);
 		});
@@ -427,8 +427,8 @@
 		var myGameArea = {
 			canvas: $("#myGameCanvas")[0],
 			start: function () {
-				this.canvas.width = 950;
-				this.canvas.height = 1500;
+				this.canvas.width = 970;
+				this.canvas.height = 1350;
 				this.context = this.canvas.getContext("2d");
 				document.body.insertBefore(this.canvas, document.body.childNodes[0]);
 				this.interval = setInterval(updateGameArea, 20);
@@ -452,14 +452,14 @@
 				b = getRand(0, 6);
 			}
 			var x1 = getRand(0, 650);
-			var y1 = getRand(600, 1250);
+			var y1 = getRand(600, 1000);
 			var x2 = getRand(0, 650);
-			var y2 = getRand(600, 1250);
+			var y2 = getRand(600, 1000);
 			while (Math.abs(x1 - x2) < 200) {
 				x2 = getRand(0, 650);
 			}
 			while (Math.abs(y1 - y2) < 300) {
-				y2 = getRand(600, 1200);
+				y2 = getRand(600, 1000);
 			}
 
 			var k = 4;
@@ -468,8 +468,8 @@
 			while (m1 == 0) m1 = getRand(-k, k);
 			while (m2 == 0) m2 = getRand(-k, k);
 
-			myGamePiece = new component(raccoons[a].width, raccoons[a].height, "../images/Racoons/" + raccoons[a].src, x1, y1, "image", m1);
-			myGamePiece2 = new component(raccoons[b].width, raccoons[b].height, "../images/Racoons/" + raccoons[b].src, x2, y2, "image", m2);
+			myGamePiece = new component(raccoons.raccoons[a].width, raccoons.raccoons[a].height, "../images/Racoons/" + raccoons.raccoons[a].src, x1, y1, "image", m1);
+			myGamePiece2 = new component(raccoons.raccoons[b].width, raccoons.raccoons[b].height, "../images/Racoons/" + raccoons.raccoons[b].src, x2, y2, "image", m2);
 		});
 
 		function startGame() {

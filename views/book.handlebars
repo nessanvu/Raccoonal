@@ -21,43 +21,21 @@
 		<div class="raccoonbookBox">
 			<h1> Raccoon Book </h1>
 			<div class="raccoons">
+
+				{{#each raccoons}}
 				<div class="raccoon">
-					<img src="../images/Racoons/racoon_default.png">
-					<p>Default</p>
+					<img src="../images/Racoons/{{src}}">
+					<p class="nameP">{{name}}</p>
+					<p class="hide descriptionP">{{description}}</p>
+					<p class="hide collegeP">{{college}}</p>
 				</div>
-				<div class="raccoon">
-					<img src="../images/Racoons/racoon_revelle.png">
-					<p>Revelle</p>
-				</div>
-				<div class="raccoon">
-					<img src="../images/Racoons/racoon_marshall.png">
-					<p>Marshall</p>
-				</div>
-				<div class="raccoon">
-					<img src="../images/Racoons/racoon_muir.png">
-					<p>Muir</p>
-				</div>
-				<div class="raccoon">
-					<img src="../images/Racoons/racoon_sixth.png">
-					<p>Sixth</p>
-				</div>
-				<div class="raccoon">
-					<img src="../images/Racoons/racoon_warren.png">
-					<p>Warren</p>
-				</div>
-				<div class="raccoon">
-					<img src="../images/Racoons/racoon_erc.png">
-					<p>ERC</p>
-				</div>
+				{{/each}}
 			</div>
-			<div class="raccoonDiscription">
+			<div class="raccoondescription">
 				<h2 id="name"></h2>
 				<img id="profilePic" src="">
-				<p id="discrption">
-					Morbi scelerisque quam risus. Ut consequat consectetur lectus id maximus. Maecenas diam quam, tristique lacinia facilisis
-					sed, cursus in felis. Maecenas sit amet ultrices orci, quis vehicula ligula. Sed bibendum at turpis ac vulputate. Mauris
-					eget odio sodales, bibendum eros eu, tempor erat.
-				</p>
+				<p id="college"></p>
+				<p id="description"></p>
 				<button type="button" id="closeDpt">back</button>
 			</div>
 		</div>
@@ -95,13 +73,15 @@
 		});
 
 		$(".raccoon").on("click", function (e) {
-			$(".raccoonDiscription").fadeIn(200).css("display", "flex");
-			$("#name").text($(e.target).closest("div").find("p").text());
+			$(".raccoondescription").fadeIn(200).css("display", "flex");
+			$("#name").text($(e.target).closest("div").find(".nameP").text());
 			$("#profilePic").attr("src", $(e.target).closest("div").find("img")[0].src);
-		})
+			$("#college").text("College: " + $(e.target).closest("div").find(".collegeP").text());
+			$("#description").text($(e.target).closest("div").find(".descriptionP").text());
+		});
 
 		$("#closeDpt").on("click", function () {
-			$(".raccoonDiscription").fadeOut(200);
+			$(".raccoondescription").fadeOut(200);
 		})
 	</script>
 </body>

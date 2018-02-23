@@ -309,7 +309,7 @@ body{
     }
 
     .raccoonbookBox {
-        height: 80%;
+        height: 85%;
         width: 80%;
         border: 10px #525863 solid;
         border-radius: 40px;
@@ -318,13 +318,19 @@ body{
         flex-direction: column;
         justify-content: center;
         align-items: center; 
+
+        .hide{
+            display: none;
+        }
+
         h1 {
             font-size: 70px;
+            font-family: 'Sniglet', cursive;            
         }
         .raccoons {
             margin: 5%;
             display: grid;
-            grid-template-columns: auto auto auto;
+            grid-template-columns: 33.33% auto 33.33%;
             //border: blue solid 5px;
             width: 85%;
             height: 85%;
@@ -357,14 +363,14 @@ body{
             }
         }
 
-        .raccoonDiscription {
-            position: absolute; 
+        .raccoondescription {
+            position: fixed; 
             display: none;
             flex-direction: column;
             justify-content: center;
             align-items: center; 
             width: 50%;
-            height: 40%;
+            height: 50%;
             background-color: blanchedalmond;
             border-radius: 20px;
             border: solid #76849A 10px;
@@ -380,7 +386,14 @@ body{
                 overflow:hidden;
                 background-color: white; 
             }
-            p {
+            #college {
+                margin: 5px;
+                font-size: 40px;
+                border: solid #76849A 5px;
+                border-radius: 20px;
+                background-color: rgb(238, 230, 225)                
+            }
+            #description {
                 height: 40%;
                 word-wrap: break-word;
                 font-size: 30px;
@@ -658,6 +671,7 @@ body{
 }
 
 .bar {
+    z-index: 1;
     height: 12%;
     display: flex;
     background-image: url("../images/pawbg.png");
