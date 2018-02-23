@@ -33,6 +33,9 @@
                     <input type="password" id="passwordBox">
                 </div>
             </div>
+            <fb:login-button id="fbLogin" scope="public_profile,email" onlogin="checkLoginState();">
+            </fb:login-button>
+
             <button type="button" id="loginButton">Submit!</button>
         </div>
     </div>
@@ -46,16 +49,18 @@
             } else {
                 var now = new Date();
                 var time = now.getTime();
-                var expireTime = time+1000*3;
+                var expireTime = time + 1000 * 3;
                 now.setTime(expireTime);
                 document.cookie =
                     'userName=' + $("#userNameBox").val() + '; ' +
-                        'expires=' + now.toGMTString() + '; ' +
-                        'path=/';
+                    'expires=' + now.toGMTString() + '; ' +
+                    'path=/';
 
                 console.log(document.cookie);
                 window.location = 'home.handlebars';
             }
         });
-    </script>
+    </script> {{> facebook}}
+    <script src="../js/facebook.js"></script>
+
 </body>

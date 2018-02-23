@@ -714,6 +714,10 @@ body{
 */
 .login {
 
+    #fbLogin {
+        margin: 40px;
+    }
+
     //test
     display: flex;    
     //display: none;
@@ -759,7 +763,8 @@ body{
         height: 60px;
         font-size: 40px;
     }
-    button {
+    #loginButton {
+        margin-top: 50px;
         font-size: 40px;
     }
 
