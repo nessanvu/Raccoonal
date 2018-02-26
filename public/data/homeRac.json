@@ -1,0 +1,37 @@
+[
+    {
+        "width": 300,
+        "height": 200,
+        "src": "racoon_default.png"
+    },
+    {
+        "width": 180,
+        "height": 230,
+        "src": "racoon_erc.png"
+    },
+    {
+        "width": 300,
+        "height": 200,
+        "src": "racoon_marshall.png"
+    },
+    {
+        "width": 250,
+        "height": 240,
+        "src": "racoon_muir.png"
+    },
+    {
+        "width": 215,
+        "height": 290,
+        "src": "racoon_revelle.png"
+    },
+    {
+        "width": 250,
+        "height": 280,
+        "src": "racoon_sixth.png"
+    },
+    {
+        "width": 260,
+        "height": 240,
+        "src": "racoon_warren.png"
+    }
+]
