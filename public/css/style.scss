@@ -307,7 +307,12 @@ body{
         right: 1em;
         border: 5px #525863 solid;
         border-radius: 20px;
-        background-color: rgb(245, 170, 127);         
+        background-color: rgb(245, 170, 127);    
+        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
     }
 
     .raccoonbookBox {

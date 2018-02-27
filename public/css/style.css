@@ -310,6 +310,11 @@ body {
   border: 5px #525863 solid;
   border-radius: 20px;
   background-color: #f5aa7f;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .content .raccoonbookBox {
