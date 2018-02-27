@@ -301,6 +301,7 @@ body {
 }
 
 .content #startScanButton {
+  -webkit-appearance: none;
   font-size: 45px;
   position: fixed;
   width: 130px;
