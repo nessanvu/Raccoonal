@@ -308,7 +308,7 @@ body {
   right: 1em;
   border: 5px #525863 solid;
   border-radius: 20px;
-  background-color: #E9C8B5;
+  background-color: #f5aa7f;
 }
 
 .content .raccoonbookBox {
@@ -554,6 +554,7 @@ body {
   background-color: white;
   border: solid 8px #525863;
   border-radius: 20px;
+  overflow: auto;
   height: 88%;
 }
 
@@ -686,7 +687,7 @@ body {
 }
 
 .calendar .calendarBox .dateBox .alldays .date #emojiOfTheDay {
-  margin-top: 30px;
+  margin-top: 10px;
   width: 60px;
   height: 60px;
 }
@@ -817,6 +818,68 @@ body {
 .login #loginButton {
   margin-top: 30px;
   font-size: 40px;
+}
+
+.settingPage .settingBox {
+  height: 85%;
+  width: 80%;
+  border: 10px #525863 solid;
+  border-radius: 40px;
+  background-color: #E9C8B5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.settingPage h1 {
+  font-size: 70px;
+  font-family: 'Sniglet', cursive;
+}
+
+.settingPage .sounds {
+  margin: 50px;
+  border: 5px #525863 solid;
+  border-radius: 40px;
+  background-color: rgba(231, 231, 231, 0.671);
+  width: 80%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.settingPage .sounds h2 {
+  margin: 50px 0 20px 0;
+  font-size: 50px;
+  font-family: 'Sniglet', cursive;
+}
+
+.settingPage .sounds input[type="range"] {
+  -webkit-appearance: none;
+  -moz-apperance: none;
+  border-radius: 6px;
+  height: 30px;
+  width: 400px;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0.5, #94A14E), color-stop(0.5, #C5C5C5));
+}
+
+.settingPage .sounds input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  background-color: #E9E9E9;
+  border: 1px solid #CECECE;
+  height: 50px;
+  width: 50px;
+}
+
+.settingPage #tutorialBtn, .settingPage #signOutBtn {
+  margin: 20px;
+  padding: 20px;
+  font-size: 45px;
+  border: solid 6px #525863;
+  border-radius: 20px;
+  background-color: #cec1b9;
+  font-family: 'Sniglet', cursive;
 }
 
 .welcomePage {

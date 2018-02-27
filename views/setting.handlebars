@@ -6,57 +6,86 @@
 	<!-- CSS -->
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/style.css">
-	<link rel="stylesheet" href="../css/setting-style.css">
 
 	<!-- JS -->
 	<!--<script src="../js/bootstrap.js"></script>-->
 	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script src="../js/jquery-ui.min.js"></script>
 </head>
 
 <body>
-	<div class="content setting otherPages">
-
-		<div class="titleBox">
-			<h1 id="titleText">Settings</h1>
-		</div>
-
+	<div class="content settingPage otherPages">
 		<div class="settingBox">
-			<h2 id="soundText">Sound:</h2>
-			<div class="slideContainer">
-				<input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+			<h1 id="titleText">Settings</h1>
+			<div class="sounds">
+				<h2 id="soundText">Sound:</h2>
+				<div class="slideContainer">
+					<input type="range" min="1" max="100" value="50" class="slider">
+				</div>
+
+				<h2 id="sfxText">SFX:</h2>
+				<div class="slideContainer">
+					<input type="range" min="1" max="100" value="50" class="slider">
+				</div>
 			</div>
-			<h2 id="sfxText">SFX:</h2>
-			<div class="slideContainer">
-				<input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-			</div>
-			<div class="tutorialBox">
-				<button type="button" id="tutorial">Tutorial</button>
+			<div class="buttonBox">
+				<button type="button" id="tutorialBtn">Tutorial</button>
+				<button type="button" id="signOutBtn">Sign out</button>
 			</div>
 		</div>
 	</div>
 
 	<div class="bar">
-		<button type="button" class="menu" id="calendarButton" onclick="window.location='calendar.handlebars'">
-			<img src="../images/Navigation/calendar.png">
-		</button>
-		<button type="button" class="menu" id="bookButton" onclick="window.location='book.handlebars'">
-			<img src="../images/Navigation/photoalbum.png">
-		</button>
-		<img src="../images/Navigation/home.png" class="menu" id="homeButton" onclick="window.location='home.handlebars'">
-		<button type="button" class="menu" id="marketButton" disabled>
-			<img src="../images/Navigation/market.png">
-		</button>
-		<button type="button" class="menu" id="settingButton" onclick="window.location='setting.handlebars'">
-			<img src="../images/Navigation/settings.png">
-		</button>
+		<div>
+			<button type="button" class="menu" id="calendarButton" onclick="window.location='calendar.handlebars'">
+				<img src="../images/Navigation/calendar.png">
+			</button>
+		</div>
+		<div>
+			<button type="button" class="menu" id="bookButton" onclick="window.location='book.handlebars'">
+				<img src="../images/Navigation/photoalbum.png">
+			</button>
+		</div>
+		<div>
+			<img src="../images/Navigation/home.png" class="menu" id="homeButton" onclick="window.location='home.handlebars'">
+		</div>
+		<div>
+			<button type="button" class="menu" id="marketButton">
+				<img src="../images/Navigation/market.png">
+				<script>
+					$("#marketButton").on("click", function () {
+						$("#marketButton").effect("shake", { distance: 10, time: 20 });
+					});
+				</script>
+			</button>
+		</div>
+		<div>
+			<button type="button" class="menu" id="settingButton" onclick="window.location='setting.handlebars'">
+				<img src="../images/Navigation/settings.png">
+			</button>
+		</div>
 	</div>
-
 </body>
 
 <script>
-	$("#tutorial").on("click", function() {
-        window.location = "tutorial.handlebars";		
+	$("#tutorialBtn").on("click", function () {
+		window.location = "tutorial.handlebars";
 	})
+
+	$("#signOutBtn").on("click", function () {
+		window.location = "/";
+	})
+
+	$('input[type="range"]').change(function () {
+		var val = ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'));
+
+		$(this).css('background-image',
+			'-webkit-gradient(linear, left top, right top, '
+			+ 'color-stop(' + val + ', #94A14E), '
+			+ 'color-stop(' + val + ', #C5C5C5)'
+			+ ')'
+		);
+	});
 </script>
 
 </html>

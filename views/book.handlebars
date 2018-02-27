@@ -10,6 +10,7 @@
 	<!-- JS -->
 	<!--<script src="../js/bootstrap.js"></script>-->
 	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script src="../js/jquery-ui.min.js"></script>
 
 	<!--
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,23 +44,37 @@
 
 
 	<div class="bar">
-		<button type="button" class="menu" id="calendarButton" onclick="window.location='calendar.handlebars'">
-			<img src="../images/Navigation/calendar.png">
-		</button>
-		<button type="button" class="menu" id="bookButton" onclick="window.location='book.handlebars'">
-			<img src="../images/Navigation/photoalbum.png">
-		</button>
-		<img src="../images/Navigation/home.png" class="menu" id="homeButton" onclick="window.location='home.handlebars'">
-		<button type="button" class="menu" id="marketButton" disabled>
-			<img src="../images/Navigation/market.png">
-		</button>
-		<button type="button" class="menu" id="settingButton" onclick="window.location='setting.handlebars'">
-			<img src="../images/Navigation/settings.png">
-		</button>
+		<div>
+			<button type="button" class="menu" id="calendarButton" onclick="window.location='calendar.handlebars'">
+				<img src="../images/Navigation/calendar.png">
+			</button>
+		</div>
+		<div>
+			<button type="button" class="menu" id="bookButton" onclick="window.location='book.handlebars'">
+				<img src="../images/Navigation/photoalbum.png">
+			</button>
+		</div>
+		<div>
+			<img src="../images/Navigation/home.png" class="menu" id="homeButton" onclick="window.location='home.handlebars'">
+		</div>
+		<div>
+			<button type="button" class="menu" id="marketButton">
+				<img src="../images/Navigation/market.png">
+				<script>
+					$("#marketButton").on("click", function () {
+						$("#marketButton").effect("shake", { distance: 10, time: 20 });
+					});
+				</script>
+			</button>
+		</div>
+		<div>
+			<button type="button" class="menu" id="settingButton" onclick="window.location='setting.handlebars'">
+				<img src="../images/Navigation/settings.png">
+			</button>
+		</div>
 	</div>
 
 	<!--Popup Profile-->
-	<script src="../js/jquery-3.3.1.min.js"></script>
 	<script> 
 		var profile;
 		function viewProfile(id) {
