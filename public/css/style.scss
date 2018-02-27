@@ -318,7 +318,7 @@ body{
         flex-direction: column;
         justify-content: center;
         align-items: center; 
-
+        overflow:auto;
         .hide{
             display: none;
         }
@@ -661,7 +661,7 @@ body{
                     border: solid 2px #525863;
                     
                     #emojiOfTheDay {
-                        margin-top: 10px;
+                        margin-top: 5px;
                         width: 60px;
                         height: 60px;
                     }
