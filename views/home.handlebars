@@ -494,7 +494,7 @@
 
 		function resultDone() {
 			if ($('#resultMemo').val()) {
-				gtag("send", "event", 'memo', "inputMemo")
+				gtag("send", "event", 'memo', "inputMemo");
 			}
 			postResult($('#resultMemo').val(), obj);
 			$('#emotionRateList').replaceWith(resultOriginState);

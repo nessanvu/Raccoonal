@@ -5,6 +5,7 @@ var data = require("../calendar.json");
 var abTest = require("../ABtest.json");
 
 exports.view = function (req, res) {
+  abTest.viewAlt = false;  
   res.render('home', abTest);
 };
 
