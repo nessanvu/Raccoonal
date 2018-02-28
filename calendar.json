@@ -73,7 +73,6 @@
       "month": "0",
       "dateNumber": "29",
       "image": "sad.png",
-      "thisMonth": false,
       "records": [
         {
           "hour": "3",
@@ -112,7 +111,6 @@
       "month": "0",
       "dateNumber": "30",
       "image": "fear.png",
-      "thisMonth": false,
       "records": [
         {
           "hour": "10",

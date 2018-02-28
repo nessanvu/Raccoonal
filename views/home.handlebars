@@ -129,11 +129,7 @@
 		</div>
 	</div>
 
-	<!-- work flow-->
 	<script>
-
-
-
 		var resultOriginState = $('#emotionRateList').clone();
 		function log(node_name, msg) {
 			$(node_name).text(msg);
@@ -428,8 +424,9 @@
 			}
 		});
 
-		$("#resultDoneButton").on("click", function () {
+		$("#resultDoneButton").on("click", resultDone);
 
+		function resultDone() {
 			postResult($('#resultMemo').val(), obj);
 			$('#emotionRateList').replaceWith(resultOriginState);
 			$("#startScanButton").prop("disabled", false);
@@ -439,11 +436,13 @@
 			$("#scanningDiv").fadeOut(100);
 			$("#scanStopButton").css("display", "initial");
 			$("#resultMemo").val("");
-		});
+		}
 
-	</script>
+		$('#resultCalendarButton').on("click", function () {
+			resultDone();
+			window.location = 'calendar.handlebars';
+		})
 
-	<script>
 		var myGameArea = {
 			canvas: $("#myGameCanvas")[0],
 			start: function () {
@@ -554,8 +553,7 @@
 			myGamePiece2.update();
 		}
 	</script>
-
-
+	
 </body>
 
 </html>
