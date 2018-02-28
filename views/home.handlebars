@@ -252,6 +252,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
 		$("#startScanButton").on("click", clickStart);
 		function clickStart() {
+			gtag("send", "event", "start", "click");
 			$("#startScanDiv").fadeIn(100).css("display", "flex");
 			$(this).prop("disabled", true);
 		}
