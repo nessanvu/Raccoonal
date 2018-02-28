@@ -484,7 +484,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 		});
 
 		function resultDone() {
-			if ($('#resultMemo').val()) {
+			if ($('#resultMemo').val()!="") {
 				gtag("send", "event", 'memo', "inputMemo");
 			}
 			postResult($('#resultMemo').val(), obj);
