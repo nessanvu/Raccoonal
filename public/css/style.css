@@ -300,6 +300,72 @@ body {
   background-color: #ff9e66;
 }
 
+.content .scanResultModalB {
+  width: 60%;
+  height: 50%;
+  font-size: 50px;
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: solid 3px #76849A;
+  background-color: #E9C8B5;
+  overflow: auto;
+}
+
+.content .scanResultModalB ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.content .scanResultModalB li {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 5px;
+}
+
+.content .scanResultModalB li .emoji {
+  margin-right: 20px;
+}
+
+.content .scanResultModalB li img {
+  width: 40px;
+  height: 40px;
+}
+
+.content .scanResultModalB .lists {
+  display: flex;
+}
+
+.content .scanResultModalB #resultMemo {
+  width: 90%;
+  font-size: 25px;
+  height: 200px;
+  margin: 20px;
+}
+
+.content .scanResultModalB .buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content .scanResultModalB button {
+  margin: 30px;
+  padding: 10px;
+  font-size: 40px;
+  border: 6px #525863 solid;
+  border-radius: 20px;
+  background-color: #ff9e66;
+}
+
 .content #startScanButton {
   -webkit-appearance: none;
   font-size: 45px;

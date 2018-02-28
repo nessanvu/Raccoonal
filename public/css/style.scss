@@ -298,6 +298,67 @@ body{
         }
     }
 
+    .scanResultModalB {
+        width: 60%;
+        height: 50%;
+        font-size: 50px;
+        position: fixed;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        border-radius: 20px;
+        border: solid 3px #76849A;
+        background-color: #E9C8B5;
+        overflow: auto;
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        li {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center; 
+            margin: 5px;
+            .emoji {
+                margin-right: 20px;
+            }
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+        .lists {
+            display: flex;
+        }
+
+        #resultMemo {
+            width: 90%;
+            font-size: 25px;
+            height: 200px;
+            margin: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center; 
+        }
+
+        button {
+            margin: 30px;
+            padding: 10px;
+            font-size: 40px;
+            border: 6px #525863 solid;
+            border-radius: 20px;
+            background-color: rgb(255, 158, 102);   
+        }
+    }
+
     #startScanButton {
         -webkit-appearance:none;
         font-size: 45px;

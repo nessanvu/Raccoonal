@@ -63,6 +63,45 @@
 			</div>
 		</div>
 
+		{{#if viewAlt}}
+		<div class="scanResultModalB" id="scanResultDiv">
+			<p>Done!
+				<br> Memo:
+				<textarea placeholder="What are you thinking about..." id="resultMemo"></textarea>
+
+				<div class="lists">
+					<ul id="emotionRateList">
+						<li id="resultJoy">
+							<img src="../images/Emotions/joy.png" class="emoji">
+						</li>
+						<li id="resultSad">
+							<img src="../images/Emotions/sad.png" class="emoji">
+						</li>
+						<li id="resultContempt">
+							<img src="../images/Emotions/contempt.png" class="emoji">
+						</li>
+						<li id="resultFear">
+							<img src="../images/Emotions/fear.png" class="emoji">
+						</li>
+					</ul>
+					<ul>
+						<li id="resultAngry">
+							<img src="../images/Emotions/angry.png" class="emoji">
+						</li>
+						<li id="resultDisgust">
+							<img src="../images/Emotions/disgust.png" class="emoji">
+						</li>
+						<li id="resultSurprise">
+							<img src="../images/Emotions/surprise.png" class="emoji">
+						</li>
+					</ul>
+				</div>
+				<div class="buttons">
+					<button type="button" id="resultCalendarButtonB">Calendar</button>
+					<button type="button" id="resultDoneButtonB">Close</button>
+				</div>
+		</div>
+		{{else}}
 		<div class="scanResultModal" id="scanResultDiv">
 			<p>Done!
 				<br>Your result is:</p>
@@ -96,21 +135,22 @@
 				<button type="button" id="resultDoneButton">Close</button>
 			</div>
 		</div>
+		{{/if}}
 	</div>
 
 	<div class="bar">
 		<div>
-			<button type="button" class="menu" id="calendarButton" onclick="window.location='calendar.handlebars'">
+			<button type="button" class="menu" id="calendarButton" onclick="window.location='calendar'">
 				<img src="../images/Navigation/calendar.png">
 			</button>
 		</div>
 		<div>
-			<button type="button" class="menu" id="bookButton" onclick="window.location='book.handlebars'">
+			<button type="button" class="menu" id="bookButton" onclick="window.location='book'">
 				<img src="../images/Navigation/photoalbum.png">
 			</button>
 		</div>
 		<div>
-			<img src="../images/Navigation/home.png" class="menu" id="homeButton" onclick="window.location='home.handlebars'">
+			<img src="../images/Navigation/home.png" class="menu" id="homeButton" onclick="window.location='homeA'">
 		</div>
 		<div>
 			<button type="button" class="menu" id="marketButton">
@@ -123,7 +163,7 @@
 			</button>
 		</div>
 		<div>
-			<button type="button" class="menu" id="settingButton" onclick="window.location='setting.handlebars'">
+			<button type="button" class="menu" id="settingButton" onclick="window.location='setting'">
 				<img src="../images/Navigation/settings.png">
 			</button>
 		</div>
@@ -424,8 +464,6 @@
 			}
 		});
 
-		$("#resultDoneButton").on("click", resultDone);
-
 		function resultDone() {
 			postResult($('#resultMemo').val(), obj);
 			$('#emotionRateList').replaceWith(resultOriginState);
@@ -438,10 +476,38 @@
 			$("#resultMemo").val("");
 		}
 
+		$("#resultDoneButton").on("click", resultDone);
+
 		$('#resultCalendarButton').on("click", function () {
 			resultDone();
-			window.location = 'calendar.handlebars';
-		})
+			window.location = 'calendar';
+		});
+
+		$("#resultDoneButtonB").on("click", function () {
+			var res;
+			if (!$("#resultMemo").val()) {
+				res = confirm("You didn't add a memo, are you sure you want to close the result window?")
+			} else {
+				res = true;
+			}
+			if (res) {
+				resultDone();
+			}
+		});
+
+		$('#resultCalendarButtonB').on("click", function () {
+			var res;
+			if (!$("#resultMemo").val()) {
+				res = confirm("You didn't add a memo, are you sure you want to close the result window?")
+			} else {
+				res = true;
+			}
+			if (res) {
+				window.location = 'calendar';
+				resultDone();
+			}
+		});
+
 
 		var myGameArea = {
 			canvas: $("#myGameCanvas")[0],
@@ -553,7 +619,18 @@
 			myGamePiece2.update();
 		}
 	</script>
-	
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114909885-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-114909885-1');
+	</script>
+
+
 </body>
 
 </html>

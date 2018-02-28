@@ -42,11 +42,12 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', login.view);
-app.get('/home.handlebars', home.view);
-app.get('/calendar.handlebars', calendar.view);
-app.get('/book.handlebars', book.view);
-app.get('/setting.handlebars', setting.view);
-app.get('/tutorial.handlebars', tutorial.view);
+app.get('/homeA', home.view);
+app.get('/homeB', home.viewAlt);
+app.get('/calendar', calendar.view);
+app.get('/book', book.view);
+app.get('/setting', setting.view);
+app.get('/tutorial', tutorial.view);
 // Example route
 // app.get('/users', user.list);
 

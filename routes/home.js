@@ -2,9 +2,15 @@
  * GET home page.
  */
 var data = require("../calendar.json");
+var abTest = require("../ABtest.json");
 
 exports.view = function (req, res) {
-  res.render('home');
+  res.render('home', abTest);
+};
+
+exports.viewAlt = function (req, res) {
+  abTest.viewAlt = true;
+  res.render('home', abTest);
 };
 
 exports.parseJson = function (req, res) {
@@ -16,7 +22,6 @@ exports.parseJson = function (req, res) {
   for (var i = 0; i < data.dates.length; i++) {
     if (data.dates[i].month == m && data.dates[i].dateNumber == d) {
       data.dates[i].records.push(req.body);
-      //console.log(data.dates[i].records);
     }
   }
 };

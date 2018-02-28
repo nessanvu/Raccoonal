@@ -50,7 +50,7 @@
                 alert("Password can't be empty!");
             } else {
                 if ($('#firstTimeUser').is(":checked")) {
-                    window.location = 'tutorial.handlebars';
+                    window.location = 'tutorial';
                 } else {
                     var now = new Date();
                     var time = now.getTime();
@@ -62,7 +62,7 @@
                         'path=/';
 
                     console.log(document.cookie);
-                    window.location = 'home.handlebars';
+                    window.location = 'homeA';
                 }
             }
         });
