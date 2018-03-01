@@ -31,7 +31,7 @@
                 <input type="password" id="passwordBox">
             </div>
         </div>
-        <fb:login-button id="fbLogin" scope="public_profile,email" onlogin="checkLoginState();">
+        <fb:login-button id="fbLogin" scope="public_profile,email" onlogin="checkLoginState();"  data-button-type="login_with" data-size="large" onlogin="Log.info.bind('onlogin callback')"> Login with Facebook
         </fb:login-button>
 
         <div id="tutorialDiv">
