@@ -280,6 +280,9 @@ body {
 
 .content .scanResultModal #memoGroup{
   width: 100%;
+  display:flex;
+  flex-direction:row;
+  justify-content: space-between;
 }
 
 .content .scanResultModal #memoGroup #resultMemo {

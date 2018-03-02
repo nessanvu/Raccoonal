@@ -503,15 +503,7 @@
 		});
 
 		$("#resultMemoSubmit").on("click", function () {
-			var res;
-			if (!$("#resultMemo").val()) {
-				res = confirm("You didn't add a memo, there is nothing to submit.")
-			} else {
-				res = confirm("Your note has been saved to Calendar!");
-			}
-			if (res) {
-				resultDone();
-			}
+			res = confirm("Memo saved to calendar!")
 		});
 
 		$("#resultDoneButtonB").on("click", function () {
