@@ -19,29 +19,37 @@
 
 <body>
     <div class="content otherPages login">
-        <h1>Raccoonal Journal</h1>
-        <h2>Login</h2>
+        <!--<h1>Raccoonal Journal</h1>
+        <h2>Login</h2>-->
+        <div id = "loginGraphic">
+            <img src="../images/raccoonal_login.png">
+        </div>
         <div class="userInput">
             <div class="userName">
-                <h3>User name:</h3>
+                <h3>USERNAME:</h3>
                 <input type="input" id="userNameBox">
             </div>
             <div class="password">
-                <h3>Password:</h3>
+                <h3>PASSWORD:</h3>
                 <input type="password" id="passwordBox">
             </div>
         </div>
         <fb:login-button id="fbLogin" scope="public_profile,email" onlogin="checkLoginState();"  data-button-type="login_with" data-size="large" onlogin="Log.info.bind('onlogin callback')"> Login with Facebook
         </fb:login-button>
 
-        <div id="tutorialDiv">
-            <input id="firstTimeUser" type="checkbox">
-            <label for="firstTimeUser">Read Tutorial?</label>
-        </div>
+        <div id="checkBoxes">
 
-        <div id="createAccDiv">
-            <input id="firstTimeUser" type="checkbox">
-            <label for="firstTimeUser">Create Account (for New Users)</label>
+
+            <div id="tutorialDiv">
+                <input id="firstTimeUser" type="checkbox">
+                <label for="firstTimeUser">Read Tutorial?</label>
+            </div>
+
+            <div id="createAccDiv">
+                <input id="firstTimeUser" type="checkbox">
+                <label for="firstTimeUser">Create Account (for New Users)</label>
+            </div>
+
         </div>
 
         <button type="button" id="loginButton">Submit!</button>

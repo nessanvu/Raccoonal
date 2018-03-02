@@ -828,7 +828,7 @@ body {
 .login {
   display: flex;
   position: fixed;
-  height: 120%;
+  height: 100%;
   width: 100%;
   background-color: white;
   z-index: 1;
@@ -855,56 +855,69 @@ body {
 
 .login h3 {
   font-size: 50px;
+  text-align: left;
+  font-weight: 700;
+  color: white;
+}
+
+.login #loginGraphic{
+  margin-bottom: 60px;
 }
 
 .login .userName, .login .password {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: left;
 }
 
 .login .userName input, .login .password input {
-  margin: 5% 10% 30% 10%;
+  margin: 0% 0% 5% 0%;
   width: 100%;
-  height: 60px;
-  font-size: 40px;
+  height: 80px;
+  font-size: 60px;
 }
 
-.login #tutorialDiv {
+.login #checkBoxes #tutorialDiv {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
+  align-content: left;
+}
+
+.login #checkBoxes #tutorialDiv #firstTimeUser {
+  margin: 0px 20px 0px 0px;
+  margin: 0;
+  width: 50px;
+  height: 50px;
+  align-content: left;
+}
+
+.login #checkBoxes #tutorialDiv label {
+  font-size: 40px;
+  margin-left: 20;
+  color:white;
+}
+
+.login #checkBoxes #createAccDiv {
+  display: flex;
+  flex-direction: row;
+ /* justify-content: space-between;*/
   align-content: center;
 }
 
-.login #tutorialDiv #firstTimeUser {
+.login #checkBoxes #createAccDiv #firstTimeUser {
   margin: 0px 20px 0px 0px;
   margin: 0;
   width: 50px;
   height: 50px;
 }
 
-.login #tutorialDiv label {
+.login #checkBoxes #createAccDiv label {
   font-size: 40px;
-}
+  margin-left: 20;
+  color:white;
 
-.login #createAccDiv {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-content: center;
-}
-
-.login #createAccDiv #firstTimeUser {
-  margin: 0px 20px 0px 0px;
-  margin: 0;
-  width: 50px;
-  height: 50px;
-}
-
-.login #createAccDiv label {
-  font-size: 40px;
 }
 
 
