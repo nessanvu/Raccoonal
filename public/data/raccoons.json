@@ -7,7 +7,7 @@
             "width": 300,
             "height": 200,
             "src": "racoon_default.png",
-            "question": "Did you sleep well yesterday?"
+            "question": "How was your sleep yesterday?"
         },
         {
             "college": "ERC",
@@ -16,7 +16,7 @@
             "width": 180,
             "height": 230,
             "src": "racoon_erc.png",
-            "question": "Was your last sleep longer than 6hr?"
+            "question": "How is your stress level today?"
         },
         {
             "college": "Marshall",
@@ -25,7 +25,7 @@
             "width": 300,
             "height": 200,
             "src": "racoon_marshall.png",
-            "question": "Did you eat breakfast today?"
+            "question": "How did you start your day?"
         },
         {
             "college": "Muir",
@@ -34,7 +34,7 @@
             "width": 250,
             "height": 240,
             "src": "racoon_muir.png",
-            "question": "Do you like today's weather?"
+            "question": "How is the weather today for you?"
         },
         {
             "college": "Revelle",
@@ -43,7 +43,7 @@
             "width": 215,
             "height": 290,
             "src": "racoon_revelle.png",
-            "question": "Have you met your friend today?"
+            "question": "How do you feel about spending time with friends today?"
         },
         {
             "college": "Sixth",
@@ -52,7 +52,7 @@
             "width": 250,
             "height": 280,
             "src": "racoon_sixth.png",
-            "question": "Do you feel pain anywhere on your body?"
+            "question": "How is your body feeling?"
         },
         {
             "college": "Warren",
@@ -61,7 +61,7 @@
             "width": 260,
             "height": 240,
             "src": "racoon_warren.png",
-            "question": "Do you have difficulties on focusing on your work?"
+            "question": "How are you doing with work or study today?"
         }
     ]
 }
