@@ -771,98 +771,532 @@
       "dateNumber": "16",
       "month": "1",
       "image": "fear.png",
-      "records": []
+      "records": [
+      {
+          "hour": "15",
+          "minute": "19",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 5,
+            "fear": 1,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "A peace is of the nature of a conquest; for then both parties nobly are subdued, and neither party loser."
+        },
+        {
+          "hour": "19",
+          "minute": "56",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 5,
+            "fear": 1,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "A peace is of the nature of a conquest; for then both parties nobly are subdued, and neither party loser."
+        }
+      ]
     },
     {
       "id": "021718",
       "dateNumber": "17",
       "month": "1",
       "image": "contempt.png",
-      "records": []
+      "records": [
+      {
+          "hour": "15",
+          "minute": "19",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 5,
+            "fear": 1,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "A peace is of the nature of a conquest; for then both parties nobly are subdued, and neither party loser."
+        },
+        {
+          "hour": "19",
+          "minute": "56",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 5,
+            "fear": 1,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "A peace is of the nature of a conquest; for then both parties nobly are subdued, and neither party loser."
+        }
+      ]
     },
     {
       "id": "021818",
       "month": "1",
       "dateNumber": "18",
       "image": "contempt.png",
-      "records": []
+      "records": [
+      {
+          "hour": "15",
+          "minute": "19",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 5,
+            "fear": 1,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "A peace is of the nature of a conquest; for then both parties nobly are subdued, and neither party loser."
+        },
+        {
+          "hour": "19",
+          "minute": "56",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 5,
+            "fear": 1,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "A peace is of the nature of a conquest; for then both parties nobly are subdued, and neither party loser."
+        }
+      ]
     },
     {
       "id": "021918",
       "month": "1",
       "dateNumber": "19",
       "image": "contempt.png",
-      "records": []
+      "records": [
+      {
+          "hour": "15",
+          "minute": "19",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 5,
+            "fear": 1,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "A peace is of the nature of a conquest; for then both parties nobly are subdued, and neither party loser."
+        },
+        {
+          "hour": "19",
+          "minute": "56",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 5,
+            "fear": 1,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "A peace is of the nature of a conquest; for then both parties nobly are subdued, and neither party loser."
+        }
+      ]
     },
     {
       "id": "022018",
       "month": "1",
       "dateNumber": "20",
       "image": "contempt.png",
-      "records": []
+      "records": [
+      {
+          "hour": "15",
+          "minute": "19",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 5,
+            "fear": 1,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "A peace is of the nature of a conquest; for then both parties nobly are subdued, and neither party loser."
+        },
+        {
+          "hour": "19",
+          "minute": "56",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 5,
+            "fear": 1,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "A peace is of the nature of a conquest; for then both parties nobly are subdued, and neither party loser."
+        }
+      ]
     },
     {
       "id": "022118",
       "month": "1",
       "dateNumber": "21",
       "image": "sad.png",
-      "records": []
+      "records": [
+      {
+          "hour": "15",
+          "minute": "19",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 5,
+            "fear": 1,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "A peace is of the nature of a conquest; for then both parties nobly are subdued, and neither party loser."
+        },
+        {
+          "hour": "19",
+          "minute": "56",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 5,
+            "fear": 1,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "A peace is of the nature of a conquest; for then both parties nobly are subdued, and neither party loser."
+        }
+      ]
     },
     {
       "id": "022218",
       "month": "1",
       "dateNumber": "22",
       "image": "contempt.png",
-      "records": []
+      "records": [
+      {
+          "hour": "15",
+          "minute": "19",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 5,
+            "fear": 1,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "A peace is of the nature of a conquest; for then both parties nobly are subdued, and neither party loser."
+        },
+        {
+          "hour": "19",
+          "minute": "56",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 5,
+            "fear": 1,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "A peace is of the nature of a conquest; for then both parties nobly are subdued, and neither party loser."
+        }
+      ]
     },
     {
       "id": "022318",
       "month": "1",
       "dateNumber": "23",
       "image": "joy.png",
-      "records": []
+      "records": [
+      {
+          "hour": "15",
+          "minute": "19",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 5,
+            "fear": 1,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "A peace is of the nature of a conquest; for then both parties nobly are subdued, and neither party loser."
+        },
+        {
+          "hour": "19",
+          "minute": "56",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 5,
+            "fear": 1,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "A peace is of the nature of a conquest; for then both parties nobly are subdued, and neither party loser."
+        }
+      ]
     },
     {
       "id": "022418",
       "month": "1",
       "dateNumber": "24",
       "image": "joy.png",
-      "records": []
+      "records": [
+      {
+          "hour": "15",
+          "minute": "19",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 5,
+            "fear": 1,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "A peace is of the nature of a conquest; for then both parties nobly are subdued, and neither party loser."
+        },
+        {
+          "hour": "19",
+          "minute": "56",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 5,
+            "fear": 1,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "A peace is of the nature of a conquest; for then both parties nobly are subdued, and neither party loser."
+        }
+      ]
     },
     {
       "id": "022518",
       "month": "1",
       "dateNumber": "25",
       "image": "fear.png",
-      "records": []
+      "records": [
+      {
+          "hour": "15",
+          "minute": "19",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 5,
+            "fear": 1,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "A peace is of the nature of a conquest; for then both parties nobly are subdued, and neither party loser."
+        },
+        {
+          "hour": "19",
+          "minute": "56",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 5,
+            "fear": 1,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "A peace is of the nature of a conquest; for then both parties nobly are subdued, and neither party loser."
+        }
+      ]
     },
     {
       "id": "022618",
       "month": "1",
       "dateNumber": "26",
       "image": "angry.png",
-      "records": []
+      "records": [
+      {
+          "hour": "15",
+          "minute": "19",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 5,
+            "fear": 1,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "A peace is of the nature of a conquest; for then both parties nobly are subdued, and neither party loser."
+        },
+        {
+          "hour": "19",
+          "minute": "56",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 5,
+            "fear": 1,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "A peace is of the nature of a conquest; for then both parties nobly are subdued, and neither party loser."
+        }
+      ]
     },
     {
       "id": "022718",
       "month": "1",
       "dateNumber": "27",
       "image": "contempt.png",
-      "records": []
+      "records": [
+      {
+          "hour": "15",
+          "minute": "19",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 5,
+            "fear": 1,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "A peace is of the nature of a conquest; for then both parties nobly are subdued, and neither party loser."
+        },
+        {
+          "hour": "19",
+          "minute": "56",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 5,
+            "fear": 1,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "A peace is of the nature of a conquest; for then both parties nobly are subdued, and neither party loser."
+        }
+      ]
     },
     {
       "id": "022818",
       "month": "1",
       "dateNumber": "28",
       "image": "contempt.png",
-      "records": []
+      "records": [
+      {
+          "hour": "15",
+          "minute": "19",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 5,
+            "fear": 1,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "A peace is of the nature of a conquest; for then both parties nobly are subdued, and neither party loser."
+        },
+        {
+          "hour": "19",
+          "minute": "56",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 5,
+            "fear": 1,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "A peace is of the nature of a conquest; for then both parties nobly are subdued, and neither party loser."
+        }
+      ]
     },
     {
       "id": "030118",
       "month": "2",
       "dateNumber": "1",
       "image": "sad.png",
-      "records": []
+      "records": [
+      {
+          "hour": "15",
+          "minute": "19",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 5,
+            "fear": 1,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "A peace is of the nature of a conquest; for then both parties nobly are subdued, and neither party loser."
+        },
+        {
+          "hour": "19",
+          "minute": "56",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 5,
+            "fear": 1,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "A peace is of the nature of a conquest; for then both parties nobly are subdued, and neither party loser."
+        }
+      ]
     },
     {
       "id": "030218",
@@ -875,6 +1309,202 @@
       "id": "030318",
       "month": "2",
       "dateNumber": "3",
+      "image": "joy.png",
+      "records": []
+    }
+    {
+      "id": "030418",
+      "month": "2",
+      "dateNumber": "4",
+      "image": "contempt.png",
+      "records": []
+    },
+    {
+      "id": "030518",
+      "month": "2",
+      "dateNumber": "5",
+      "image": "joy.png",
+      "records": []
+    }
+    {
+      "id": "030618",
+      "month": "2",
+      "dateNumber": "6",
+      "image": "contempt.png",
+      "records": []
+    },
+    {
+      "id": "030718",
+      "month": "2",
+      "dateNumber": "7",
+      "image": "joy.png",
+      "records": []
+    }
+    {
+      "id": "030818",
+      "month": "2",
+      "dateNumber": "8",
+      "image": "joy.png",
+      "records": []
+    }
+    {
+      "id": "030918",
+      "month": "2",
+      "dateNumber": "9",
+      "image": "contempt.png",
+      "records": []
+    },
+    {
+      "id": "031018",
+      "month": "2",
+      "dateNumber": "10",
+      "image": "joy.png",
+      "records": []
+    }
+    {
+      "id": "031118",
+      "month": "2",
+      "dateNumber": "11",
+      "image": "joy.png",
+      "records": []
+    }
+    {
+      "id": "031218",
+      "month": "2",
+      "dateNumber": "12",
+      "image": "contempt.png",
+      "records": []
+    },
+    {
+      "id": "031318",
+      "month": "2",
+      "dateNumber": "13",
+      "image": "joy.png",
+      "records": []
+    }
+    {
+      "id": "031418",
+      "month": "2",
+      "dateNumber": "14",
+      "image": "contempt.png",
+      "records": []
+    },
+    {
+      "id": "031518",
+      "month": "2",
+      "dateNumber": "15",
+      "image": "joy.png",
+      "records": []
+    }
+    {
+      "id": "031618",
+      "month": "2",
+      "dateNumber": "16",
+      "image": "contempt.png",
+      "records": []
+    },
+    {
+      "id": "031718",
+      "month": "2",
+      "dateNumber": "17",
+      "image": "joy.png",
+      "records": []
+    }
+    {
+      "id": "031818",
+      "month": "2",
+      "dateNumber": "18",
+      "image": "joy.png",
+      "records": []
+    }
+    {
+      "id": "031918",
+      "month": "2",
+      "dateNumber": "19",
+      "image": "contempt.png",
+      "records": []
+    },
+    {
+      "id": "032018",
+      "month": "2",
+      "dateNumber": "20",
+      "image": "joy.png",
+      "records": []
+    }
+    {
+      "id": "032118",
+      "month": "2",
+      "dateNumber": "21",
+      "image": "joy.png",
+      "records": []
+    }
+    {
+      "id": "032218",
+      "month": "2",
+      "dateNumber": "22",
+      "image": "contempt.png",
+      "records": []
+    },
+    {
+      "id": "032318",
+      "month": "2",
+      "dateNumber": "23",
+      "image": "joy.png",
+      "records": []
+    }
+    {
+      "id": "032418",
+      "month": "2",
+      "dateNumber": "24",
+      "image": "contempt.png",
+      "records": []
+    },
+    {
+      "id": "032518",
+      "month": "2",
+      "dateNumber": "25",
+      "image": "joy.png",
+      "records": []
+    }
+    {
+      "id": "032618",
+      "month": "2",
+      "dateNumber": "26",
+      "image": "contempt.png",
+      "records": []
+    },
+    {
+      "id": "032718",
+      "month": "2",
+      "dateNumber": "27",
+      "image": "joy.png",
+      "records": []
+    }
+    {
+      "id": "032818",
+      "month": "2",
+      "dateNumber": "28",
+      "image": "joy.png",
+      "records": []
+    }
+    {
+      "id": "032918",
+      "month": "2",
+      "dateNumber": "29",
+      "image": "contempt.png",
+      "records": []
+    },
+    {
+      "id": "033018",
+      "month": "2",
+      "dateNumber": "30",
+      "image": "joy.png",
+      "records": []
+    }
+    {
+      "id": "033118",
+      "month": "2",
+      "dateNumber": "31",
       "image": "joy.png",
       "records": []
     }
