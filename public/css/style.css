@@ -251,7 +251,7 @@ body {
 }
 
 .content .scanResultModal input {
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .content .scanResultModal ul {
@@ -278,10 +278,22 @@ body {
   height: 60px;
 }
 
-.content .scanResultModal #resultMemo {
-  width: 90%;
-  height: 50px;
+.content .scanResultModal #memoGroup{
+  width: 100%;
+}
+
+.content .scanResultModal #memoGroup #resultMemo {
+  width: 73%;
+  height: 70px;
   margin: 20px;
+  position: absolute;
+  left:0px;
+  margin-bottom: 30px;
+}
+
+.content .scanResultModal #memoGroup button {
+  position: absolute;
+  right: 5px;
 }
 
 .content .scanResultModal .buttons {
@@ -289,6 +301,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-top: 110px;
 }
 
 .content .scanResultModal button {

@@ -135,7 +135,12 @@
 					<img src="../images/Emotions/surprise.png" class="emoji">
 				</li>
 			</ul>
-			<input type="text" placeholder="What are you thinking about..." id="resultMemo">
+			<div id = "memoGroup">
+				<input type="text" placeholder="What are you thinking about..." id="resultMemo">
+				<button type="submit" id="resultMemoSubmit"> 
+					<img src="../images/checkmark.png" width="50">
+				</button>
+			</div>
 			<div class="buttons">
 				<button type="button" id="resultCalendarButton">Calendar</button>
 				<button type="button" id="resultDoneButton">Close</button>
@@ -495,6 +500,18 @@
 		$('#resultCalendarButton').on("click", function () {
 			resultDone();
 			window.location = 'calendar';
+		});
+
+		$("#resultMemoSubmit").on("click", function () {
+			var res;
+			if (!$("#resultMemo").val()) {
+				res = confirm("You didn't add a memo, there is nothing to submit.")
+			} else {
+				res = confirm("Your note has been saved to Calendar!");
+			}
+			if (res) {
+				resultDone();
+			}
 		});
 
 		$("#resultDoneButtonB").on("click", function () {
