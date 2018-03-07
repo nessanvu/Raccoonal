@@ -21,6 +21,7 @@
 	<div class="content otherPages">
 		<div class="raccoonbookBox">
 			<h1> Raccoon Book </h1>
+			<p>These mindful raccoons drop by randomly to say hi and see how you're doing!</p>
 			<div class="raccoons">
 
 				{{#each raccoons}}
@@ -91,8 +92,8 @@
 			$(".raccoondescription").fadeIn(200).css("display", "flex");
 			$("#name").text($(e.target).closest("div").find(".nameP").text());
 			$("#profilePic").attr("src", $(e.target).closest("div").find("img")[0].src);
-			$("#college").text("College: " + $(e.target).closest("div").find(".collegeP").text());
-			$("#description").text($(e.target).closest("div").find(".descriptionP").text());
+			$("#college").text("Visiting from: " + $(e.target).closest("div").find(".collegeP").text());
+			$("#description").text("Mindful Tip:"+ $(e.target).closest("div").find(".descriptionP").text());
 		});
 
 		$("#closeDpt").on("click", function () {

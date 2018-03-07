@@ -5,12 +5,14 @@ var data = require("../calendar.json");
 var abTest = require("../ABtest.json");
 
 exports.view = function (req, res) {
-  abTest.viewAlt = false;  
+  console.log('Pass')
+  abTest["viewAlt"] = false;  
   res.render('home', abTest);
 };
 
 exports.viewAlt = function (req, res) {
-  abTest.viewAlt = true;
+  console.log('Pass2')
+  abTest["viewAlt"] = true;
   res.render('home', abTest);
 };
 

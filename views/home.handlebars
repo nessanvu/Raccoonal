@@ -1,6 +1,20 @@
 <html>
-
 <head>
+
+<!-- Google Analytics Content Experiment code -->
+<script>function utmx_section(){}function utmx(){}(function(){var
+k='170952721-0',d=document,l=d.location,c=d.cookie;
+if(l.search.indexOf('utm_expid='+k)>0)return;
+function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+</script><script>utmx('url','A/B');</script>
+<!-- End of Google Analytics Content Experiment code -->
 
 	<title>Raccoonal Home</title>
 
@@ -28,8 +42,8 @@
 	<div class="content homePage">
 		<button id="testAna">test</button>
 		<button type="button" id="startScanButton">
-			{{#if viewAlt}}
-			<p>StartB</p>
+			{{#if viewAlt}} 
+			<p>Start</p>
 			{{else}}
 			<p>Start</p>
 			{{/if}}			
@@ -37,7 +51,7 @@
 		<div class="modal" id="startScanDiv">
 			<div class="modalMessage">
 				<p>
-					Answer the questions from the raccons, and meanwhile we'll start the emotion scanner!
+					Answer the questions from the raccoons, and meanwhile we'll start the emotion scanner!
 				</p>
 			</div>
 			<div class="modalButton">
@@ -73,7 +87,11 @@
 		<div class="scanResultModalB" id="scanResultDiv">
 			<p>Done!
 				<br> Memo:
-				<textarea placeholder="What are you thinking about..." id="resultMemo"></textarea>
+				<textarea placeholder="What other thoughts do you have for today?" id="resultMemo"></textarea>
+
+				<button type="submit" id="resultMemoSubmit"> 
+					<img src="../images/checkmark.png" width="50">
+				</button>
 
 				<div class="lists">
 					<ul id="emotionRateList">
@@ -136,7 +154,7 @@
 				</li>
 			</ul>
 			<div id = "memoGroup">
-				<input type="text" placeholder="What are you thinking about..." id="resultMemo">
+				<input type="text" placeholder="What other thoughts do you have for today?" id="resultMemo">
 				<button type="submit" id="resultMemoSubmit"> 
 					<img src="../images/checkmark.png" width="50">
 				</button>
@@ -504,6 +522,7 @@
 
 		$("#resultMemoSubmit").on("click", function () {
 			res = confirm("Memo saved to calendar!")
+			gtag('send','event','memo','click');
 		});
 
 		$("#resultDoneButtonB").on("click", function () {
@@ -644,14 +663,14 @@
 	</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114909885-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115178675-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
-  gtag('config', 'UA-114909885-1');
+  gtag('config', 'UA-115178675-1');
 </script>
+
 </body>
 
 </html>

@@ -1,3 +1,8 @@
+@font-face {
+    font-family: adamGorryInline;
+    src: url(adam_gorry_inline.woff);
+}
+
 body {
   font-family: 'Sniglet', cursive;
 }
@@ -422,6 +427,13 @@ body {
   font-family: 'Sniglet', cursive;
 }
 
+.content .raccoonbookBox p {
+  font-size: 30px;
+  margin-right: 7%;
+  margin-left: 7%;
+  font-family: 'Sniglet', cursive;
+}
+
 .content .raccoonbookBox .raccoons {
   margin: 5%;
   display: grid;
@@ -447,6 +459,8 @@ body {
 .content .raccoonbookBox .raccoons .raccoon img {
   max-height: 40%;
   max-width: 90%;
+  width: auto;
+  height: auto;
 }
 
 .content .raccoonbookBox .raccoons .raccoon p {
@@ -477,11 +491,12 @@ body {
 }
 
 .content .raccoonbookBox .raccoondescription img {
-  max-width: 80%;
-  max-height: 40%;
-  border: solid 4px #525863;
+  max-width: 70%;
+  max-height: 30%;
+  padding: 10px;
+  /*border: solid 4px #525863;
   overflow: hidden;
-  background-color: white;
+  background-color: white;*/
 }
 
 .content .raccoonbookBox .raccoondescription #college {
