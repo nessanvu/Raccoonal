@@ -245,10 +245,13 @@ body {
     }
 
     .scanResultModal {
-        width: 60%;
-        height: 50%;
+        width: 65%;
+        height: 60%;
         font-size: 50px;
         position: fixed;
+        padding: 20px;
+        overflow: auto;
+
         display: none;
         flex-direction: column;
         justify-content: center;
@@ -285,17 +288,17 @@ body {
             }
         }
 
-        #resultMemo {
-            width: 90%;
-            height: 50px;
-            margin: 20px;
-        }
+        
 
         .buttons {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
+
+            button {
+                width: 200px;
+            }
         }
 
         button {
@@ -306,14 +309,32 @@ body {
             border-radius: 20px;
             background-color: rgb(255, 158, 102);
         }
+
+        #memoGroup {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            #resultMemo {
+                width: 90%;
+                height: 60px;
+                margin: 20px;
+            }
+
+            #resultMemoSubmit {
+                margin: 0 0 0 10px;
+            }            
+        }
     }
 
     .scanResultModalB {
-        width: 60%;
-        height: 50%;
-        font-size: 50px;
+        width: 65%;
+        height: 60%;
+        font-size: 60px;
         position: fixed;
-        display: none;
+        padding: 20px;
+        overflow: auto;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -321,6 +342,11 @@ body {
         border: solid 3px #76849A;
         background-color: #E9C8B5;
         overflow: auto;
+        display: none;
+
+        #donetext {
+            font-size: 80px;
+        }
 
         ul {
             list-style: none;
@@ -352,8 +378,8 @@ body {
 
         #resultMemo {
             width: 90%;
-            font-size: 25px;
-            height: 200px;
+            font-size: 30px;
+            height: 230px;
             margin: 20px;
         }
 
@@ -362,6 +388,9 @@ body {
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
+            button {
+                width: 200px;
+            }
         }
 
         button {

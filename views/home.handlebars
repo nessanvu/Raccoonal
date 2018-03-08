@@ -1,675 +1,687 @@
 <html>
+
 <head>
 
-<!-- Google Analytics Content Experiment code -->
-<script>function utmx_section(){}function utmx(){}(function(){var
-k='170952721-0',d=document,l=d.location,c=d.cookie;
-if(l.search.indexOf('utm_expid='+k)>0)return;
-function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
-indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
-length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
-'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
-'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
-'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
-valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
-'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
-</script><script>utmx('url','A/B');</script>
-<!-- End of Google Analytics Content Experiment code -->
+    <!-- Google Analytics Content Experiment code -->
+    <script>function utmx_section() { } function utmx() { } (function () {
+            var
+            k = '170952721-0', d = document, l = d.location, c = d.cookie;
+            if (l.search.indexOf('utm_expid=' + k) > 0) return;
+            function f(n) {                
+if (c) {
+                    var i = c.indexOf(n + '='); if (i > -1) {                        
+var j = c.
+                            indexOf(';', i); return escape(c.substring(i + n.length + 1, j < 0 ? c.
+                                length : j))
+                    }                
+}
+            } var x = f('__utmx'), xx = f('__utmxx'), h = l.hash; d.write(
+                '<sc' + 'ript src="' + 'http' + (l.protocol == 'https:' ? 's://ssl' :
+                    '://www') + '.google-analytics.com/ga_exp.js?' + 'utmxkey=' + k +
+                '&utmx=' + (x ? x : '') + '&utmxx=' + (xx ? xx : '') + '&utmxtime=' + new Date().
+                    valueOf() + (h ? '&utmxhash=' + escape(h.substr(1)) : '') +
+                '" type="text/javascript" charset="utf-8"><\/sc' + 'ript>')        
+})();
+    </script>
+    <script>utmx('url', 'A/B');</script>
+    <!-- End of Google Analytics Content Experiment code -->
 
-	<title>Raccoonal Home</title>
+    <title>Raccoonal Home</title>
 
-	<!-- CSS -->
-	<link rel="stylesheet" href="../css/bootstrap.min.css">
-	<link rel="stylesheet" href="../css/style.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
 
-	<!-- Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Sniglet" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Sniglet" rel="stylesheet">
 
-	<!-- JS -->
-	<script src="../js/jquery-3.3.1.min.js"></script>
-	<script src="../js/jquery-ui.min.js"></script>
-	<script src="../js/bootstrap.js"></script>
-	<script src="https://download.affectiva.com/js/3.1/affdex.js" type="text/javascript"> </script>
-	<script src="../js/easytimer.min.js"></script>
+    <!-- JS -->
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="https://download.affectiva.com/js/3.1/affdex.js" type="text/javascript"> </script>
+    <script src="../js/easytimer.min.js"></script>
 
 </head>
 
 <body onload="startGame()">
 
-	<canvas class="game" id="myGameCanvas">
-	</canvas>
+    <canvas class="game" id="myGameCanvas">
+    </canvas>
 
-	<div class="content homePage">
-		<button id="testAna">test</button>
-		<button type="button" id="startScanButton">
-			{{#if viewAlt}} 
-			<p>Start</p>
-			{{else}}
-			<p>Start</p>
-			{{/if}}			
-		</button>
-		<div class="modal" id="startScanDiv">
-			<div class="modalMessage">
-				<p>
-					Answer the questions from the raccoons, and meanwhile we'll start the emotion scanner!
-				</p>
-			</div>
-			<div class="modalButton">
-				<button type="button" id="scanLaterButton">Later</button>
-				<button type="button" id="scanOkButton">OK</button>
-			</div>
-		</div>
+    <div class="content homePage">
+        <button id="testAna">test</button>
+        <button type="button" id="startScanButton">
+            {{#if viewAlt}}
+            <p>Start</p>
+            {{else}}
+            <p>Start</p>
+            {{/if}}
+        </button>
+        <div class="modal" id="startScanDiv">
+            <div class="modalMessage">
+                <p>
+                    Answer the questions from the raccoons, and meanwhile we'll start the emotion scanner!
+                </p>
+            </div>
+            <div class="modalButton">
+                <button type="button" id="scanLaterButton">Later</button>
+                <button type="button" id="scanOkButton">OK</button>
+            </div>
+        </div>
 
-		<div class="scanningModal" id="scanningDiv">
-			<p id="countdownMessage">Scanning... </p>
-			<button type="button" id="scanStopButton">Stop</button>
-			<p id="notCenteredMessage">Scanning Paused! Couldn't find your face!</p>
-			<div class="affectivaTest" id="affdex_elements"></div>
-			<button type="button" id="toggleCamButton">
-				<img src="../images/toggle.png" alt="toggle">
-			</button>
-		</div>
+        <div class="scanningModal" id="scanningDiv">
+            <p id="countdownMessage">Scanning... </p>
+            <button type="button" id="scanStopButton">Stop</button>
+            <p id="notCenteredMessage">Scanning Paused! Couldn't find your face!</p>
+            <div class="affectivaTest" id="affdex_elements"></div>
+            <button type="button" id="toggleCamButton">
+                <img src="../images/toggle.png" alt="toggle">
+            </button>
+        </div>
 
-		<div class="quizModal">
-			<div class="quizQuestion">
-				<img id="questionImg" src="" class="raccoon">
-				<p id="questionP">
-					Question.
-				</p>
-			</div>
-			<div class="quizButton">
-				<button type="button" id="quizYesButton" onclick="nextQuestion()">Good</button>
-				<button type="button" id="quizNoButton" onclick="nextQuestion()">Bad</button>
-			</div>
-		</div>
+        <div class="quizModal">
+            <div class="quizQuestion">
+                <img id="questionImg" src="" class="raccoon">
+                <p id="questionP">
+                    Question.
+                </p>
+            </div>
+            <div class="quizButton">
+                <button type="button" id="quizYesButton" onclick="nextQuestion()">Good</button>
+                <button type="button" id="quizNoButton" onclick="nextQuestion()">Bad</button>
+            </div>
+        </div>
 
-		{{#if viewAlt}}
-		<div class="scanResultModalB" id="scanResultDiv">
-			<p>Done!
-				<br> Memo:
-				<textarea placeholder="What are you thinking about..." id="resultMemo"></textarea>
+        {{#if viewAlt}}
+        <div class="scanResultModalB" id="scanResultDiv">
+            <p id="donetext">Done!</p>
+            <p>
+                <strong>Memo:</strong>
+            </p>
+            <textarea placeholder="What are you thinking about..." id="resultMemo"></textarea>
 
-				<button type="submit" id="resultMemoSubmit"> 
-					<img src="../images/checkmark.png" width="50">
-				</button>
+            <button type="submit" id="resultMemoSubmit">
+                <img src="../images/checkmark.png" width="50">Save
+            </button>
 
-				<div class="lists">
-					<ul id="emotionRateList">
-						<li id="resultJoy">
-							<img src="../images/Emotions/joy.png" class="emoji">
-						</li>
-						<li id="resultSad">
-							<img src="../images/Emotions/sad.png" class="emoji">
-						</li>
-						<li id="resultContempt">
-							<img src="../images/Emotions/contempt.png" class="emoji">
-						</li>
-						<li id="resultFear">
-							<img src="../images/Emotions/fear.png" class="emoji">
-						</li>
-					</ul>
-					<ul>
-						<li id="resultAngry">
-							<img src="../images/Emotions/angry.png" class="emoji">
-						</li>
-						<li id="resultDisgust">
-							<img src="../images/Emotions/disgust.png" class="emoji">
-						</li>
-						<li id="resultSurprise">
-							<img src="../images/Emotions/surprise.png" class="emoji">
-						</li>
-					</ul>
-				</div>
-				<div class="buttons">
-					<button type="button" id="resultCalendarButtonB">Calendar</button>
-					<button type="button" id="resultDoneButtonB">Close</button>
-				</div>
-		</div>
-		{{else}}
-		<div class="scanResultModal" id="scanResultDiv">
-			<p>Done!
-				<br>Your result is:</p>
-			<!--<div id="resultChartContainer"></div>-->
-			<ul id="emotionRateList">
-				<li id="resultJoy">
-					<img src="../images/Emotions/joy.png" class="emoji">
-				</li>
-				<li id="resultSad">
-					<img src="../images/Emotions/sad.png" class="emoji">
-				</li>
-				<li id="resultContempt">
-					<img src="../images/Emotions/contempt.png" class="emoji">
-				</li>
-				<li id="resultFear">
-					<img src="../images/Emotions/fear.png" class="emoji">
-				</li>
-				<li id="resultAngry">
-					<img src="../images/Emotions/angry.png" class="emoji">
-				</li>
-				<li id="resultDisgust">
-					<img src="../images/Emotions/disgust.png" class="emoji">
-				</li>
-				<li id="resultSurprise">
-					<img src="../images/Emotions/surprise.png" class="emoji">
-				</li>
-			</ul>
-			<div id = "memoGroup">
-				<input type="text" placeholder="What are you thinking about..." id="resultMemo">
-				<button type="submit" id="resultMemoSubmit"> 
-					<img src="../images/checkmark.png" width="50">
-				</button>
-			</div>
-			<div class="buttons">
-				<button type="button" id="resultCalendarButton">Calendar</button>
-				<button type="button" id="resultDoneButton">Close</button>
-			</div>
-		</div>
-		{{/if}}
-	</div>
+            <div class="lists">
+                <ul id="emotionRateList">
+                    <li id="resultJoy">
+                        <img src="../images/Emotions/joy.png" class="emoji">
+                    </li>
+                    <li id="resultSad">
+                        <img src="../images/Emotions/sad.png" class="emoji">
+                    </li>
+                    <li id="resultContempt">
+                        <img src="../images/Emotions/contempt.png" class="emoji">
+                    </li>
+                    <li id="resultFear">
+                        <img src="../images/Emotions/fear.png" class="emoji">
+                    </li>
+                </ul>
+                <ul>
+                    <li id="resultAngry">
+                        <img src="../images/Emotions/angry.png" class="emoji">
+                    </li>
+                    <li id="resultDisgust">
+                        <img src="../images/Emotions/disgust.png" class="emoji">
+                    </li>
+                    <li id="resultSurprise">
+                        <img src="../images/Emotions/surprise.png" class="emoji">
+                    </li>
+                </ul>
+            </div>
+            <div class="buttons">
+                <button type="button" id="resultCalendarButtonB">Calendar</button>
+                <button type="button" id="resultDoneButtonB">Close</button>
+            </div>
+        </div>
+        {{else}}
+        <div class="scanResultModal" id="scanResultDiv">
+            <p>Done!
+                <br>Your result is:</p>
+            <!--<div id="resultChartContainer"></div>-->
+            <ul id="emotionRateList">
+                <li id="resultJoy">
+                    <img src="../images/Emotions/joy.png" class="emoji">
+                </li>
+                <li id="resultSad">
+                    <img src="../images/Emotions/sad.png" class="emoji">
+                </li>
+                <li id="resultContempt">
+                    <img src="../images/Emotions/contempt.png" class="emoji">
+                </li>
+                <li id="resultFear">
+                    <img src="../images/Emotions/fear.png" class="emoji">
+                </li>
+                <li id="resultAngry">
+                    <img src="../images/Emotions/angry.png" class="emoji">
+                </li>
+                <li id="resultDisgust">
+                    <img src="../images/Emotions/disgust.png" class="emoji">
+                </li>
+                <li id="resultSurprise">
+                    <img src="../images/Emotions/surprise.png" class="emoji">
+                </li>
+            </ul>
+            <div id="memoGroup">
+                <input type="text" placeholder="What are you thinking about..." id="resultMemo">
+                <button type="submit" id="resultMemoSubmit">
+                    <img src="../images/checkmark.png" width="50">
+                </button>
+            </div>
+            <div class="buttons">
+                <button type="button" id="resultCalendarButton">Calendar</button>
+                <button type="button" id="resultDoneButton">Close</button>
+            </div>
+        </div>
+        {{/if}}
+    </div>
 
-	<div class="bar">
-		<div>
-			<button type="button" class="menu" id="calendarButton" onclick="window.location='calendar'">
-				<img src="../images/Navigation/calendar.png">
-			</button>
-		</div>
-		<div>
-			<button type="button" class="menu" id="bookButton" onclick="window.location='book'">
-				<img src="../images/Navigation/photoalbum.png">
-			</button>
-		</div>
-		<div>
-			<img src="../images/Navigation/home.png" class="menu" id="homeButton" onclick="window.location='homeA'">
-		</div>
-		<div>
-			<button type="button" class="menu" id="marketButton">
-				<img src="../images/Navigation/market.png">
-				<script>
-					$("#marketButton").on("click", function () {
-						$("#marketButton").effect("shake", { distance: 10, time: 20 });
-					});
-				</script>
-			</button>
-		</div>
-		<div>
-			<button type="button" class="menu" id="settingButton" onclick="window.location='setting'">
-				<img src="../images/Navigation/settings.png">
-			</button>
-		</div>
-	</div>
+    <div class="bar">
+        <div>
+            <button type="button" class="menu" id="calendarButton" onclick="window.location='calendar'">
+                <img src="../images/Navigation/calendar.png">
+            </button>
+        </div>
+        <div>
+            <button type="button" class="menu" id="bookButton" onclick="window.location='book'">
+                <img src="../images/Navigation/photoalbum.png">
+            </button>
+        </div>
+        <div>
+            <img src="../images/Navigation/home.png" class="menu" id="homeButton" onclick="window.location='homeA'">
+        </div>
+        <div>
+            <button type="button" class="menu" id="marketButton">
+                <img src="../images/Navigation/market.png">
+                <script>
+                    $("#marketButton").on("click", function () {
+                        $("#marketButton").effect("shake", { distance: 10, time: 20 });
+                    });
+                </script>
+            </button>
+        </div>
+        <div>
+            <button type="button" class="menu" id="settingButton" onclick="window.location='setting'">
+                <img src="../images/Navigation/settings.png">
+            </button>
+        </div>
+    </div>
 
-	<script>
-		var resultOriginState = $('#emotionRateList').clone();
-		function log(node_name, msg) {
-			$(node_name).text(msg);
-		}
+    <script>
+        var resultOriginState = $('#emotionRateList').clone();
+        function log(node_name, msg) {
+            $(node_name).text(msg);
+        }
 
-		var quizRaccoons = [];
-		$.getJSON("../data/raccoons.json", function (raccoons) {
-			for (var i = 0; i <= 6; i++) {
-				quizRaccoons.push(new quizRaccoon(raccoons.raccoons[i].src, raccoons.raccoons[i].question));
-			}
-			//console.log(quizRaccoons);
-		});
+        var quizRaccoons = [];
+        $.getJSON("../data/raccoons.json", function (raccoons) {
+            for (var i = 0; i <= 6; i++) {
+                quizRaccoons.push(new quizRaccoon(raccoons.raccoons[i].src, raccoons.raccoons[i].question));
+            }
+            //console.log(quizRaccoons);
+        });
 
-		function quizRaccoon(src, question) {
-			this.src = src;
-			this.question = question;
-			this.getSrc = function () {
-				return this.src;
-			}
-			this.getQuestion = function () {
-				return this.question;
-			}
-		}
+        function quizRaccoon(src, question) {
+            this.src = src;
+            this.question = question;
+            this.getSrc = function () {
+                return this.src;
+            }
+            this.getQuestion = function () {
+                return this.question;
+            }
+        }
 
-		var isQuizFinished = false;
-		var isScanFinished = false;
-		var ind = 0;
-		function startQuiz() {
-			$(".quizModal").fadeIn(200).css("display", "flex");
-			$("#questionImg").attr("src", "../images/Racoons/" + quizRaccoons[ind].getSrc());
-			$("#questionP").text(quizRaccoons[ind].getQuestion());
-		}
+        var isQuizFinished = false;
+        var isScanFinished = false;
+        var ind = 0;
+        function startQuiz() {
+            $(".quizModal").fadeIn(200).css("display", "flex");
+            $("#questionImg").attr("src", "../images/Racoons/" + quizRaccoons[ind].getSrc());
+            $("#questionP").text(quizRaccoons[ind].getQuestion());
+        }
 
-		function nextQuestion() {
-			$(".quizModal").hide();
-			ind++;
-			if (ind < 7) {
-				startQuiz();
-			} else {
-				ind = 0;
-				$(".quizModal").hide();
-				isQuizFinished = true;
+        function nextQuestion() {
+            $(".quizModal").hide();
+            ind++;
+            if (ind < 7) {
+                startQuiz();
+            } else {
+                ind = 0;
+                $(".quizModal").hide();
+                isQuizFinished = true;
 
-				if (isScanFinished) {
-					$("#scanResultDiv").fadeIn(100).css("display", "flex");
-				}
-			}
-		}
+                if (isScanFinished) {
+                    $("#scanResultDiv").fadeIn(100).css("display", "flex");
+                }
+            }
+        }
 
-		//affectiva init
-		var divRoot = $("#affdex_elements")[0];
-		var width = 640;
-		var height = 480;
-		var isOn = false;
+        //affectiva init
+        var divRoot = $("#affdex_elements")[0];
+        var width = 640;
+        var height = 480;
+        var isOn = false;
 
-		var faceMode = affdex.FaceDetectorMode.LARGE_FACES;
-		var detector = new affdex.CameraDetector(divRoot, width, height, faceMode);
+        var faceMode = affdex.FaceDetectorMode.LARGE_FACES;
+        var detector = new affdex.CameraDetector(divRoot, width, height, faceMode);
 
-		detector.detectAllEmotions();
-		detector.detectAllEmojis();
+        detector.detectAllEmotions();
+        detector.detectAllEmojis();
 
-		$("#testAna").on("click", function() {
-			console.log("test google analytics");
-			gtag("send", "event", "start", "click");		
-		})
+        $("#testAna").on("click", function () {
+            console.log("test google analytics");
+            gtag("send", "event", "start", "click");
+        })
 
-		$("#startScanButton").on("click", clickStart);
-		function clickStart() {
-			$("#startScanDiv").fadeIn(100).css("display", "flex");
-			$(this).prop("disabled", true);
-		}
+        $("#startScanButton").on("click", clickStart);
+        function clickStart() {
+            $("#startScanDiv").fadeIn(100).css("display", "flex");
+            $(this).prop("disabled", true);
+        }
 
-		$("#scanLaterButton").on("click", function () {
-			$("#startScanDiv").fadeOut(100);
-			$("#startScanButton").prop("disabled", false);
-		});
+        $("#scanLaterButton").on("click", function () {
+            $("#startScanDiv").fadeOut(100);
+            $("#startScanButton").prop("disabled", false);
+        });
 
-		//countdown
-		var countdownIntervalId;
-		var isPaused = false;
-		var offset = 0;
-		var time;
-		var output = $('#countdownMessage');
-		var out2 = $("#notCenteredMessage");
+        //countdown
+        var countdownIntervalId;
+        var isPaused = false;
+        var offset = 0;
+        var time;
+        var output = $('#countdownMessage');
+        var out2 = $("#notCenteredMessage");
 
-		var resultObj = {
-			"anger": 0.0,
-			"contempt": 0.0,
-			"disgust": 0.0,
-			"fear": 0.0,
-			"joy": 0.0,
-			"sadness": 0.0,
-			"surprise": 0.0,
-			"count": 0,
-		}
+        var resultObj = {
+            "anger": 0.0,
+            "contempt": 0.0,
+            "disgust": 0.0,
+            "fear": 0.0,
+            "joy": 0.0,
+            "sadness": 0.0,
+            "surprise": 0.0,
+            "count": 0,
+        }
 
-		function cleanResult(resultObj) {
-			resultObj["anger"] = 0.0;
-			resultObj["contempt"] = 0.0;
-			resultObj["disgust"] = 0.0;
-			resultObj["fear"] = 0.0;
-			resultObj["joy"] = 0.0;
-			resultObj["sadness"] = 0.0;
-			resultObj["surprise"] = 0.0;
-			resultObj["count"] = 0;
-		}
+        function cleanResult(resultObj) {
+            resultObj["anger"] = 0.0;
+            resultObj["contempt"] = 0.0;
+            resultObj["disgust"] = 0.0;
+            resultObj["fear"] = 0.0;
+            resultObj["joy"] = 0.0;
+            resultObj["sadness"] = 0.0;
+            resultObj["surprise"] = 0.0;
+            resultObj["count"] = 0;
+        }
 
-		function rateResult(score) {
-			if (score >= 0 && score < 1) return 0;
-			if (score >= 1 && score < 20) return 1;
-			if (score >= 20 && score < 40) return 2;
-			if (score >= 40 && score < 60) return 3;
-			if (score >= 60 && score < 80) return 4;
-			if (score >= 80 && score <= 100) return 5;
-		}
+        function rateResult(score) {
+            if (score >= 0 && score < 1) return 0;
+            if (score >= 1 && score < 20) return 1;
+            if (score >= 20 && score < 40) return 2;
+            if (score >= 40 && score < 60) return 3;
+            if (score >= 60 && score < 80) return 4;
+            if (score >= 80 && score <= 100) return 5;
+        }
 
-		function finalizeResult(resultObj) {
-			if (resultObj["count"] == 0) resultObj["count"] = 1;
-			resultObj["anger"] = (resultObj["anger"] / resultObj["count"]);
-			resultObj["contempt"] = (resultObj["contempt"] / resultObj["count"]);
-			resultObj["disgust"] = (resultObj["disgust"] / resultObj["count"]);
-			resultObj["fear"] = (resultObj["fear"] / resultObj["count"]);
-			resultObj["joy"] = (resultObj["joy"] / resultObj["count"]);
-			resultObj["sadness"] = (resultObj["sadness"] / resultObj["count"]);
-			resultObj["surprise"] = (resultObj["surprise"] / resultObj["count"]);
+        function finalizeResult(resultObj) {
+            if (resultObj["count"] == 0) resultObj["count"] = 1;
+            resultObj["anger"] = (resultObj["anger"] / resultObj["count"]);
+            resultObj["contempt"] = (resultObj["contempt"] / resultObj["count"]);
+            resultObj["disgust"] = (resultObj["disgust"] / resultObj["count"]);
+            resultObj["fear"] = (resultObj["fear"] / resultObj["count"]);
+            resultObj["joy"] = (resultObj["joy"] / resultObj["count"]);
+            resultObj["sadness"] = (resultObj["sadness"] / resultObj["count"]);
+            resultObj["surprise"] = (resultObj["surprise"] / resultObj["count"]);
 
-			var overall = resultObj["anger"] + resultObj["contempt"] + resultObj["disgust"] + resultObj["fear"] + resultObj["joy"] + resultObj["sadness"] + resultObj["surprise"];
-			if (overall == 0) overall = 1;
-			resultObj["anger"] = rateResult(resultObj["anger"] / overall * 100);
-			resultObj["contempt"] = rateResult(resultObj["contempt"] / overall * 100);
-			resultObj["disgust"] = rateResult(resultObj["disgust"] / overall * 100);
-			resultObj["fear"] = rateResult(resultObj["fear"] / overall * 100);
-			resultObj["joy"] = rateResult(resultObj["joy"] / overall * 100);
-			resultObj["sadness"] = rateResult(resultObj["sadness"] / overall * 100);
-			resultObj["surprise"] = rateResult(resultObj["surprise"] / overall * 100);
-			return resultObj;
-		}
+            var overall = resultObj["anger"] + resultObj["contempt"] + resultObj["disgust"] + resultObj["fear"] + resultObj["joy"] + resultObj["sadness"] + resultObj["surprise"];
+            if (overall == 0) overall = 1;
+            resultObj["anger"] = rateResult(resultObj["anger"] / overall * 100);
+            resultObj["contempt"] = rateResult(resultObj["contempt"] / overall * 100);
+            resultObj["disgust"] = rateResult(resultObj["disgust"] / overall * 100);
+            resultObj["fear"] = rateResult(resultObj["fear"] / overall * 100);
+            resultObj["joy"] = rateResult(resultObj["joy"] / overall * 100);
+            resultObj["sadness"] = rateResult(resultObj["sadness"] / overall * 100);
+            resultObj["surprise"] = rateResult(resultObj["surprise"] / overall * 100);
+            return resultObj;
+        }
 
-		function getEmojiByRating(resultObj) {
-			var i;
-			var j = resultObj["anger"];
-			if (resultObj["anger"] > j) {
-				j = resultObj["anger"];
-				i = "anger.png";
-			}
-			if (resultObj["contempt"] > j) {
-				j = resultObj["contempt"];
-				i = "contempt.png";
-			}
-			if (resultObj["disgust"] > j) {
-				j = resultObj["disgust"];
-				i = "disgust.png";
-			}
-			if (resultObj["fear"] > j) {
-				j = resultObj["fear"];
-				i = "fear.png";
-			}
-			if (resultObj["joy"] > j) {
-				j = resultObj["joy"];
-				i = "joy.png";
-			}
-			if (resultObj["sadness"] > j) {
-				j = resultObj["sadness"];
-				i = "sad.png";
-			}
-			if (resultObj["surprise"] > j) {
-				j = resultObj["surprise"];
-				i = "surprise.png";
-			}
-			return i;
-		}
+        function getEmojiByRating(resultObj) {
+            var i;
+            var j = resultObj["anger"];
+            if (resultObj["anger"] > j) {
+                j = resultObj["anger"];
+                i = "anger.png";
+            }
+            if (resultObj["contempt"] > j) {
+                j = resultObj["contempt"];
+                i = "contempt.png";
+            }
+            if (resultObj["disgust"] > j) {
+                j = resultObj["disgust"];
+                i = "disgust.png";
+            }
+            if (resultObj["fear"] > j) {
+                j = resultObj["fear"];
+                i = "fear.png";
+            }
+            if (resultObj["joy"] > j) {
+                j = resultObj["joy"];
+                i = "joy.png";
+            }
+            if (resultObj["sadness"] > j) {
+                j = resultObj["sadness"];
+                i = "sad.png";
+            }
+            if (resultObj["surprise"] > j) {
+                j = resultObj["surprise"];
+                i = "surprise.png";
+            }
+            return i;
+        }
 
-		function postResult(memo, stringObj) {
-			var t = new Date();
+        function postResult(memo, stringObj) {
+            var t = new Date();
 
-			var resultJson = {
-				"hour": t.getHours(),
-				"minute": t.getMinutes(),
-				"emoji": getEmojiByRating(resultObj),
-				"emotion": JSON.parse(stringObj),
-				"memoText": memo
-			};
-			$.post("/", resultJson);
-		}
+            var resultJson = {
+                "hour": t.getHours(),
+                "minute": t.getMinutes(),
+                "emoji": getEmojiByRating(resultObj),
+                "emotion": JSON.parse(stringObj),
+                "memoText": memo
+            };
+            $.post("/", resultJson);
+        }
 
-		var timer = new Timer();
+        var timer = new Timer();
 
-		timer.addEventListener('secondsUpdated', function (e) {
-			output.text("Scanning... " + timer.getTimeValues().toString() + "s left...");
-		});
+        timer.addEventListener('secondsUpdated', function (e) {
+            output.text("Scanning... " + timer.getTimeValues().toString() + "s left...");
+        });
 
-		var obj;
-		timer.addEventListener('targetAchieved', function (e) {
-			e.preventDefault();
-			detector.stop();
-			timer.stop();
-			$("#toggleCamButton").fadeOut(100);
-			$("notCenteredMessage").hide();
-			$(".affectivaTest").fadeOut(100);
-			output.text("Scanning done!");
-			resultObj = finalizeResult(resultObj);
-			//console.log(JSON.stringify(resultObj));
-			//log('#avgRes', "Emotions in average: " + JSON.stringify(resultObj));
-			$("#scanStopButton").fadeOut(100);
+        var obj;
+        timer.addEventListener('targetAchieved', function (e) {
+            e.preventDefault();
+            detector.stop();
+            timer.stop();
+            $("#toggleCamButton").fadeOut(100);
+            $("notCenteredMessage").hide();
+            $(".affectivaTest").fadeOut(100);
+            output.text("Scanning done!");
+            resultObj = finalizeResult(resultObj);
+            //console.log(JSON.stringify(resultObj));
+            //log('#avgRes', "Emotions in average: " + JSON.stringify(resultObj));
+            $("#scanStopButton").fadeOut(100);
 
-			for (var i = 0; i < resultObj["joy"]; i++) {
-				$("#resultJoy").append('<img src="../images/rate_star.png">');
-			};
-			for (var i = 0; i < resultObj["sadness"]; i++) {
-				$("#resultSad").append('<img src="../images/rate_star.png">');
-			};
-			for (var i = 0; i < resultObj["contempt"]; i++) {
-				$("#resultContempt").append('<img src="../images/rate_star.png">');
-			};
-			for (var i = 0; i < resultObj["fear"]; i++) {
-				$("#resultFear").append('<img src="../images/rate_star.png">');
-			};
-			for (var i = 0; i < resultObj["anger"]; i++) {
-				$("#resultAngry").append('<img src="../images/rate_star.png">');
-			};
-			for (var i = 0; i < resultObj["disgust"]; i++) {
-				$("#resultDisgust").append('<img src="../images/rate_star.png">');
-			};
-			for (var i = 0; i < resultObj["surprise"]; i++) {
-				$("#resultSurprise").append('<img src="../images/rate_star.png">');
-			};
+            for (var i = 0; i < resultObj["joy"]; i++) {
+                $("#resultJoy").append('<img src="../images/rate_star.png">');
+            };
+            for (var i = 0; i < resultObj["sadness"]; i++) {
+                $("#resultSad").append('<img src="../images/rate_star.png">');
+            };
+            for (var i = 0; i < resultObj["contempt"]; i++) {
+                $("#resultContempt").append('<img src="../images/rate_star.png">');
+            };
+            for (var i = 0; i < resultObj["fear"]; i++) {
+                $("#resultFear").append('<img src="../images/rate_star.png">');
+            };
+            for (var i = 0; i < resultObj["anger"]; i++) {
+                $("#resultAngry").append('<img src="../images/rate_star.png">');
+            };
+            for (var i = 0; i < resultObj["disgust"]; i++) {
+                $("#resultDisgust").append('<img src="../images/rate_star.png">');
+            };
+            for (var i = 0; i < resultObj["surprise"]; i++) {
+                $("#resultSurprise").append('<img src="../images/rate_star.png">');
+            };
 
-			obj = JSON.stringify(resultObj);
+            obj = JSON.stringify(resultObj);
 
-			isScanFinished = true;
+            isScanFinished = true;
 
-			if (isQuizFinished) {
-				$("#scanResultDiv").fadeIn(100).css("display", "flex");
-			}
-		});
+            if (isQuizFinished) {
+                $("#scanResultDiv").fadeIn(100).css("display", "flex");
+            }
+        });
 
-		detector.addEventListener("onInitializeSuccess", function () {
-			$(".affectivaTest").css("visibility", "visible");
-			$("#toggleCamButton").fadeIn(100);
-			cleanResult(resultObj);
-			$("#notCenteredMessage").fadeOut(100);
-			isOn = false;
-			timer.start({ countdown: true, startValues: { seconds: 5 } });
-		});
+        detector.addEventListener("onInitializeSuccess", function () {
+            $(".affectivaTest").css("visibility", "visible");
+            $("#toggleCamButton").fadeIn(100);
+            cleanResult(resultObj);
+            $("#notCenteredMessage").fadeOut(100);
+            isOn = false;
+            timer.start({ countdown: true, startValues: { seconds: 5 } });
+        });
 
-		detector.addEventListener("onImageResultsSuccess", function (faces, image, timestamp) {
-			if (faces.length <= 0) {
-				timer.pause();
-				$("#notCenteredMessage").fadeIn(100);
-			} else {
-				$("#notCenteredMessage").fadeOut(100);
-				timer.start();
+        detector.addEventListener("onImageResultsSuccess", function (faces, image, timestamp) {
+            if (faces.length <= 0) {
+                timer.pause();
+                $("#notCenteredMessage").fadeIn(100);
+            } else {
+                $("#notCenteredMessage").fadeOut(100);
+                timer.start();
 
-				//log('#emojiRes', "Emoji: " + faces[0].emojis.dominantEmoji);
-				resultObj["anger"] += faces[0].emotions.anger;
-				resultObj["contempt"] += faces[0].emotions.contempt;
-				resultObj["disgust"] += faces[0].emotions.disgust;
-				resultObj["fear"] += faces[0].emotions.fear;
-				resultObj["joy"] += faces[0].emotions.joy;
-				resultObj["sadness"] += faces[0].emotions.sadness;
-				resultObj["surprise"] += faces[0].emotions.surprise;
-				resultObj["count"]++;
-			}
-		});
-
-
-		$("#scanOkButton").on("click", function () {
-			detector.start();
-			isQuizFinished = false;
-			isScanFinished = false;
-			startQuiz();
-			$("#startScanDiv").fadeOut(100);
-			$("#scanningDiv").fadeIn(100).css("display", "flex");
-			$("#toggleCamButton").hide();
-			output.text("Initializing emotion Scanner...");
-			//startQuiz();
-		});
-
-		$("#scanStopButton").on("click", function () {
-			detector.stop();
-			timer.stop();
-			$("#startScanButton").prop("disabled", false);
-			$("#toggleCamButton").fadeOut(100);
-			$(".affectivaTest").fadeOut(100);
-			$("#notCenteredMessage").fadeOut(100);
-			$(".resultMessages").text("");
-			$("#scanningDiv").fadeOut(100);
-		});
-
-		$("#toggleCamButton").on("click", function () {
-			if (!isOn) {
-				isOn = !isOn;
-				$(".affectivaTest").fadeIn(200);
-			} else {
-				isOn = !isOn;
-				$(".affectivaTest").fadeOut(200);
-			}
-		});
-
-		function resultDone() {
-			if ($('#resultMemo').val()!="") {
-				gtag("send", "event", 'memo', "inputMemo");
-			}
-			postResult($('#resultMemo').val(), obj);
-			$('#emotionRateList').replaceWith(resultOriginState);
-			$("#startScanButton").prop("disabled", false);
-			$("#notCenteredMessage").fadeOut(100);
-			$(".resultMessages").text("");
-			$("#scanResultDiv").fadeOut(100);
-			$("#scanningDiv").fadeOut(100);
-			$("#scanStopButton").css("display", "initial");
-			$("#resultMemo").val("");
-		}
-
-		$("#resultDoneButton").on("click", resultDone);
-
-		$('#resultCalendarButton').on("click", function () {
-			resultDone();
-			window.location = 'calendar';
-		});
-
-		$("#resultMemoSubmit").on("click", function () {
-			res = confirm("Memo saved to calendar!")
-			gtag('send','event','memo','click');
-		});
-
-		$("#resultDoneButtonB").on("click", function () {
-			var res;
-			if (!$("#resultMemo").val()) {
-				res = confirm("You didn't add a memo, are you sure you want to close the result window?")
-			} else {
-				res = true;
-			}
-			if (res) {
-				resultDone();
-			}
-		});
-
-		$('#resultCalendarButtonB').on("click", function () {
-			var res;
-			if (!$("#resultMemo").val()) {
-				res = confirm("You didn't add a memo, are you sure you want to close the result window?")
-			} else {
-				res = true;
-			}
-			if (res) {
-				window.location = 'calendar';
-				resultDone();
-			}
-		});
+                //log('#emojiRes', "Emoji: " + faces[0].emojis.dominantEmoji);
+                resultObj["anger"] += faces[0].emotions.anger;
+                resultObj["contempt"] += faces[0].emotions.contempt;
+                resultObj["disgust"] += faces[0].emotions.disgust;
+                resultObj["fear"] += faces[0].emotions.fear;
+                resultObj["joy"] += faces[0].emotions.joy;
+                resultObj["sadness"] += faces[0].emotions.sadness;
+                resultObj["surprise"] += faces[0].emotions.surprise;
+                resultObj["count"]++;
+            }
+        });
 
 
-		var myGameArea = {
-			canvas: $("#myGameCanvas")[0],
-			start: function () {
-				this.canvas.width = 970;
-				this.canvas.height = 1350;
-				this.context = this.canvas.getContext("2d");
-				document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-				this.interval = setInterval(updateGameArea, 20);
-			},
-			clear: function () {
-				this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-			}
-		}
+        $("#scanOkButton").on("click", function () {
+            detector.start();
+            isQuizFinished = false;
+            isScanFinished = false;
+            startQuiz();
+            $("#startScanDiv").fadeOut(100);
+            $("#scanningDiv").fadeIn(100).css("display", "flex");
+            $("#toggleCamButton").hide();
+            output.text("Initializing emotion Scanner...");
+            //startQuiz();
+        });
+
+        $("#scanStopButton").on("click", function () {
+            detector.stop();
+            timer.stop();
+            $("#startScanButton").prop("disabled", false);
+            $("#toggleCamButton").fadeOut(100);
+            $(".affectivaTest").fadeOut(100);
+            $("#notCenteredMessage").fadeOut(100);
+            $(".resultMessages").text("");
+            $("#scanningDiv").fadeOut(100);
+        });
+
+        $("#toggleCamButton").on("click", function () {
+            if (!isOn) {
+                isOn = !isOn;
+                $(".affectivaTest").fadeIn(200);
+            } else {
+                isOn = !isOn;
+                $(".affectivaTest").fadeOut(200);
+            }
+        });
+
+        function resultDone() {
+            if ($('#resultMemo').val() != "") {
+                gtag("send", "event", 'memo', "inputMemo");
+            }
+            postResult($('#resultMemo').val(), obj);
+            $('#emotionRateList').replaceWith(resultOriginState);
+            $("#startScanButton").prop("disabled", false);
+            $("#notCenteredMessage").fadeOut(100);
+            $(".resultMessages").text("");
+            $("#scanResultDiv").fadeOut(100);
+            $("#scanningDiv").fadeOut(100);
+            $("#scanStopButton").css("display", "initial");
+            $("#resultMemo").val("");
+        }
+
+        $("#resultDoneButton").on("click", resultDone);
+
+        $('#resultCalendarButton').on("click", function () {
+            resultDone();
+            window.location = 'calendar';
+        });
+
+        $("#resultMemoSubmit").on("click", function () {
+            res = confirm("Memo saved to calendar!")
+            gtag('send', 'event', 'memo', 'click');
+        });
+
+        $("#resultDoneButtonB").on("click", function () {
+            var res;
+            if (!$("#resultMemo").val()) {
+                res = confirm("You didn't add a memo, are you sure you want to close the result window?")
+            } else {
+                res = true;
+            }
+            if (res) {
+                resultDone();
+            }
+        });
+
+        $('#resultCalendarButtonB').on("click", function () {
+            var res;
+            if (!$("#resultMemo").val()) {
+                res = confirm("You didn't add a memo, are you sure you want to close the result window?")
+            } else {
+                res = true;
+            }
+            if (res) {
+                window.location = 'calendar';
+                resultDone();
+            }
+        });
 
 
-		var myGamePiece;
-		var myGamePiece2;
-		function getRand(min, max) {
-			return Math.floor(Math.random() * (max - min + 1) + min);
-		}
+        var myGameArea = {
+            canvas: $("#myGameCanvas")[0],
+            start: function () {
+                this.canvas.width = 970;
+                this.canvas.height = 1350;
+                this.context = this.canvas.getContext("2d");
+                document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+                this.interval = setInterval(updateGameArea, 20);
+            },
+            clear: function () {
+                this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+            }
+        }
 
-		$.getJSON("../data/homeRac.json", function (raccoons) {
-			var a = getRand(0, 6);
-			var b = getRand(0, 6);
-			while (a == b) {
-				b = getRand(0, 6);
-			}
-			var x1 = getRand(0, 650);
-			var y1 = getRand(600, 1000);
-			var x2 = getRand(0, 650);
-			var y2 = getRand(600, 1000);
-			while (Math.abs(x1 - x2) < 200) {
-				x2 = getRand(0, 650);
-			}
-			while (Math.abs(y1 - y2) < 200) {
-				y2 = getRand(600, 1000);
-			}
 
-			var k = 4;
-			var m1 = getRand(-k, k);
-			var m2 = getRand(-k, k);
-			while (m1 == 0) m1 = getRand(-k, k);
-			while (m2 == 0) m2 = getRand(-k, k);
+        var myGamePiece;
+        var myGamePiece2;
+        function getRand(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
 
-			myGamePiece = new component(raccoons[a].width, raccoons[a].height, "../images/Racoons/" + raccoons[a].src, x1, y1, "image", m1);
-			myGamePiece2 = new component(raccoons[b].width, raccoons[b].height, "../images/Racoons/" + raccoons[b].src, x2, y2, "image", m2);
-		});
+        $.getJSON("../data/homeRac.json", function (raccoons) {
+            var a = getRand(0, 6);
+            var b = getRand(0, 6);
+            while (a == b) {
+                b = getRand(0, 6);
+            }
+            var x1 = getRand(0, 650);
+            var y1 = getRand(600, 1000);
+            var x2 = getRand(0, 650);
+            var y2 = getRand(600, 1000);
+            while (Math.abs(x1 - x2) < 200) {
+                x2 = getRand(0, 650);
+            }
+            while (Math.abs(y1 - y2) < 200) {
+                y2 = getRand(600, 1000);
+            }
 
-		function startGame() {
-			myGameArea.start();
-			var x = readCookie('userName');
-			function readCookie(name) {
-				var nameEQ = name + "=";
-				var ca = document.cookie.split(';');
-				for (var i = 0; i < ca.length; i++) {
-					var c = ca[i];
-					while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-					if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-				}
-				return null;
-			}
-			if (x != null) {
-				clickStart();
-			}
-		}
+            var k = 4;
+            var m1 = getRand(-k, k);
+            var m2 = getRand(-k, k);
+            while (m1 == 0) m1 = getRand(-k, k);
+            while (m2 == 0) m2 = getRand(-k, k);
 
-		function component(width, height, color, x, y, type, m) {
-			this.type = type;
-			if (type == "image") {
-				this.image = new Image();
-				this.image.src = color;
-			}
-			this.width = width;
-			this.height = height;
-			this.x = x;
-			this.y = y;
-			this.m = m;
-			this.update = function () {
-				ctx = myGameArea.context;
-				if (type == "image") {
-					ctx.drawImage(this.image,
-						this.x,
-						this.y,
-						this.width, this.height);
-				} else {
-					ctx.fillStyle = color;
-					ctx.fillRect(this.x, this.y, this.width, this.height);
-				}
-			}
-			this.moveToRight = true;
-			this.move = function () {
-				if (this.moveToRight) {
-					this.x += this.m;
-				} else {
-					this.x -= this.m;
-				}
-				if (this.x < 0 | this.x > myGameArea.canvas.width - this.width) {
-					this.moveToRight = !this.moveToRight;
-				}
-			}
-		}
+            myGamePiece = new component(raccoons[a].width, raccoons[a].height, "../images/Racoons/" + raccoons[a].src, x1, y1, "image", m1);
+            myGamePiece2 = new component(raccoons[b].width, raccoons[b].height, "../images/Racoons/" + raccoons[b].src, x2, y2, "image", m2);
+        });
 
-		function updateGameArea() {
-			myGameArea.clear();
-			myGamePiece.move();
-			myGamePiece2.move();
-			myGamePiece.update();
-			myGamePiece2.update();
-		}
-	</script>
+        function startGame() {
+            myGameArea.start();
+            var x = readCookie('userName');
+            function readCookie(name) {
+                var nameEQ = name + "=";
+                var ca = document.cookie.split(';');
+                for (var i = 0; i < ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+                }
+                return null;
+            }
+            if (x != null) {
+                clickStart();
+            }
+        }
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115178675-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-115178675-1');
-</script>
+        function component(width, height, color, x, y, type, m) {
+            this.type = type;
+            if (type == "image") {
+                this.image = new Image();
+                this.image.src = color;
+            }
+            this.width = width;
+            this.height = height;
+            this.x = x;
+            this.y = y;
+            this.m = m;
+            this.update = function () {
+                ctx = myGameArea.context;
+                if (type == "image") {
+                    ctx.drawImage(this.image,
+                        this.x,
+                        this.y,
+                        this.width, this.height);
+                } else {
+                    ctx.fillStyle = color;
+                    ctx.fillRect(this.x, this.y, this.width, this.height);
+                }
+            }
+            this.moveToRight = true;
+            this.move = function () {
+                if (this.moveToRight) {
+                    this.x += this.m;
+                } else {
+                    this.x -= this.m;
+                }
+                if (this.x < 0 | this.x > myGameArea.canvas.width - this.width) {
+                    this.moveToRight = !this.moveToRight;
+                }
+            }
+        }
+
+        function updateGameArea() {
+            myGameArea.clear();
+            myGamePiece.move();
+            myGamePiece2.move();
+            myGamePiece.update();
+            myGamePiece2.update();
+        }
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115178675-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-115178675-1');
+    </script>
 
 </body>
 

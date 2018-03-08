@@ -237,10 +237,12 @@ body {
 }
 
 .content .scanResultModal {
-  width: 60%;
-  height: 50%;
+  width: 65%;
+  height: 60%;
   font-size: 50px;
   position: fixed;
+  padding: 20px;
+  overflow: auto;
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -278,17 +280,15 @@ body {
   height: 60px;
 }
 
-.content .scanResultModal #resultMemo {
-  width: 90%;
-  height: 50px;
-  margin: 20px;
-}
-
 .content .scanResultModal .buttons {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.content .scanResultModal .buttons button {
+  width: 200px;
 }
 
 .content .scanResultModal button {
@@ -300,12 +300,30 @@ body {
   background-color: #ff9e66;
 }
 
+.content .scanResultModal #memoGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content .scanResultModal #memoGroup #resultMemo {
+  width: 90%;
+  height: 60px;
+  margin: 20px;
+}
+
+.content .scanResultModal #memoGroup #resultMemoSubmit {
+  margin: 0 0 0 10px;
+}
+
 .content .scanResultModalB {
-  width: 60%;
-  height: 50%;
-  font-size: 50px;
+  width: 65%;
+  height: 60%;
+  font-size: 60px;
   position: fixed;
-  display: none;
+  padding: 20px;
+  overflow: auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -313,6 +331,11 @@ body {
   border: solid 3px #76849A;
   background-color: #E9C8B5;
   overflow: auto;
+  display: none;
+}
+
+.content .scanResultModalB #donetext {
+  font-size: 80px;
 }
 
 .content .scanResultModalB ul {
@@ -345,8 +368,8 @@ body {
 
 .content .scanResultModalB #resultMemo {
   width: 90%;
-  font-size: 25px;
-  height: 200px;
+  font-size: 30px;
+  height: 230px;
   margin: 20px;
 }
 
@@ -355,6 +378,10 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.content .scanResultModalB .buttons button {
+  width: 200px;
 }
 
 .content .scanResultModalB button {
