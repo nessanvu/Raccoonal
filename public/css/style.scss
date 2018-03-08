@@ -22,6 +22,8 @@ body {
     justify-content: center;
     align-items: center;
     background-size: 100% auto;
+    max-height: 1740px;
+    min-width: 980px;
 
     h1 {
         width: 100%;
@@ -433,6 +435,12 @@ body {
         align-items: center;
         overflow: auto;
 
+        #raccoonp {
+            width: 70%;
+            color: rgb(53, 53, 53);
+            font-size: 25px;
+        }
+
         .hide {
             display: none;
         }
@@ -609,9 +617,13 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        overflow: auto;
+
 
         li {
             width: 100%;
+            min-height: 93px;
+            min-width: 430px;
         }
 
         .deleteBtn {
@@ -643,6 +655,8 @@ body {
         width: 98%;
         padding: 5%;
         background-color: rgba(255, 187, 114, 0.9);
+        overflow: auto;
+        max-height: 1400px;
 
         .monthBar {
             #monthText {
@@ -682,6 +696,7 @@ body {
             border-radius: 20px;
             overflow: auto;
             height: 88%;
+            max-height: 1114px;
 
             .memoModal {
                 #closeMemoModal {
@@ -706,6 +721,7 @@ body {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                overflow: auto;
 
                 #memoTitle {
                     font-size: 60px;
@@ -808,6 +824,7 @@ body {
                     margin: 0;
                     padding: 0;
                     border: solid 2px #525863;
+                    min-height: 166px;
 
                     #emojiOfTheDay {
                         margin-top: 5px;
@@ -828,6 +845,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    min-height: 200px;
 
     button {
         margin: 15px;
@@ -886,6 +904,7 @@ body {
         margin: 40px;
     }
 
+    min-height: 1500px;
     //test
     display: flex;
 
@@ -923,17 +942,17 @@ body {
         align-items: center;
 
         input {
-            margin: 5% 10% 30% 10%;
+            margin: 5% 10% 15% 10%;
             width: 100%;
             height: 60px;
             font-size: 40px;
         }
     }
 
-    #tutorialDiv {
+    #tutorialDiv, #createAccDiv {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         align-content: center;
 
         #firstTimeUser {
@@ -949,6 +968,10 @@ body {
     }
 
     #loginButton {
+        font-weight: bold;
+        border: 10px #525863 solid;
+        border-radius: 20px;
+        padding: 10px;
         margin-top: 30px;
         font-size: 40px;
     }
@@ -982,6 +1005,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        overflow: auto;
 
         h2 {
             margin: 50px 0 20px 0;
