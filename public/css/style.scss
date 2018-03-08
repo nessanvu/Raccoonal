@@ -1,34 +1,35 @@
-body{
+body {
     font-family: 'Sniglet', cursive;
 }
 
 .homePage {
     background-image: url("../images/background.png");
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     background-color: #E9C8B5;
     width: 100%;
-    height: 100%;   
+    height: 100%;
 }
 
 .otherPages {
     background-image: url("../images/bg.png");
 }
 
-.content{
+.content {
     height: 88%;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     background-size: 100% auto;
+
     h1 {
         width: 100%;
     }
 
     .quizModal {
         position: fixed;
-        top:25%;
+        top: 25%;
         bottom: 30%;
         left: 15%;
         right: 15%;
@@ -36,7 +37,7 @@ body{
         display: none;
         flex-direction: column;
         justify-content: center;
-        align-items: center; 
+        align-items: center;
 
         .raccoon {
             max-width: 300px;
@@ -46,7 +47,7 @@ body{
 
         .quizQuestion {
             height: 60%;
-            width: 70%;            
+            width: 70%;
             border: solid #525863 5px;
             border-radius: 80px;
             background-color: rgba(233, 200, 181, 0.8);
@@ -54,15 +55,17 @@ body{
             color: black;
 
             p {
-                transform: translate(0%, -50%);            
+                transform: translate(0%, -50%);
             }
         }
 
-        .quizButton{
-            width:100%;
+        .quizButton {
+            width: 100%;
             height: 15%;
+
             //border: solid green;
             padding-top: 5%;
+
             button {
                 font-size: 40px;
                 height: 100%;
@@ -73,16 +76,16 @@ body{
                 display: inline-block;
                 border-radius: 50px;
                 border: solid 3px #76849A;
-                color:#000000;
-                transition-duration: 0.2s;   
+                color: #000000;
+                transition-duration: 0.2s;
             }
 
             #quizYesButton {
-                background-color: rgba(157, 255, 128, 0.8);                
+                background-color: rgba(157, 255, 128, 0.8);
             }
 
             #quizNoButton {
-                background-color: rgba(241, 114, 114, 0.8);                
+                background-color: rgba(241, 114, 114, 0.8);
             }
         }
     }
@@ -103,33 +106,33 @@ body{
         /* flex */
         flex-direction: column;
         justify-content: center;
-        align-items: center; 
+        align-items: center;
 
         .modalMessage {
             height: 70%;
-            width:70%;
+            width: 70%;
+
             //border: solid blue;
             padding: 10%;
             margin: 10%;
-
-            overflow:auto;
-
+            overflow: auto;
             border-radius: 20px;
             border: solid 3px #76849A;
             font-size: 50px;
             color: #525863;
-
-            background-color: rgba(255,187,114,0.9);
-
+            background-color: rgba(255, 187, 114, 0.9);
         }
-        .modalButton{
-            width:100%;
+
+        .modalButton {
+            width: 100%;
             height: 15%;
+
             //border: solid green;
             padding-top: 5%;
+
             button {
                 font-size: 40px;
-                background-color: #E9C8B5;                
+                background-color: #E9C8B5;
                 height: 80%;
                 width: 40%;
                 margin-left: 4%;
@@ -138,8 +141,8 @@ body{
                 display: inline-block;
                 border-radius: 20px;
                 border: solid 3px #76849A;
-                color:#525863;
-                transition-duration: 0.2s;      
+                color: #525863;
+                transition-duration: 0.2s;
             }
 
             #scanLaterButton:hover {
@@ -154,13 +157,14 @@ body{
 
     .scanningModal {
         position: fixed;
+
         //border: solid yellow;
         width: 100%;
-        top:3%;
+        top: 3%;
         display: none;
         flex-direction: column;
         justify-content: center;
-        align-items: center; 
+        align-items: center;
 
         #countdownMessage {
             width: 60%;
@@ -168,7 +172,7 @@ body{
             border: solid 3px #76849A;
             font-size: 40px;
             color: #525863;
-            background-color: rgba(255,187,114,0.9);
+            background-color: rgba(255, 187, 114, 0.9);
         }
 
         #scanStopButton {
@@ -180,11 +184,12 @@ body{
             display: inline-block;
             border-radius: 20px;
             border: solid 2px #76849A;
-            color:#525863;
+            color: #525863;
             transition-duration: 0.2s;
         }
+
         #scanStopButton:hover {
-            background-color: #FF7F7F;                
+            background-color: #FF7F7F;
         }
 
         #notCenteredMessage {
@@ -193,7 +198,7 @@ body{
             margin-top: 10px;
         }
 
-        $glass_wh : 400px;
+        $glass_wh: 400px;
 
         .affectivaTest {
             display: none;
@@ -203,6 +208,7 @@ body{
             height: $glass_wh;
             border: solid #525863 10px;
             overflow: hidden;
+
             video {
                 width: $glass_wh / 3 * 4;
                 margin-left: -$glass_wh / 6;
@@ -210,6 +216,7 @@ body{
         }
 
         $toggle_wh: 150px;
+
         #toggleCamButton {
             display: none;
             opacity: 50%;
@@ -222,22 +229,20 @@ body{
             text-align: center;
             border-radius: 20px;
             border: solid 2px #76849A;
-            color:#525863;
+            color: #525863;
             transition-duration: 0.2s;
             background-color: #E9C8B5;
-
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center; 
+            align-items: center;
+
             img {
                 width: $toggle_wh - 20px;
                 height: $toggle_wh - 20px;
             }
         }
     }
-
- 
 
     .scanResultModal {
         width: 60%;
@@ -247,28 +252,33 @@ body{
         display: none;
         flex-direction: column;
         justify-content: center;
-        align-items: center; 
+        align-items: center;
         border-radius: 20px;
         border: solid 3px #76849A;
         background-color: #E9C8B5;
+
         input {
             font-size: 25px;
         }
+
         ul {
             list-style: none;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
         }
+
         li {
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
-            align-items: center; 
+            align-items: center;
             margin: 10px;
+
             .emoji {
                 margin-right: 20px;
             }
+
             img {
                 width: 60px;
                 height: 60px;
@@ -285,7 +295,7 @@ body{
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            align-items: center; 
+            align-items: center;
         }
 
         button {
@@ -294,7 +304,7 @@ body{
             font-size: 40px;
             border: 6px #525863 solid;
             border-radius: 20px;
-            background-color: rgb(255, 158, 102);   
+            background-color: rgb(255, 158, 102);
         }
     }
 
@@ -306,31 +316,36 @@ body{
         display: none;
         flex-direction: column;
         justify-content: center;
-        align-items: center; 
+        align-items: center;
         border-radius: 20px;
         border: solid 3px #76849A;
         background-color: #E9C8B5;
         overflow: auto;
+
         ul {
             list-style: none;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
         }
+
         li {
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
-            align-items: center; 
+            align-items: center;
             margin: 5px;
+
             .emoji {
                 margin-right: 20px;
             }
+
             img {
                 width: 40px;
                 height: 40px;
             }
         }
+
         .lists {
             display: flex;
         }
@@ -346,7 +361,7 @@ body{
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            align-items: center; 
+            align-items: center;
         }
 
         button {
@@ -355,12 +370,12 @@ body{
             font-size: 40px;
             border: 6px #525863 solid;
             border-radius: 20px;
-            background-color: rgb(255, 158, 102);   
+            background-color: rgb(255, 158, 102);
         }
     }
 
     #startScanButton {
-        -webkit-appearance:none;
+        -webkit-appearance: none;
         font-size: 45px;
         position: fixed;
         width: 130px;
@@ -369,12 +384,12 @@ body{
         right: 1em;
         border: 5px #525863 solid;
         border-radius: 20px;
-        background-color: rgb(245, 170, 127);    
+        background-color: rgb(245, 170, 127);
         padding-top: 10px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center; 
+        align-items: center;
     }
 
     .raccoonbookBox {
@@ -386,20 +401,23 @@ body{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center; 
-        overflow:auto;
-        .hide{
+        align-items: center;
+        overflow: auto;
+
+        .hide {
             display: none;
         }
 
         h1 {
             font-size: 70px;
-            font-family: 'Sniglet', cursive;            
+            font-family: 'Sniglet', cursive;
         }
+
         .raccoons {
             margin: 5%;
             display: grid;
             grid-template-columns: 33.33% auto 33.33%;
+
             //border: blue solid 5px;
             width: 85%;
             height: 85%;
@@ -411,16 +429,17 @@ body{
                 border: 5px solid black;
                 border-radius: 20px;
                 background-color: bisque;
-
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                align-items: center; 
+                align-items: center;
                 overflow: hidden;
+
                 img {
                     max-height: 40%;
                     max-width: 90%;
                 }
+
                 p {
                     font-size: 40px;
                     background-color: azure;
@@ -433,11 +452,11 @@ body{
         }
 
         .raccoondescription {
-            position: fixed; 
+            position: fixed;
             display: none;
             flex-direction: column;
             justify-content: center;
-            align-items: center; 
+            align-items: center;
             width: 50%;
             height: 50%;
             background-color: blanchedalmond;
@@ -448,21 +467,24 @@ body{
             #name {
                 font-size: 45px;
             }
+
             img {
                 max-width: 80%;
                 max-height: 40%;
                 border: solid 4px #525863;
-                overflow:hidden;
-                background-color: white; 
+                overflow: hidden;
+                background-color: white;
             }
+
             #college {
                 padding: 10px;
                 margin: 5px;
                 font-size: 40px;
                 border: solid #76849A 5px;
                 border-radius: 20px;
-                background-color: rgb(238, 230, 225)                
+                background-color: rgb(238, 230, 225);
             }
+
             #description {
                 height: 40%;
                 word-wrap: break-word;
@@ -488,7 +510,7 @@ body{
     background: grey;
     flex-direction: row;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
 
 .calendarModal {
@@ -509,34 +531,41 @@ body{
     background-color: rgb(255, 237, 227);
     flex-direction: column;
     box-shadow: 4px 5px 20px;
+
     .top {
         right: 0px;
         margin: 20px 50px 30px 20px;
+
         .fullDate {
             font-family: 'Fredericka the Great', cursive;
             float: right;
             padding: 5px;
+
             * {
                 margin: 0;
                 padding: 0;
             }
+
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center; 
+            align-items: center;
+
             .monthNum {
                 font-size: 35px;
             }
+
             .dateNum {
                 font-size: 80px;
             }
+
             .yearNum {
                 font-size: 35px;
             }
         }
 
         #closeDiaryButton {
-            float:left;
+            float: left;
             border: 5px solid #525863;
             border-radius: 10px;
             font-size: 30px;
@@ -550,19 +579,33 @@ body{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center; 
+        align-items: center;
+
         li {
             width: 100%;
+        }
+
+        .deleteBtn {
+            border: 3px solid #525863;
+            border-radius: 10px;
+            width: 70px;
+            height: 70px;
+            padding: 2px;
+        }
+
+        .deleteBtn:hover {
+            background-color: #FF7F7F;
         }
     }
 }
 
-.game{
+.game {
     position: fixed;
 }
 
 .calendar {
     padding: 5%;
+
     .calendarBox {
         height: 95%;
         border: solid #525863 10px;
@@ -570,11 +613,13 @@ body{
         text-align: center;
         width: 98%;
         padding: 5%;
-        background-color: rgba(255,187,114,0.9);        
+        background-color: rgba(255, 187, 114, 0.9);
+
         .monthBar {
             #monthText {
-                font-size: 70px;                    
+                font-size: 70px;
             }
+
             margin-bottom: 20px;
             display: flex;
             border: solid 8px rgb(146, 64, 16);
@@ -582,7 +627,7 @@ body{
             background-color: rgb(202, 129, 86);
             flex-direction: row;
             justify-content: space-between;
-            align-items: center;  
+            align-items: center;
 
             button {
                 margin: 10px 20px 10px 20px;
@@ -594,12 +639,14 @@ body{
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
-                align-items: center;  
+                align-items: center;
+
                 img {
                     max-width: 60px;
                 }
             }
         }
+
         .dateBox {
             background-color: white;
             border: solid 8px #525863;
@@ -608,7 +655,6 @@ body{
             height: 88%;
 
             .memoModal {
-
                 #closeMemoModal {
                     border: solid #525863 5px;
                     padding: 5px;
@@ -627,7 +673,6 @@ body{
                 right: 22%;
                 top: 25%;
                 bottom: 30%;
-
                 display: none;
                 flex-direction: column;
                 justify-content: center;
@@ -647,7 +692,7 @@ body{
                     padding: 30px;
                     background-color: rgb(235, 223, 217);
                 }
-                
+
                 #emotionRateList {
                     display: flex;
                     flex-direction: row;
@@ -661,6 +706,7 @@ body{
                         justify-content: center;
                         align-items: center;
                         margin: 10px 4px 10px 4px;
+
                         img {
                             width: 65px;
                             height: 65px;
@@ -669,28 +715,31 @@ body{
                 }
             }
 
-            ul,li {
+            ul, li {
                 margin: 0px;
                 padding: 0px;
                 list-style: none;
             }
+
             li {
                 font-size: 50px;
                 text-align: center;
                 margin-top: 10px;
-                flex:auto;
+                flex: auto;
             }
+
             .record {
                 width: 80%;
                 font-size: 40px;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
-                align-items: center;  
+                align-items: center;
                 border: 3px #76849A solid;
                 background-color: wheat;
                 padding: 5px;
                 border-radius: 12px;
+
                 p {
                     margin: 5px;
                     width: 160px;
@@ -698,6 +747,7 @@ body{
                     border-radius: 20px;
                     background-color: rgb(204, 212, 226);
                 }
+
                 img {
                     width: 60px;
                     height: 60px;
@@ -706,18 +756,19 @@ body{
             }
 
             .weekdays {
-                text-transform: uppercase; 
+                text-transform: uppercase;
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
                 background-color: rgb(90, 36, 4);
-                color:#E9C8B5;
+                color: #E9C8B5;
             }
 
             .alldays {
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
+
                 .date {
                     background-color: rgb(250, 226, 212);
                     font-size: 55px;
@@ -728,7 +779,7 @@ body{
                     margin: 0;
                     padding: 0;
                     border: solid 2px #525863;
-                    
+
                     #emojiOfTheDay {
                         margin-top: 5px;
                         width: 60px;
@@ -747,7 +798,7 @@ body{
     background-image: url("../images/pawbg.png");
     flex-direction: row;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 
     button {
         margin: 15px;
@@ -756,19 +807,20 @@ body{
         width: 160px;
         height: 160px;
         border-radius: 20px;
-        background-color: rgb(252, 193, 159);               
+        background-color: rgb(252, 193, 159);
     }
 
-    #calendarButton, #bookButton, #marketButton, #settingButton{
+    #calendarButton, #bookButton, #marketButton, #settingButton {
         display: flex;
         justify-content: center;
         align-items: center;
         box-shadow: 3px 2px 20px rgb(62, 70, 83);
+
         img {
             max-width: 100px;
             max-height: 100px;
         }
-    } 
+    }
 
     #homeButton {
         width: 190px;
@@ -777,7 +829,7 @@ body{
 }
 
 .menu {
-    margin:5px;
+    margin: 5px;
     width: 18%;
     height: 80%;
     font-size: small;
@@ -801,13 +853,13 @@ body{
 }
 */
 .login {
-
     #fbLogin {
         margin: 40px;
     }
 
     //test
-    display: flex;    
+    display: flex;
+
     //display: none;
 
     position: fixed;
@@ -817,15 +869,16 @@ body{
     z-index: 1;
     flex-direction: column;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 
     * {
-        font-family: 'Sniglet', cursive;   
+        font-family: 'Sniglet', cursive;
     }
 
     h1 {
         font-size: 80px;
     }
+
     h2 {
         font-size: 60px;
     }
@@ -833,11 +886,13 @@ body{
     h3 {
         font-size: 50px;
     }
+
     .userName, .password {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center; 
+        align-items: center;
+
         input {
             margin: 5% 10% 30% 10%;
             width: 100%;
@@ -845,24 +900,24 @@ body{
             font-size: 40px;
         }
     }
-    
 
     #tutorialDiv {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-content: center;  
+        align-content: center;
+
         #firstTimeUser {
             margin: 0px 20px 0px 0px;
             margin: 0;
             width: 50px;
             height: 50px;
         }
+
         label {
             font-size: 40px;
         }
     }
-
 
     #loginButton {
         margin-top: 30px;
@@ -879,13 +934,13 @@ body{
         background-color: #E9C8B5;
         display: flex;
         flex-direction: column;
-        align-items: center; 
+        align-items: center;
         padding: 20px;
-    } 
+    }
 
     h1 {
         font-size: 70px;
-        font-family: 'Sniglet', cursive;            
+        font-family: 'Sniglet', cursive;
     }
 
     .sounds {
@@ -897,29 +952,23 @@ body{
         height: 50%;
         display: flex;
         flex-direction: column;
-        align-items: center; 
+        align-items: center;
 
         h2 {
             margin: 50px 0 20px 0;
             font-size: 50px;
             font-family: 'Sniglet', cursive;
-        }  
+        }
 
-        input[type="range"]{
+        input[type="range"] {
             -webkit-appearance: none;
             -moz-apperance: none;
             border-radius: 6px;
             height: 30px;
             width: 400px;
-            background-image: -webkit-gradient(
-                linear,
-                left top,
-                right top,
-                color-stop(0.5, #94A14E),
-                color-stop(0.5, #C5C5C5)
-            );
+            background-image: -webkit-gradient(linear, left top, right top, color-stop(0.5, #94A14E), color-stop(0.5, #C5C5C5));
         }
-        
+
         input[type='range']::-webkit-slider-thumb {
             -webkit-appearance: none !important;
             background-color: #E9E9E9;
@@ -935,8 +984,8 @@ body{
         font-size: 45px;
         border: solid 6px #525863;
         border-radius: 20px;
-        background-color: rgb(206, 193, 185);    
-        font-family: 'Sniglet', cursive;      
+        background-color: rgb(206, 193, 185);
+        font-family: 'Sniglet', cursive;
     }
 }
 
@@ -946,6 +995,7 @@ body{
     display: flex;
     align-content: center;
     justify-content: center;
+
     img {
         width: 100%;
     }
@@ -956,21 +1006,23 @@ body{
         font-size: 45px;
         border: solid 6px #525863;
         border-radius: 20px;
-        background-color: rgb(252, 193, 159);    
-        font-family: 'Sniglet', cursive;        
+        background-color: rgb(252, 193, 159);
+        font-family: 'Sniglet', cursive;
     }
 
     #skipBtn {
-        background-color: rgba(252, 193, 159, 0.5);    
+        background-color: rgba(252, 193, 159, 0.5);
         top: 1em;
         right: 1em;
     }
+
     #prevBtn {
         left: 1em;
         bottom: 1em;
         width: 220px;
         display: none;
     }
+
     #nextBtn {
         right: 1em;
         bottom: 1em;

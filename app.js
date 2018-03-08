@@ -48,6 +48,7 @@ app.get('/calendar', calendar.view);
 app.get('/book', book.view);
 app.get('/setting', setting.view);
 app.get('/tutorial', tutorial.view);
+app.get('/calendar/today', calendar.isToday);
 // Example route
 // app.get('/users', user.list);
 

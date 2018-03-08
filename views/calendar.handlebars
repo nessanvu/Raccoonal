@@ -1,226 +1,247 @@
 <html>
 
 <head>
-	<title>Raccoonal Calendar</title>
+    <title>Raccoonal Calendar</title>
 
-	<!-- CSS -->
-	<link rel="stylesheet" href="../css/bootstrap.min.css">
-	<link rel="stylesheet" href="../css/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
 
-	<script src="../js/jquery-3.3.1.min.js"></script>
-	<script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
 </head>
 
 <body>
-	<div class="content calendar otherPages">
-		<div class="calendarBox">
-			<div class="monthBar">
-				<button type="button" id="leftButton">
-					<img src="../images/arrow-left.png" alt="left">
-				</button>
-				<p id="monthText">February</p>
-				<button type="button" id="rightButton">
-					<img src="../images/arrow-right.png" alt="right">
-				</button>
-			</div>
-			<div class="dateBox">
-				<ul class="weekdays">
-					<li>Mo</li>
-					<li>Tu</li>
-					<li>We</li>
-					<li>Th</li>
-					<li>Fr</li>
-					<li>Sa</li>
-					<li>Su</li>
-				</ul>
-				<div class="alldays">
-					{{#each dates}}
-					<div class="date">
-						<p id="dateNumber">{{dateNumber}}</p>
-						<img id="emojiOfTheDay" src="../images/Emotions/{{image}}">
+    <div class="content calendar otherPages">
+        <div class="calendarBox">
+            <div class="monthBar">
+                <button type="button" id="leftButton">
+                    <img src="../images/arrow-left.png" alt="left">
+                </button>
+                <p id="monthText">March</p>
+                <button type="button" id="rightButton">
+                    <img src="../images/arrow-right.png" alt="right">
+                </button>
+            </div>
+            <div class="dateBox">
+                <ul class="weekdays">
+                    <li>Mo</li>
+                    <li>Tu</li>
+                    <li>We</li>
+                    <li>Th</li>
+                    <li>Fr</li>
+                    <li>Sa</li>
+                    <li>Su</li>
+                </ul>
+                <div class="alldays">
+                    {{#each dates}}
+                    <div class="date" id="{{month}}{{dateNumber}}">
+                        <p id="dateNumber">{{dateNumber}}</p>
+                        <img id="emojiOfTheDay" src="../images/Emotions/{{image}}">
+                        <div class='calendarModal'>
+                            <div class="top">
+                                <p class="monthNumber hide">{{month}}</p>
+                                <p class="dateNumber hide">{{dateNumber}}</p>
+                                <button type="button" id="closeDiaryButton" class="closebtn">Close</button>
+                                <div class="fullDate"></div>
+                            </div>
+                            <ol class="records">
+                                {{#records}}
+                                <li class="record">
+                                    <p class="timeStamp">{{hour}}:{{minute}}</p>
+                                    <img id="emoji" src="../images/Emotions/{{emoji}}">
+                                    <button class="deleteBtn">
+                                        <img src="../images/delete.png" />
+                                    </button>
+                                    <p class="memoText hide">{{memoText}}</p>
+                                    <div class="emotion hide">
+                                        <p class="angerData">{{emotion.anger}}</p>
+                                        <p class="contemptData">{{emotion.contempt}}</p>
+                                        <p class="disgustData">{{emotion.disgust}}</p>
+                                        <p class="fearData">{{emotion.fear}}</p>
+                                        <p class="joyData">{{emotion.joy}}</p>
+                                        <p class="sadnessData">{{emotion.sadness}}</p>
+                                        <p class="surpriseData">{{emotion.surprise}}</p>
+                                    </div>
+                                </li>
+                                {{/records}}
+                            </ol>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
 
-						<div class='calendarModal'>
-							<div class="top">
-								<p class="monthNumber hide">{{month}}</p>
-								<p class="dateNumber hide">{{dateNumber}}</p>
-								<button type="button" id="closeDiaryButton" class="closebtn">Close</button>
-								<div class="fullDate"></div>
-							</div>
-							<ol class="records">
-								{{#records}}
-								<li class="record">
-									<p class="timeStamp">{{hour}}:{{minute}}</p>
-									<img id="emoji" src="../images/Emotions/{{emoji}}">
-									<p class="memoText hide">{{memoText}}</p>
-									<div class="emotion hide">
-										<p class="angerData">{{emotion.anger}}</p>
-										<p class="contemptData">{{emotion.contempt}}</p>
-										<p class="disgustData">{{emotion.disgust}}</p>
-										<p class="fearData">{{emotion.fear}}</p>
-										<p class="joyData">{{emotion.joy}}</p>
-										<p class="sadnessData">{{emotion.sadness}}</p>
-										<p class="surpriseData">{{emotion.surprise}}</p>
-									</div>
-								</li>
-								{{/records}}
-							</ol>
-						</div>
-					</div>
-					{{/each}}
-				</div>
+                <div class="memoModal">
+                    <p id="memoTitle">Memo</p>
+                    <p class="memoText"></p>
+                    <ul id="emotionRateList">
+                        <li id="resultJoy">
+                            <p class="joyRes"></p>
+                            <img src="../images/Emotions/joy.png" class="emoji">
+                        </li>
+                        <li id="resultSad">
+                            <p class="sadnessRes"></p>
+                            <img src="../images/Emotions/sad.png" class="emoji">
+                        </li>
+                        <li id="resultContempt">
+                            <p class="contemptRes"></p>
+                            <img src="../images/Emotions/contempt.png" class="emoji">
+                        </li>
+                        <li id="resultFear">
+                            <p class="fearRes"></p>
+                            <img src="../images/Emotions/fear.png" class="emoji">
+                        </li>
+                        <li id="resultAngry">
+                            <p class="angerRes"></p>
+                            <img src="../images/Emotions/angry.png" class="emoji">
+                        </li>
+                        <li id="resultDisgust">
+                            <p class="disgustRes"></p>
+                            <img src="../images/Emotions/disgust.png" class="emoji">
+                        </li>
+                        <li id="resultSurprise">
+                            <p class="surpriseRes"></p>
+                            <img src="../images/Emotions/surprise.png" class="emoji">
+                        </li>
+                    </ul>
+                    <button type="button" id="closeMemoModal">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-				<div class="memoModal">
-					<p id="memoTitle">Memo</p>
-					<p class="memoText"></p>
-					<ul id="emotionRateList">
-						<li id="resultJoy">
-							<p class="joyRes"></p>
-							<img src="../images/Emotions/joy.png" class="emoji">
-						</li>
-						<li id="resultSad">
-							<p class="sadnessRes"></p>
-							<img src="../images/Emotions/sad.png" class="emoji">
-						</li>
-						<li id="resultContempt">
-							<p class="contemptRes"></p>
-							<img src="../images/Emotions/contempt.png" class="emoji">
-						</li>
-						<li id="resultFear">
-							<p class="fearRes"></p>
-							<img src="../images/Emotions/fear.png" class="emoji">
-						</li>
-						<li id="resultAngry">
-							<p class="angerRes"></p>
-							<img src="../images/Emotions/angry.png" class="emoji">
-						</li>
-						<li id="resultDisgust">
-							<p class="disgustRes"></p>
-							<img src="../images/Emotions/disgust.png" class="emoji">
-						</li>
-						<li id="resultSurprise">
-							<p class="surpriseRes"></p>
-							<img src="../images/Emotions/surprise.png" class="emoji">
-						</li>
-					</ul>
-					<button type="button" id="closeMemoModal">Back</button>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="bar">
+        <div>
+            <button type="button" class="menu" id="calendarButton" onclick="window.location='calendar'">
+                <img src="../images/Navigation/calendar.png">
+            </button>
+        </div>
+        <div>
+            <button type="button" class="menu" id="bookButton" onclick="window.location='book'">
+                <img src="../images/Navigation/photoalbum.png">
+            </button>
+        </div>
+        <div>
+            <img src="../images/Navigation/home.png" class="menu" id="homeButton" onclick="window.location='homeA'">
+        </div>
+        <div>
+            <button type="button" class="menu" id="marketButton">
+                <img src="../images/Navigation/market.png">
+                <script>
+                    $("#marketButton").on("click", function () {
+                        $("#marketButton").effect("shake", { distance: 10, time: 20 });
+                    });
+                </script>
+            </button>
+        </div>
+        <div>
+            <button type="button" class="menu" id="settingButton" onclick="window.location='setting'">
+                <img src="../images/Navigation/settings.png">
+            </button>
+        </div>
+    </div>
 
-	<div class="bar">
-		<div>
-			<button type="button" class="menu" id="calendarButton" onclick="window.location='calendar'">
-				<img src="../images/Navigation/calendar.png">
-			</button>
-		</div>
-		<div>
-			<button type="button" class="menu" id="bookButton" onclick="window.location='book'">
-				<img src="../images/Navigation/photoalbum.png">
-			</button>
-		</div>
-		<div>
-			<img src="../images/Navigation/home.png" class="menu" id="homeButton" onclick="window.location='homeA'">
-		</div>
-		<div>
-			<button type="button" class="menu" id="marketButton">
-				<img src="../images/Navigation/market.png">
-				<script>
-					$("#marketButton").on("click", function () {
-						$("#marketButton").effect("shake", { distance: 10, time: 20 });
-					});
-				</script>
-			</button>
-		</div>
-		<div>
-			<button type="button" class="menu" id="settingButton" onclick="window.location='setting'">
-				<img src="../images/Navigation/settings.png">
-			</button>
-		</div>
-	</div>
+    <script>
 
-	<script>
-		var diary;
-		$(".date").on("click", function () {
-			var t = new Date();
-			var yearNumber = t.getFullYear();
-			var monthNumber = $(this).find('.monthNumber').text();
-			var dateNumber = $(this).find('.dateNumber').text();
-			switch (monthNumber) {
-				case "0":
-					monthNumber = "JANUARY";
-					break;
-				case "1":
-					monthNumber = "FEBRUARY";
-					break;
-				case "2":
-					monthNumber = "MARCH";
-					break;
-				case "3":
-					monthNumber = "APRIL";
-					break;
-				case "4":
-					monthNumber = "MAY";
-					break;
-				case "5":
-					monthNumber = "JUNE";
-					break;
-				case "6":
-					monthNumber = "JULY";
-					break;
-				case "7":
-					monthNumber = "AUGUST";
-					break;
-				case "8":
-					monthNumber = "SEPETEMBER";
-					break;
-				case "9":
-					monthNumber = "OCTOBER";
-					break;
-				case "10":
-					monthNumber = "NOVEMBER";
-					break;
-				case "11":
-					monthNumber = "DECEMBER";
-					break;
-			}
-			$(this).find('.fullDate').html('<p class="monthNum">' + monthNumber + '</p>' + '<p class="dateNum">' + dateNumber + '</p>' + '<p class="yearNum">' + yearNumber + '</p>');
+        var diary;
+        $(".date").on("click", function () {
+            var t = new Date();
+            var yearNumber = t.getFullYear();
+            var monthNumber = $(this).find('.monthNumber').text();
+            var dateNumber = $(this).find('.dateNumber').text();
+            switch (monthNumber) {
+                case "0":
+                    monthNumber = "JANUARY";
+                    break;
+                case "1":
+                    monthNumber = "FEBRUARY";
+                    break;
+                case "2":
+                    monthNumber = "MARCH";
+                    break;
+                case "3":
+                    monthNumber = "APRIL";
+                    break;
+                case "4":
+                    monthNumber = "MAY";
+                    break;
+                case "5":
+                    monthNumber = "JUNE";
+                    break;
+                case "6":
+                    monthNumber = "JULY";
+                    break;
+                case "7":
+                    monthNumber = "AUGUST";
+                    break;
+                case "8":
+                    monthNumber = "SEPETEMBER";
+                    break;
+                case "9":
+                    monthNumber = "OCTOBER";
+                    break;
+                case "10":
+                    monthNumber = "NOVEMBER";
+                    break;
+                case "11":
+                    monthNumber = "DECEMBER";
+                    break;
+            }
+            $(this).find('.fullDate').html('<p class="monthNum">' + monthNumber + '</p>' + '<p class="dateNum">' + dateNumber + '</p>' + '<p class="yearNum">' + yearNumber + '</p>');
 
-			$(this).find(".calendarModal").fadeIn(100).css('display', 'flex');
-		});
+            $(this).find(".calendarModal").fadeIn(100).css('display', 'flex');
+        });
 
-		$(".closebtn").on("click", function (e) {
-			$(this).parent().parent().fadeOut(100)
-			e.stopPropagation()
-		});
+        $(".closebtn").on("click", function (e) {
+            $(this).parent().parent().fadeOut(100)
+            e.stopPropagation()
+        });
 
-		$(".memoBtn").on("click", function (e) {
-			$('#memo').show();
-			e.stopPropagation();
-		});
+        $(".deleteBtn").on("click", function (e) {
+            e.stopPropagation()
+            var c = confirm("Are you sure you want to delete this record?")
+            if (c) {
+                $(this).parent().hide();
+            }
+        })
 
-		$('.closememoBtn').on("click", function (e) {
-			$('#memo').hide();
-			e.stopPropagation();
-		})
+        $(".memoBtn").on("click", function (e) {
+            $('#memo').show();
+            e.stopPropagation();
+        });
 
-		$('.record').on("click", function (e) {
-			$(".memoModal").find(".memoText").text($(this).find(".memoText").text());
-			$(".memoModal").find(".joyRes").text($(this).find(".joyData").text());
-			$(".memoModal").find(".sadnessRes").text($(this).find(".sadnessData").text());
-			$(".memoModal").find(".contemptRes").text($(this).find(".contemptData").text());
-			$(".memoModal").find(".fearRes").text($(this).find(".fearData").text());
-			$(".memoModal").find(".angerRes").text($(this).find(".angerData").text());
-			$(".memoModal").find(".disgustRes").text($(this).find(".disgustData").text());
-			$(".memoModal").find(".surpriseRes").text($(this).find(".surpriseData").text());
-			$(".memoModal").fadeIn(100).css("display", "flex");
-		})
+        $('.closememoBtn').on("click", function (e) {
+            $('#memo').hide();
+            e.stopPropagation();
+        })
 
-		$('#closeMemoModal').on("click", function (e) {
-			$(".memoModal").fadeOut(100);
-		})
-	</script>
+        $('.record').on("click", function (e) {
+            $(".memoModal").find(".memoText").text($(this).find(".memoText").text());
+            $(".memoModal").find(".joyRes").text($(this).find(".joyData").text());
+            $(".memoModal").find(".sadnessRes").text($(this).find(".sadnessData").text());
+            $(".memoModal").find(".contemptRes").text($(this).find(".contemptData").text());
+            $(".memoModal").find(".fearRes").text($(this).find(".fearData").text());
+            $(".memoModal").find(".angerRes").text($(this).find(".angerData").text());
+            $(".memoModal").find(".disgustRes").text($(this).find(".disgustData").text());
+            $(".memoModal").find(".surpriseRes").text($(this).find(".surpriseData").text());
+            $(".memoModal").fadeIn(100).css("display", "flex");
+        })
+
+        $('#closeMemoModal').on("click", function (e) {
+            $(".memoModal").fadeOut(100);
+        })
+
+        $(document).ready(function() {
+            $.get('/calendar/today', onServerResponse);
+            function onServerResponse(data) {
+                var elementId = data.id;
+                var element = $("#" + elementId);
+                element.css({'background': 'rgb(250, 135, 68)'});
+                element.css({'font-weight': '900'});
+            }
+        })
+    </script>
 </body>
 
 </html>
