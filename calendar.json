@@ -277,92 +277,540 @@
       "id": "030318",
       "month": "2",
       "dateNumber": "3",
-      "image": "emo_e.png",
-      "records": []
+      "image": "surprise.png",
+      "records": [
+        {
+          "hour": "8",
+          "minute": "15",
+          "emoji": "joy.png",
+          "emotion": {
+            "anger": 0,
+            "contempt": 3,
+            "disgust": 0,
+            "fear": 0,
+            "joy": 4,
+            "sadness": 0,
+            "surprise": 1
+          },
+          "memoText": "Men at some time are masters of their fates:  The fault, dear Brutus, is not in our stars,  But in ourselves, that we are underlings."
+        },
+        {
+          "hour": "8",
+          "minute": "39",
+          "emoji": "surprise.png",
+          "emotion": {
+            "anger": 0,
+            "contempt": 2,
+            "disgust": 1,
+            "fear": 3,
+            "joy": 1,
+            "sadness": 0,
+            "surprise": 5
+          },
+          "memoText": "Sigh no more, ladies, sigh no more,  Men were deceivers ever;  One foot in sea, and one on shore,  To one thing constant never."
+        }
+      ]
     },
     {
       "id": "030418",
       "month": "2",
       "dateNumber": "4",
-      "image": "emo_e.png",
-      "records": []
+      "image": "angry.png",
+      "records": [
+        {
+          "hour": "23",
+          "minute": "31",
+          "emoji": "angry.png",
+          "emotion": {
+            "anger": 5,
+            "contempt": 0,
+            "disgust": 2,
+            "fear": 2,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "Some are born great, some achieve greatness, and some have greatness thrust upon them."
+        }
+      ]
     },
     {
       "id": "030518",
       "month": "2",
       "dateNumber": "5",
-      "image": "emo_e.png",
-      "records": []
+      "image": "contempt.png",
+      "records": [
+        {
+          "hour": "10",
+          "minute": "26",
+          "emoji": "contempt.png",
+          "emotion": {
+            "anger": 1,
+            "contempt": 5,
+            "disgust": 1,
+            "fear": 0,
+            "joy": 2,
+            "sadness": 1,
+            "surprise": 1
+          },
+          "memoText": "Come what come may, time and the hour runs through the roughest day."
+        },
+        {
+          "hour": "17",
+          "minute": "19",
+          "emoji": "contempt.png",
+          "emotion": {
+            "anger": 1,
+            "contempt": 5,
+            "disgust": 1,
+            "fear": 0,
+            "joy": 2,
+            "sadness": 1,
+            "surprise": 1
+          },
+          "memoText": "Have more than thou showest,  Speak less than thou knowest,  Lend less than thou owest,  Ride more than thou goest,  Learn more than thou trowest,  Set less than thou throwest."
+        }
+      ]
     },
     {
       "id": "030618",
       "month": "2",
       "dateNumber": "6",
-      "image": "emo_e.png",
-      "records": []
+      "image": "joy.png",
+      "records": [
+        {
+          "hour": "8",
+          "minute": "15",
+          "emoji": "joy.png",
+          "emotion": {
+            "anger": 0,
+            "contempt": 1,
+            "disgust": 2,
+            "fear": 0,
+            "joy": 5,
+            "sadness": 1,
+            "surprise": 1
+          },
+          "memoText": "Self-love, my liege, is not so vile a sin, as self-neglecting."
+        },
+        {
+          "hour": "15",
+          "minute": "15",
+          "emoji": "surprise.png",
+          "emotion": {
+            "anger": 0,
+            "contempt": 2,
+            "disgust": 1,
+            "fear": 3,
+            "joy": 1,
+            "sadness": 0,
+            "surprise": 5
+          },
+          "memoText": "Our doubts are traitors,  And make us lose the good we oft might win,  By fearing to attempt."
+        },
+        {
+          "hour": "19",
+          "minute": "15",
+          "emoji": "surprise.png",
+          "emotion": {
+            "anger": 0,
+            "contempt": 2,
+            "disgust": 1,
+            "fear": 3,
+            "joy": 1,
+            "sadness": 0,
+            "surprise": 5
+          },
+          "memoText": "If music be the food of love, play on."
+        },
+        {
+          "hour": "20",
+          "minute": "15",
+          "emoji": "joy.png",
+          "emotion": {
+            "anger": 0,
+            "contempt": 1,
+            "disgust": 2,
+            "fear": 0,
+            "joy": 5,
+            "sadness": 1,
+            "surprise": 1
+          },
+          "memoText": "Time shall unfold what plighted cunning hides:  Who cover faults, at last shame them derides."
+        }
+      ]
     },
     {
       "id": "030718",
       "month": "2",
       "dateNumber": "7",
-      "image": "emo_e.png",
-      "records": []
+      "image": "angry.png",
+      "records": [
+        {
+          "hour": "17",
+          "minute": "54",
+          "emoji": "angry.png",
+          "emotion": {
+            "anger": 5,
+            "contempt": 0,
+            "disgust": 2,
+            "fear": 2,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "Swear not by the moon, the inconstant moon,  That monthly changes in her circled orb,  Lest that thy love prove likewise variable."
+        }
+      ]
     },
     {
       "id": "030818",
       "month": "2",
       "dateNumber": "8",
-      "image": "emo_e.png",
-      "records": []
+      "image": "disgust.png",
+      "records": [
+        {
+          "hour": "15",
+          "minute": "19",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 5,
+            "fear": 1,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "A peace is of the nature of a conquest; for then both parties nobly are subdued, and neither party loser."
+        },
+        {
+          "hour": "19",
+          "minute": "56",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 5,
+            "fear": 1,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "A peace is of the nature of a conquest; for then both parties nobly are subdued, and neither party loser."
+        }
+      ]
     },
     {
       "id": "030918",
       "month": "2",
       "dateNumber": "9",
-      "image": "emo_e.png",
-      "records": []
+      "image": "fear.png",
+      "records": [
+        {
+          "hour": "15",
+          "minute": "19",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 5,
+            "fear": 1,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "A peace is of the nature of a conquest; for then both parties nobly are subdued, and neither party loser."
+        },
+        {
+          "hour": "19",
+          "minute": "56",
+          "emoji": "fear.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 1,
+            "fear": 5,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "A peace is of the nature of a conquest; for then both parties nobly are subdued, and neither party loser."
+        }
+      ]
     },
     {
       "id": "031018",
       "month": "2",
       "dateNumber": "10",
-      "image": "emo_e.png",
-      "records": []
+      "image": "contempt.png",
+      "records": [
+        {
+          "hour": "2",
+          "minute": "2",
+          "emoji": "contempt.png",
+          "emotion": {
+            "anger": 1,
+            "contempt": 5,
+            "disgust": 1,
+            "fear": 0,
+            "joy": 2,
+            "sadness": 1,
+            "surprise": 1
+          },
+          "memoText": "Be not afraid of greatness: some are born great, some achieve greatness, and some have greatness thrust upon them."
+        },
+        {
+          "hour": "5",
+          "minute": "5",
+          "emoji": "contempt.png",
+          "emotion": {
+            "anger": 1,
+            "contempt": 5,
+            "disgust": 1,
+            "fear": 0,
+            "joy": 2,
+            "sadness": 1,
+            "surprise": 1
+          },
+          "memoText": "Be not afraid of greatness: some are born great, some achieve greatness, and some have greatness thrust upon them."
+        },
+        {
+          "hour": "10",
+          "minute": "10",
+          "emoji": "contempt.png",
+          "emotion": {
+            "anger": 1,
+            "contempt": 5,
+            "disgust": 1,
+            "fear": 0,
+            "joy": 2,
+            "sadness": 1,
+            "surprise": 1
+          },
+          "memoText": "I would challenge you to a battle of wits, but I see you are unarmed!"
+        }
+      ]
     },
     {
       "id": "031118",
       "month": "2",
       "dateNumber": "11",
-      "image": "emo_e.png",
-      "records": []
+      "image": "sad.png",
+      "records": [
+        {
+          "hour": "7",
+          "minute": "45",
+          "emoji": "joy.png",
+          "emotion": {
+            "anger": 0,
+            "contempt": 1,
+            "disgust": 2,
+            "fear": 0,
+            "joy": 5,
+            "sadness": 1,
+            "surprise": 1
+          },
+          "memoText": "Love looks not with the eyes, but with the mind, And therefore is winged Cupid painted blind."
+        },
+        {
+          "hour": "15",
+          "minute": "09",
+          "emoji": "sad.png",
+          "emotion": {
+            "anger": 0,
+            "contempt": 1,
+            "disgust": 2,
+            "fear": 2,
+            "joy": 0,
+            "sadness": 5,
+            "surprise": 1
+          },
+          "memoText": "The fault, dear Brutus, is not in our stars, but in ourselves."
+        }
+      ]
     },
     {
       "id": "031218",
       "month": "2",
       "dateNumber": "12",
-      "image": "emo_e.png",
-      "records": []
+      "image": "joy.png",
+      "records": [
+        {
+          "hour": "21",
+          "minute": "19",
+          "emoji": "contempt.png",
+          "emotion": {
+            "anger": 1,
+            "contempt": 5,
+            "disgust": 1,
+            "fear": 0,
+            "joy": 2,
+            "sadness": 1,
+            "surprise": 1
+          },
+          "memoText": "We know what we are, but not what we may be."
+        },
+        {
+          "hour": "22",
+          "minute": "51",
+          "emoji": "joy.png",
+          "emotion": {
+            "anger": 0,
+            "contempt": 1,
+            "disgust": 2,
+            "fear": 0,
+            "joy": 4,
+            "sadness": 1,
+            "surprise": 1
+          },
+          "memoText": "If you prick us do we not bleed? If you tickle us do we not laugh? If you poison us do we not die? And if you wrong us shall we not revenge?"
+        }
+      ]
     },
     {
       "id": "031318",
       "month": "2",
       "dateNumber": "13",
-      "image": "emo_e.png",
-      "records": []
+      "image": "contempt.png",
+      "records": [
+        {
+          "hour": "14",
+          "minute": "11",
+          "emoji": "contempt.png",
+          "emotion": {
+            "anger": 1,
+            "contempt": 5,
+            "disgust": 1,
+            "fear": 0,
+            "joy": 2,
+            "sadness": 1,
+            "surprise": 1
+          },
+          "memoText": "The evil that men do lives after them; the good is oft interred with their bones."
+        }
+      ]
     },
     {
       "id": "031418",
       "month": "2",
       "dateNumber": "14",
-      "image": "emo_e.png",
-      "records": []
+      "image": "joy.png",
+      "records": [
+        {
+          "hour": "8",
+          "minute": "15",
+          "emoji": "fear.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 0,
+            "disgust": 2,
+            "fear": 4,
+            "joy": 0,
+            "sadness": 0,
+            "surprise": 2
+          },
+          "memoText": "It is not in the stars to hold our destiny but in ourselves."
+        },
+        {
+          "hour": "10",
+          "minute": "19",
+          "emoji": "surprise.png",
+          "emotion": {
+            "anger": 0,
+            "contempt": 2,
+            "disgust": 1,
+            "fear": 3,
+            "joy": 1,
+            "sadness": 0,
+            "surprise": 5
+          },
+          "memoText": "It is not in the stars to hold our destiny but in ourselves."
+        },
+        {
+          "hour": "11",
+          "minute": "44",
+          "emoji": "joy.png",
+          "emotion": {
+            "anger": 0,
+            "contempt": 1,
+            "disgust": 2,
+            "fear": 0,
+            "joy": 5,
+            "sadness": 1,
+            "surprise": 1
+          },
+          "memoText": "Ignorance is the curse of God; knowledge is the wing wherewith we fly to heaven."
+        },
+        {
+          "hour": "14",
+          "minute": "29",
+          "emoji": "joy.png",
+          "emotion": {
+            "anger": 0,
+            "contempt": 1,
+            "disgust": 2,
+            "fear": 0,
+            "joy": 5,
+            "sadness": 1,
+            "surprise": 1
+          },
+          "memoText": "To thine own self be true, and it must follow, as the night the day, thou canst not then be false to any man."
+        }
+      ]
     },
     {
       "id": "031518",
       "month": "2",
       "dateNumber": "15",
-      "image": "emo_e.png",
-      "records": []
+      "image": "disgust.png",
+      "records": [
+        {
+          "hour": "1",
+          "minute": "22",
+          "emoji": "joy.png",
+          "emotion": {
+            "anger": 0,
+            "contempt": 3,
+            "disgust": 0,
+            "fear": 0,
+            "joy": 5,
+            "sadness": 0,
+            "surprise": 1
+          },
+          "memoText": "As soon go kindle fire with snow, as seek to quench the fire of love with words."
+        },
+        {
+          "hour": "9",
+          "minute": "25",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 2,
+            "contempt": 1,
+            "disgust": 5,
+            "fear": 1,
+            "joy": 0,
+            "sadness": 1,
+            "surprise": 3
+          },
+          "memoText": "Better three hours too soon than a minute too late."
+        },
+        {
+          "hour": "18",
+          "minute": "34",
+          "emoji": "disgust.png",
+          "emotion": {
+            "anger": 1,
+            "contempt": 2,
+            "disgust": 5,
+            "fear": 0,
+            "joy": 2,
+            "sadness": 1,
+            "surprise": 1
+          },
+          "memoText": "And this, our life, exempt from public haunt, finds tongues in trees, books in the running brooks, sermons in stones, and good in everything."
+        }
+      ]
     },
     {
       "id": "031618",
